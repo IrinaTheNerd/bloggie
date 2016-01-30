@@ -1,0 +1,42 @@
+//Grid
+//this is a flexbox grid
+// tutotial from http://callmenick.com/_development/flexbox-examples/
+//references from s
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+.grid_item {
+	flex: 1;
+	padding:0.5em;
+}
+.grid_item_half{
+	flex: 0 0 49.9%;
+	padding:0.5em;
+}
+/*grid responsive*/
+
+@media all and ( max-width: 480px ) {
+
+  .sm {
+    flex-direction: row;
+  }
+
+}
+
+@media all and ( max-width: 720px ) {
+
+  .md {
+    flex-direction: row;
+  }
+
+}
+
+@media all and ( max-width: 960px ) {
+
+  .lg {
+    flex-direction: row;
+  }
+
+}

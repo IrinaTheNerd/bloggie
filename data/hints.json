@@ -1,0 +1,28 @@
+{
+	"tips": [
+{
+	"title":"Title",
+	"info":"Your title should contain the essence of your topic"
+}
+],
+
+"sb": [
+{
+	"title":"Subtitle",
+	"info":"This is a rather quick overview or and eye-catching line"
+}
+],
+
+"body-text": [
+{
+	"title":"Main text",
+	"info":"Make sure that most important information is on top of the page, it's valuable and consice"
+}
+],
+"preview": [
+{
+	"title":"Preview",
+	"info":"That’s a preview to your post, little preview that will be shown first"
+}
+]
+}

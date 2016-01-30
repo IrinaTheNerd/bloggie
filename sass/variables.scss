@@ -1,0 +1,37 @@
+//variables
+
+
+//colour
+$white: #fff;
+$lblue: #e4ebeb;
+$blue: #01579b;
+$pink: #ad1457;
+$green: #006064;
+$black: #3d3c3c;
+
+
+//typography
+
+//main body text
+@font-face {
+    font-family: 'arconregular';
+    src: url('../fonts/arcon-regular-webfont.eot');
+    src: url('../fonts/arcon-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/arcon-regular-webfont.woff2') format('woff2'),
+         url('../fonts/arcon-regular-webfont.woff') format('woff'),
+         url('../fonts/arcon-regular-webfont.ttf') format('truetype'),
+         url('../fonts/arcon-regular-webfont.svg#arconregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+$main: 'arconregular';
+
+
+//headings and important type
+$heading: "museo-sans-rounded",sans-serif;
+
+//font sizes
+$norm: 1.2em;
+$h-size: 1.75em;
+$s-zise: 1.5em;
