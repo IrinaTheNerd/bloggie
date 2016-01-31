@@ -24,7 +24,7 @@ section, hg, header, nav, footer, .container {
 /* column */
 .col {
 	display: block;
-	float:left; 
+	float:left;
 	margin: 1% 0 1% 0.6%;
 }
 .col:first-child { margin-left: 0; }
@@ -78,7 +78,7 @@ section, hg, header, nav, footer, .container {
   	width: 6.866%;
 }
 
-/*typography generated with font-squirrel, opes source license.*/
+/*typography generated with font-squirrel, opes source license.*
 @font-face {
     font-family: 'arconregular';
     src: url('../fonts/arcon-regular-webfont.eot');
@@ -92,7 +92,7 @@ section, hg, header, nav, footer, .container {
 
 }
 
-/*Icons taken from http://fontello.com/ in open source lisence*/
+/*Icons taken from http://fontello.com/ in open source lisence
 @font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello.eot?6498180');
@@ -113,43 +113,43 @@ section, hg, header, nav, footer, .container {
   }
 }
 */
- 
+
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
- 
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
- 
+
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
+
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
- 
+
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
- 
+
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
- 
+
+
 .icon-facebook-circled:before { content: '\e800'; } /* '' */
 .icon-twitter-circled:before { content: '\e801'; } /* '' */
 .icon-googleplus-rect:before { content: '\e802'; } /* '' */
@@ -162,14 +162,21 @@ section, hg, header, nav, footer, .container {
 	font-size: 2em;
 }
 body {
-	font-family: 'arconregular';
+	font-family: 'Lato', sans-serif;
 	color: #3d3c3c;
 	font-size: 1.2em;
+}
+b {
+	font-style: bold;
+	font-weight: 700;
+}
+i {
+	font-style: italic;
 }
 section {
 	min-height: 30vh;
 	overflow: auto;
-	
+
 }
 .new-post {
 	padding-bottom: 1em;
@@ -196,9 +203,7 @@ header {
 	/*box-shadow: -5px 5px 20px -5px #006064;*/
 }
 .inputs {
-	border: 2px solid #006064;
 	padding:3%;
-	background: #e4ebeb;
 	margin-bottom: 5em;
 }
 .inputs h3{
@@ -214,20 +219,24 @@ header {
 	margin: 2em 0;
 }
 .inputs input[type=submit]:hover {
-	border: 2px solid #006064;
+	border: 2px solid #ad1457;
 	padding:1em 2em;
 	background: transparent;
 	color: #006064;
 	transition: 1s all;
 }
-input[type="text"],input[type="password"] {
+input[type="text"],input[type="password"],textarea {
 	min-height:2em;
 	max-height: 6em;
+	border: 1px solid #DDD;
+	margin: 1em 0;
 }
 textarea {
 	min-height: 8em;
 }
-
+.auto {
+	margin:0 auto;
+}
 .intro {
 	background: #fff;
 }
@@ -346,7 +355,7 @@ ul .slider li {
 footer .button {
 	padding: 1em 3em;
 	background: #006064;
-	color: #fff; 
+	color: #fff;
 }
 footer .button:hover {
 	border: 2px solid #e4ebeb;
@@ -368,12 +377,12 @@ article {
 	height: 20vh;
     padding: 3em 0;
     margin: auto;
-    
+
 }
 article > h2 {
 	color: #ad1457;
 	text-align: center;
-	font-size:2.75em; 
+	font-size:2.75em;
 }
 h1.main {
 	font-size: 3.2em;
@@ -484,22 +493,22 @@ section.feat:nth-last-of-type(1){
 }
 /*Animations*/
 .pulse {
-   -webkit-animation-duration: 1s; 
-    animation-duration: 1s; 
-    -webkit-animation-fill-mode: both; 
-    animation-fill-mode: both; 
-} 
-
-@-webkit-keyframes pulse { 
-    0% { -webkit-transform: scale(1); } 
-    50% { -webkit-transform: scale(1.05); } 
-    100% { -webkit-transform: scale(1); } 
+   -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
-@keyframes pulse { 
-    0% { transform: scale(1); } 
-    50% { transform: scale(1.1); } 
-    100% { transform: scale(1); } 
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.05); }
+    100% { -webkit-transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 /*section content */
@@ -518,7 +527,7 @@ footer {
 @media screen and (max-width: 1100px) {
 
 	article > h2 {
-		font-size:1.5em; 
+		font-size:1.5em;
 	}
 	.main {
 		font-size:2em;
@@ -541,7 +550,7 @@ footer {
 		width:97%;
 		height:4em;
 	}
-	
+
 /*responsive forms*/
 	.inputs {
 		border: none;
@@ -551,6 +560,7 @@ footer {
 		width: 90%;
 		min-height: 2em;
 		margin: auto 5%;
+		border: 1px solid #DDD;
 	}
 
 	/*specific grid solutions*/
@@ -587,11 +597,11 @@ footer {
 	}
 
 	/*New post*/
-	
+
 	/*generic setting for all grid*/
 	.col {  margin: 1% 0 1% 0%; }
-    
-    .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, 
+
+    .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12,
     .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
     		width: 100%;
     }

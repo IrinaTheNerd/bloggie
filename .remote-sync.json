@@ -2,13 +2,13 @@
   "uploadOnSave": false,
   "deleteLocal": false,
   "hostname": "server194.web-hosting.com",
-  "port": "21098",
-  "target": "/bloggie",
+  "port": "21",
+  "target": "/home/irinnlso/public_html/bloggie",
   "ignore": [
     ".remote-sync.json",
     ".git/**"
   ],
   "username": "irinnlso",
-  "passphrase": "HEWLf_hSdJ_nW",
-  "transport": "scp"
+  "transport": "ftp",
+  "password": "HEWLf_hSdJ_nW"
 }

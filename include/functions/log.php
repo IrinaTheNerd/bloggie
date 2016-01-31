@@ -8,22 +8,22 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // prepare sql and bind parameters
-    $stmt = $conn->prepare("INSERT INTO users (email, password)
-    VALUES (:email, :password)");
+    $stmt = $conn->prepare("SELECT * from users WHERE email = :email LIMIT 1");
+
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':password', $password);
 
 
     // insert a row
-    $email = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
     $password = md5($password);
-    $stmt->execute(); 
- header('Location: ../../login.php');
-    }
+    $stmt->execute();
+  }
 catch(PDOException $e)
     {
     echo "Error: " . $e->getMessage();
     }
+
 $conn = null;
 ?>
