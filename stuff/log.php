@@ -1,7 +1,7 @@
 <?php
 include_once('../../php/config.php');
 
-
+/*
 try {
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $pass);
     // set the PDO error mode to exception
@@ -9,11 +9,7 @@ try {
 
     // prepare sql and bind parameters
     $stmt = $conn->prepare("SELECT * from users WHERE email = :email LIMIT 1");
-
-    $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':password', $password);
-
-
+    if()
     // insert a row
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -25,5 +21,25 @@ catch(PDOException $e)
     echo "Error: " . $e->getMessage();
     }
 
-$conn = null;
+$conn = null;*/
+
+
+	if($user->loggedin()!="")
+	{
+	 $user->redirect('dashboard.php');
+	}
+	if(isset($_POST['login_button']))
+	{
+		$email = $_POST['email'];
+		$pass = $_POST['password'];
+		if($user->login($email,$pass))
+		{
+		 $user->redirect('dashboard.php');
+		}
+		else
+		{
+		 $error = "Wrong Details !";
+		}
+	}
+  
 ?>

@@ -6,23 +6,23 @@ include_once('/include/header.php');
 ?>
 				<header id="header">
 					<div class="feat span_12_of_12">
-				
+
 						<div class="col span_4_of_12">
 							<img src="img/logov2.png" alt="bloggie, a friendly blogging platform">
 						</div>
-				
+
 						<div class="col span_5_of_12">
 							<h1 class="main absolute top">
 							 a friendly blogging platform</h1>
 						</div>
-					
-						
+
+
 				</div>
-				
+
 			</header>
 
 			<div class="container">
-				<article> 
+				<article>
 					<h2>Write well structured and adapted content for all platforms</h2>
 				</article>
 				<div class="blue span_12_of_12">
@@ -39,7 +39,7 @@ include_once('/include/header.php');
 						</div>
 						<div class="box bg col span_4_of_12 wow slideInRight" data-wow-duration="1s" data-wow-delay="2s">
 							<h3>Responsive</h3>
-							<p>It's lightweight and responsive, you can write on the go, or read from your tablet. 
+							<p>It's lightweight and responsive, you can write on the go, or read from your tablet.
 							</p>
 						</div>
 					</div>
@@ -53,7 +53,7 @@ include_once('/include/header.php');
 					    <div class="col span_4_of_12">
 					 		<!--<input type="radio" id="testimony1" name="slide" checked>
 					 		<label for="testimony1"></label>-->
-					        
+
 					        <img src="img/testim-one.gif" alt="Jane Doe">
 					        <p>This is an amazing platform</p>
 
@@ -71,11 +71,11 @@ include_once('/include/header.php');
 					        <p>There are three of me</p>
 					    </div>
 
-					
+
 					</ul>
 				</div>
 			</section>
-	
+
 	<?php
 include_once('include/footer.php');
 ?>

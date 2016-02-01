@@ -1,13 +1,29 @@
 <?php
-include_once('/include/header.php')
+include_once('php/config.php');
+
+define("PAGENAME","dashboard");
+include_once('include/header.php');
+$user = new USER($conn);
+require_once("include/session.php");
+
+if(!$user->loggedin())
+{
+	$user->redirect('login.php');
+ //echo 'hi';
+}
+$userID = $_SESSION['user_session'];
+$stmt = $conn->prepare("SELECT * FROM users WHERE userID=:userID");
+$stmt->execute(array(":userID"=>$userID));
+$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 ?>
-	
+
 				<header>
 					<div class="feat span_8_of_12">
 						<h1 class="dashboard">Hello, Username!</h1>
 
 						<div class="dashboard">
 							<h2>Create catching content with a press of a button, take advantage of our guides to help you write and plan your content, delivery and further strategy. Keep in touch with other writers, share your opinions and add to our knowledge base.</h2>
+							<h3><a href="logout.php?logout=true">&nbsp;Sign Out</a></h3>
 						</div>
 					</div>
 				</header>
