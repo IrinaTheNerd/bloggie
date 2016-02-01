@@ -10,7 +10,7 @@
 			<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>-->
 			<link href="css/style.css" rel="stylesheet" type="text/css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!--	<link rel="stylesheet"  type="text/css" href="dist/ui/trumbowyg.css">-->
+		  <link rel="stylesheet"  type="text/css" href="dist/ui/trumbowyg.css">
 		</head>
 		<body>
 

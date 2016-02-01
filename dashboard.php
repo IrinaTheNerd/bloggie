@@ -28,7 +28,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 					</div>
 				</header>
 				<section class="feat span_10_of_12">
-					<a href="new_post.html" class="col box board span_6_of_12">
+					<a href="new_post.php" class="col box board span_6_of_12">
 						<div class="tile col span_5_of_12">
 							<span class="icon-doc-new-circled"></span>
 						</div>
