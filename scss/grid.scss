@@ -1,0 +1,20 @@
+//Grid mixin, done with responsivegrid.com and
+//http://thesassway.com/intermediate/simple-grid-mixins
+
+@mixin row() {
+  font-size: 0;
+  float:left;
+  display:block;
+  overflow: hidden;
+  clear:both;
+}
+
+@mixin col($col, $sum, $gap:0.6%, $align:top, $first:false) {
+  width:percentage($col/$sum);
+  font-size: inherit;
+  float:left;
+  display: inline-block;
+  vertical-align: $align;
+  box-sizing: border-box;
+  padding: 1% 0 1% if($first, 0, $gap);
+}

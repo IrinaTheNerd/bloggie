@@ -1,0 +1,59 @@
+//defaults
+body {
+  font-family: $text-font;
+  color: $gray;
+  font-size: 1.2em;
+}
+
+b {
+  font-style: bold;
+  font-weight: $bold-font;
+}
+
+i {
+  font-style: italic;
+}
+
+//typography
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $heading-font;
+}
+
+h1 {
+  font-weight: 900;
+  color: $blue;
+}
+
+h2 {
+  font-weight: 900;
+  color: $pink;
+}
+
+h3 {
+  color: $green;
+}
+
+p {
+  padding: 1.25em;
+}
+
+
+//links
+
+a {
+  color: $blue;
+  text-decoration: none;
+  &:hover {
+    color: $pink;
+    text-decoration: underline;
+    transition: all 1s;
+  }
+}
+//helpers
+.hidden {
+  display: none;
+}

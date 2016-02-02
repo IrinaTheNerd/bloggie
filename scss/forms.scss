@@ -1,0 +1,30 @@
+//forms
+
+.inputs {
+input[type=submit] {
+	border: 2px solid #ad1457;
+	background: #ad1457;
+	padding:1em 2em;
+	color: #e4ebeb;
+	font-size: 0.75em;
+	margin: 2em 0;
+  &:hover {
+    border: 2px solid #ad1457;
+    padding:1em 2em;
+    background: transparent;
+    color: #006064;
+    transition: 1s all;
+
+  }
+}
+
+  input[type="text"],input[type="password"],textarea {
+  	min-height:2em;
+  	max-height: 6em;
+  	border: 1px solid #DDD;
+  	margin: 1em 0;
+  }
+  textarea {
+  	min-height: 8em;
+  }
+}

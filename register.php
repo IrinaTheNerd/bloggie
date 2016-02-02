@@ -2,6 +2,7 @@
 include_once('php/config.php');
 define("PAGENAME","Register");
 include_once('/include/header.php');
+	$user = new USER($conn);
 if($user->loggedin()!="")
 {
     $user->redirect('dashboard.php');

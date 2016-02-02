@@ -1,0 +1,51 @@
+//nav
+
+nav {
+  padding:1% 0;
+  clear: both;
+  overflow: hidden;
+  @include row();
+  @include col(1,1);
+  .first {
+    @include col(2,3,$first:true);
+  }
+  a {
+    font-size: 0.9em;
+  }
+  form {
+    background-color: $post-bg;
+    outline: $post-bg;
+    width:auto;
+    padding:.25em;
+    input[type=search] {
+    	width:82%;
+    	border: 1px solid $post-bg;
+    	height: 2.5em;
+    }
+    input:focus {
+    	border: none;
+    	outline: none;
+    }
+    input[type=submit] {
+    	background-color: $post-bg;
+    	color: $blue;
+      
+    	font-size: 0.6em;
+    	height: 3em;
+    	width: 5em;
+
+      &:hover {
+      	background: $blue;
+      	color: $white;
+      	transition: 1s all;
+      }
+    }
+  }
+  .middle {
+    @include col(1,12);
+    text-align:center;
+  }
+  .last {
+    @include col(1,3);
+  }
+}

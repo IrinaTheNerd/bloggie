@@ -1,0 +1,14 @@
+//normalise taken from https://github.com/JohnAlbin/normalize-scss
+@import 'normalize/variables';
+@import 'normalize/vertical-rhythm';
+@import 'normalize/normalize-mixin';
+
+@import 'variables';
+@import 'grid';
+@import 'defaults';
+@import 'nav';
+@import 'forms';
+//debate whether usage of webfonts is detabatble
+//http://www.creativenightly.com/2015/02/Optimising-Typekit-for-mobile-devices/
+//https://varvy.com/pagespeed/web-font-options.html
+//navigation

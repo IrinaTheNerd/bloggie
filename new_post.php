@@ -2,6 +2,19 @@
 include_once('php/config.php');
 define("PAGENAME","Create New");
 include_once('/include/header.php');
+$user = new USER($conn);
+require_once("include/session.php");
+
+if(!$user->loggedin())
+{
+	$user->redirect('login.php');
+ //echo 'hi';
+}
+$userID = $_SESSION['user_session'];
+$stmt = $conn->prepare("SELECT * FROM users WHERE userID=:userID");
+$stmt->execute(array(":userID"=>$userID));
+$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+
 
 ?>
 
