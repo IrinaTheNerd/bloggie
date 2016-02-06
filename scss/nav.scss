@@ -6,6 +6,15 @@ nav {
   overflow: hidden;
   @include row();
   @include col(1,1);
+  .button {
+   border:2px solid $pink;
+   color: $pink;
+   &:hover {
+     background: $pink;
+     color: $post-bg;
+     transition: all 1s;
+   }
+  }
   .first {
     @include col(2,3,$first:true);
   }
@@ -29,17 +38,17 @@ nav {
     input[type=submit] {
     	background-color: $post-bg;
     	color: $blue;
-      
     	font-size: 0.6em;
     	height: 3em;
     	width: 5em;
-
+      border:none;
       &:hover {
       	background: $blue;
       	color: $white;
       	transition: 1s all;
       }
     }
+
   }
   .middle {
     @include col(1,12);

@@ -1,0 +1,66 @@
+.dashboard {
+	padding-top:2em;
+	text-align: left;
+	h2 {
+		font-size: 1.2em;
+		color: $pink;
+	}
+}
+h1.dashboard {
+	font-size: 1.8em;
+	color:$blue;
+}
+
+/*dashboard stuff*/
+.tile {
+	span{
+		font-size: 11em;
+	}
+	h3 {
+		margin-top: 2.45em;
+	  font-size: 2em;
+	}
+}
+/*Box property*/
+.box {
+	padding-bottom: 3em;
+  box-shadow: -1px 3px 10px -5px #006064;
+  margin-bottom: 6em;
+  height: 9em;
+    /*comments*/
+		  > h3 {
+			font-size: 1.9em;
+			color: #01579b;
+			font-weight: 500;
+			padding: 1em 0;
+		}
+}
+
+.feat {
+	margin: 1em auto;
+	text-align: center;
+}
+.post {
+	.feat {
+		margin-top: 0.5em;
+		margin-bottom: 0;
+		.box {
+			margin-bottom: 0.5em;
+			text-align: left;
+			> h3 {
+				padding-left:0.5em;
+			}
+		}
+	}
+}
+
+
+.board{
+	display: block;
+	background: #006064;
+
+	&:hover {
+		background: #ad1457;
+		transition: 1s all;
+	}
+}

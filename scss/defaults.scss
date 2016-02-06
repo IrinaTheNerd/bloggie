@@ -3,6 +3,7 @@ body {
   font-family: $text-font;
   color: $gray;
   font-size: 1.2em;
+  margin: 0;
 }
 
 b {
@@ -52,8 +53,94 @@ a {
     text-decoration: underline;
     transition: all 1s;
   }
+  .tile {
+  	color: $white;
+  }
+}
+//default elements
+header {
+	margin: 2em 0 2em 0;
+	max-height: 60vh;
+	min-height: 10vh;
+	/*box-shadow: -5px 5px 20px -5px #006064;*/
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  @include row();
+  @include col(1,1);
+}
+hg, .container {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+section {
+	min-height: 30vh;
+	overflow: auto;
+  @include row();
+  @include col(1,1);
+  .feat {
+  	margin: -2em auto;
+    :nth-last-of-type(1){
+  	margin-bottom: 2em;
+    }
+  }
+}
+article {
+	height: 20vh;
+  padding: 3em 0;
+  margin: auto;
+  > h2 {
+  	color: $pink;
+  	text-align: center;
+  	font-size:2.75em;
+  }
 }
 //helpers
 .hidden {
   display: none;
+}
+.absolute {
+	position: absolute;
+}
+.relative {
+	position: relative;
+}
+.bottom-margin {
+	margin-bottom: 10em;
+}
+.bg {
+	background: $post-bg;
+}
+.auto {
+	margin:0 auto;
+}
+.blue {
+	background:$white;
+	overflow:hidden;
+}
+.transition {
+	background: $blue;
+	transition: 1s all;
+}
+.margins {
+	margin: 1em 0 2em;
+}
+//buttons
+.button {
+	padding: 0.25em 1em;
+	border: 2px solid transparent;
+	text-decoration: none;
+}
+.top {
+	top: 4.75em;
+}
+.logo {
+	padding-left: 2%;
+}
+.image {
+	background: url('../img/landing-img.jpg') no-repeat center center;
+	overflow: auto;
+	background-size: cover;
 }

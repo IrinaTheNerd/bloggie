@@ -1,0 +1,15 @@
+/*Prototype style*/
+
+/*Responsive grid calculated with http://www.responsivegridsystem.com opes source lisence*/
+
+.icon-facebook-circled:before { content: '\e800'; } /* '' */
+.icon-twitter-circled:before { content: '\e801'; } /* '' */
+.icon-googleplus-rect:before { content: '\e802'; } /* '' */
+.icon-doc-new-circled:before { content: '\e803'; } /* '' */
+.icon-mail:before { content: '\e804'; } /* '' */
+.icon-book:before { content: '\e805'; } /* '' */
+.icon-help-circled:before { content: '\e807'; } /* '' */
+/*general setting*/
+ [class^="icon-"] {
+	font-size: 2em;
+}

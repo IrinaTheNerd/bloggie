@@ -1,0 +1,27 @@
+//footer
+
+footer{
+  background: $gray;
+  min-height: 15em;
+  color: $post-bg;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  @include row();
+  @include col(1,1);
+  a {
+    color:$white;
+  }
+   .button {
+  	padding: 1em 3em;
+  	background: $green;
+  	color: $white;
+
+    &:hover {
+    	border: 2px solid $post-bg;
+    	background: transparent;
+    	color: $post-bg;
+    	transition: all 1s;
+    }
+  }
+}
