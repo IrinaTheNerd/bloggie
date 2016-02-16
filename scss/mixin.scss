@@ -1,0 +1,7 @@
+//extra mixin development
+//central positioning mixin
+@mixin centr() {
+  margin:0 auto;
+  display:block;
+  float:none;  
+}

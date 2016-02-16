@@ -220,7 +220,10 @@ nav {
 
 .inputs {
   padding: 3%;
-  margin-bottom: 5em; }
+  margin-bottom: 5em;
+  border: 2px solid #006064;
+  padding: 3%;
+  background: #e4ebeb; }
   .inputs h3 {
     color: #006064;
     font-weight: 900; }
@@ -366,7 +369,7 @@ h1.dashboard {
 h1.main {
   font-size: 3.2em; }
 
-/*Animations*/
+/*Animations mixin!!!!!*/
 .pulse {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -512,9 +515,9 @@ header .feat .last {
     vertical-align: top;
     box-sizing: border-box;
     padding: 1% 0 1% 0.6%;
-    margin: auto;
-    float: none;
+    margin: 0 auto;
     display: block;
+    float: none;
     padding: 0; }
     .blue .first .middle {
       width: 29.62963%;
@@ -572,5 +575,106 @@ header .feat .last {
       float: none;
       display: inline-block;
       overflow: auto; }
+
+.intro {
+  float: left;
+  display: block;
+  overflow: hidden;
+  clear: both;
+  width: 75%;
+  font-size: inherit;
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 1% 0 1% 0;
+  margin: 0 auto;
+  display: block;
+  float: none; }
+
+.bottom-margin {
+  width: 33.33333%;
+  font-size: inherit;
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 1% 0 1% 0;
+  margin: 0 auto;
+  display: block;
+  float: none; }
+  .bottom-margin .inputs .first {
+    width: 33.33333%;
+    font-size: inherit;
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 1% 0 1% 0;
+    margin: 0 auto;
+    display: block;
+    float: none; }
+  .bottom-margin .middle {
+    width: 12.5%;
+    font-size: inherit;
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 1% 0 1% 0.6%;
+    float: none;
+    margin: 0; }
+  .bottom-margin .col {
+    width: 100%;
+    font-size: inherit;
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 1% 0 1% 0.6%;
+    margin: 0; }
+
+.post {
+  float: left;
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  .post .box {
+    padding-top: 1%;
+    width: 91.66667%;
+    font-size: inherit;
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 1% 0 1% 0.6%;
+    margin: 0 auto;
+    display: block;
+    float: none;
+    margin-top: 1em; }
+    .post .box:nth-child(1) {
+      width: 91.66667%;
+      font-size: inherit;
+      float: left;
+      display: inline-block;
+      vertical-align: top;
+      box-sizing: border-box;
+      padding: 1% 0 1% 0;
+      margin: 0 auto;
+      display: block;
+      float: none; }
+    .post .box:nth-last-child(1) {
+      width: 91.66667%;
+      font-size: inherit;
+      float: left;
+      display: inline-block;
+      vertical-align: top;
+      box-sizing: border-box;
+      padding: 1% 0 1% 0.6%;
+      margin: 0 auto;
+      display: block;
+      float: none;
+      margin-top: 1em;
+      margin-bottom: 3em; }
 
 /*# sourceMappingURL=import.css.map */

@@ -1,0 +1,28 @@
+//login and register pages markup
+.intro {
+  @include row();
+  @include col(3,4,$first:true);
+  @include centr();
+}
+
+//exend didn't work
+ .bottom-margin {
+
+    @include col(1,3,$first:true);
+    @include centr();
+
+    .inputs .first {
+      @include col(1,3,$first:true);
+      @include centr(); 
+    }
+
+    .middle {
+      @include col(1,8);
+      float:none;
+      margin:0;
+    }
+    .col {
+      @include col(1,1);
+      margin:0;
+    }
+  }

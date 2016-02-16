@@ -24,9 +24,7 @@ header {
   margin-bottom:2em;
   .first{
     @include col(11,12);
-    margin: auto;
-    float: none;
-    display: block;
+    @include centr();
     padding: 0;
     .middle {
       @include col(8,27);

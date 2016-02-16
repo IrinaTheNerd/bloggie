@@ -4,17 +4,19 @@
 @import 'normalize/normalize-mixin';
 
 @import 'variables';
-@import 'grid';
-@import 'defaults';
-@import 'nav';
+@import 'grid'; //grid mixin
+@import 'mixin';
+@import 'defaults'; //default styles
+@import 'nav'; //navigation
 @import 'forms';
 @import 'footer';
 @import 'dashboard';
-@import 'middle_sections';
+@import 'middle_sections'; // other stuff, like container
 @import 'fonts';
-@import 'index_content';
+@import 'index_content'; //index page content
 @import 'slider';
-@import 'content-slider';
+@import 'login-reg'; //login and register pages
+@import 'all-posts'; //all posts page
 //responsive stuff
 //@import 'tablet';
 //debate whether usage of webfonts is detabatble
