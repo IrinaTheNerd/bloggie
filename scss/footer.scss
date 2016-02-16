@@ -9,6 +9,18 @@ footer{
   overflow: hidden;
   @include row();
   @include col(1,1);
+  .feat {
+    @include col(1,1);
+  }
+  .social {
+    @include col(1,4);
+    img {
+      width:inherit;
+    }
+  }
+  .last {
+    @include col(1,1);
+  }
   a {
     color:$white;
   }

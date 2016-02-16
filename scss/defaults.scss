@@ -42,7 +42,10 @@ p {
   padding: 1.25em;
 }
 
+img {
+  width:100%;
 
+}
 //links
 
 a {
@@ -60,8 +63,7 @@ a {
 //default elements
 header {
 	margin: 2em 0 2em 0;
-	max-height: 60vh;
-	min-height: 10vh;
+
 	/*box-shadow: -5px 5px 20px -5px #006064;*/
   padding: 0px;
   margin: 0px;
@@ -88,13 +90,13 @@ section {
   }
 }
 article {
-	height: 20vh;
   padding: 3em 0;
   margin: auto;
   > h2 {
   	color: $pink;
   	text-align: center;
-  	font-size:2.75em;
+  	font-size:2.5em;
+    padding:0 1%;
   }
 }
 //helpers

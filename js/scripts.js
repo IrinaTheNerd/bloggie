@@ -1,13 +1,13 @@
 //jquery
 $(document).ready(function(){
-	//responsiveness 
-		if ($(window).width() >= 1100) {	
-			$("#header").addClass("image");
+	//responsiveness
+		if ($(window).width() >= 1100) {
+			$("#index").addClass("image");
 
 		}
 		else {
 			$(".main").removeClass("absolute");
-			$("#header").removeClass("image");
+			$("#index").removeClass("image");
 		}
 		//remove value
 		$("input[type=search]").focus(function(){
@@ -23,7 +23,7 @@ $(document).ready(function(){
 
    		 });
 
-   		 
+
    		 //fancy pulsing on hover need to specify classes better
    		$("a.board").hover(function(){
    		 	$(".tile h3").addClass("pulse");
@@ -53,7 +53,7 @@ function addTips(){
     });
   }
 
-addTips(); 
+addTips();
 
 $(".new-post").on('click', '.icon-help-circled', function(e) {
 	e.preventDefault();
@@ -68,6 +68,5 @@ $(".new-post").on('click', '.icon-help-circled', function(e) {
 
 });
 });
-   		 
-	});
 
+	});

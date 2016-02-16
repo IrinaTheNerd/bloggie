@@ -17,6 +17,9 @@ nav {
   }
   .first {
     @include col(2,3,$first:true);
+    img {
+      width:inherit;
+    }
   }
   a {
     font-size: 0.9em;

@@ -1,0 +1,73 @@
+//middle header
+header {
+  .feat {
+    .first {
+      @include col(1,1);
+    }
+    .middle {
+      @include row();
+      @include col(1,4,$first:true);
+    }
+    .last {
+      @include col(3,4);
+    }
+  }
+}
+.container {
+  @include row();
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+.blue {
+  margin-bottom:2em;
+  .first{
+    @include col(11,12);
+    margin: auto;
+    float: none;
+    display: block;
+    padding: 0;
+    .middle {
+      @include col(8,27);
+      margin:auto 1.75%;
+      &:nth-last-child(1) {
+        padding-bottom:33px; //since not enough content
+      }
+    }
+  }
+}
+
+//need to re-do, ugly
+
+/*section content */
+#testimonials {
+	background: $green;
+	color: $white;
+  padding:0;
+  margin:0;
+  width:100%;
+  .first {
+    @include col(4,6, $first:true);
+    vertical-align: none;
+    padding: 0;
+    float: none;
+    margin-top:1em;
+    display: block;
+    overflow: auto;
+  }
+    .middle {
+      @include col(1,3);
+      padding:0;
+      margin:0;
+
+      &:nth-child(1){
+        @include col(1,3, $first:true);
+        vertical-align: none;
+        padding: 0;
+        float: none;
+        display: inline-block;
+        overflow: auto;
+      }
+    }
+  }

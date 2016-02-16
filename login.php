@@ -27,14 +27,14 @@
 ?>
 
 				<header>
-					<div class="feat span_4_of_12">
-						<h1 class="main absolute">Please, log in</h1>
+					<div class="feat">
+						<h1>Please, log in</h1>
 					</div>
 
 
 			</header>
-			<section class="intro span_12_of_12">
-				<div class="feat span_8_of_12">
+			<section class="intro container">
+				<div class="feat">
 					<h2>Welcome back! Just login though our services or alternatively login through one of our social media integrations</h2>
 				</div>
 			</section>
