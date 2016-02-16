@@ -1,6 +1,12 @@
+//dashboard
+
 .dashboard {
 	padding-top:2em;
 	text-align: left;
+	@include row();
+	@include col(10,11,$first:true);
+	@include centr();
+
 	h2 {
 		font-size: 1.2em;
 		color: $pink;
@@ -19,6 +25,11 @@ h1.dashboard {
 	h3 {
 		margin-top: 2.45em;
 	  font-size: 2em;
+			color:$white;
+
+	}
+	&:hover {
+		color:$green;
 	}
 }
 /*Box property*/

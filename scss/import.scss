@@ -5,7 +5,7 @@
 
 @import 'variables';
 @import 'grid'; //grid mixin
-@import 'mixin';
+@import 'mixin'; // creating mixins from classes that are constantly used
 @import 'defaults'; //default styles
 @import 'nav'; //navigation
 @import 'forms';

@@ -18,7 +18,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
 				<header>
-					<div class="feat span_8_of_12">
+					<div class="feat">
 						<h1 class="dashboard">Hello, Username!</h1>
 
 						<div class="dashboard">
@@ -27,7 +27,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 						</div>
 					</div>
 				</header>
-				<section class="feat span_10_of_12">
+				<div class="feat dashboard">
 					<a href="new_post.php" class="col box board span_6_of_12">
 						<div class="tile col span_5_of_12">
 							<span class="icon-doc-new-circled"></span>
@@ -36,7 +36,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 							<h3>Write new..</h3>
 						</div>
 					</a>
-				<a href="#" class="col box board tile span_6_of_12">
+				<a href="#" class="col box board span_6_of_12">
 					<div class="tile col span_5_of_12">
 						<span class="icon-help-circled"></span>
 					</div>
@@ -44,8 +44,8 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 						<h3>Tips</h3>
 					</div>
 				</a>
-			</section>
-			<section class="feat span_10_of_12">
+			</div>
+			<div class="feat dashboard">
 				<a href="mailto:hello@irinapetrova.uk" class="col box board span_6_of_12">
 					<div class="tile col span_5_of_12">
 						<span class="icon-mail"></span>
@@ -62,7 +62,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 						<h3>View all posts</h3>
 					</div>
 				</a>
-			</section>
+			</div>
 	<?php
 include_once('include/footer.php');
 ?>

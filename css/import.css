@@ -113,9 +113,6 @@ article {
 .bg {
   background: #e4ebeb; }
 
-.auto {
-  margin: 0 auto; }
-
 .blue {
   background: #fff;
   overflow: hidden; }
@@ -307,7 +304,21 @@ footer {
 
 .dashboard {
   padding-top: 2em;
-  text-align: left; }
+  text-align: left;
+  float: left;
+  display: block;
+  overflow: hidden;
+  clear: both;
+  width: 90.90909%;
+  font-size: inherit;
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 1% 0 1% 0;
+  margin: 0 auto;
+  display: block;
+  float: none; }
   .dashboard h2 {
     font-size: 1.2em;
     color: #ad1457; }
@@ -321,7 +332,10 @@ h1.dashboard {
   font-size: 11em; }
 .tile h3 {
   margin-top: 2.45em;
-  font-size: 2em; }
+  font-size: 2em;
+  color: #fff; }
+.tile:hover {
+  color: #006064; }
 
 /*Box property*/
 .box {
