@@ -3,7 +3,7 @@ include_once('php/config.php');
 
 define("PAGENAME","dashboard");
 include_once('include/header.php');
-/*
+
 $user = new USER($conn);
 require_once("include/session.php");
 
@@ -15,7 +15,7 @@ if(!$user->loggedin())
 $userID = $_SESSION['user_session'];
 $stmt = $conn->prepare("SELECT * FROM users WHERE userID=:userID");
 $stmt->execute(array(":userID"=>$userID));
-$userRow=$stmt->fetch(PDO::FETCH_ASSOC);*/
+$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
 				<header>
