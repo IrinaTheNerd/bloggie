@@ -30,7 +30,7 @@ header {
       @include col(8,27);
       margin:auto 1.75%;
       &:nth-last-child(1) {
-        padding-bottom:33px; //since not enough content
+        padding-bottom:13px; //since not enough content
       }
     }
   }
