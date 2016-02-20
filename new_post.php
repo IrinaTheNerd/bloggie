@@ -1,7 +1,7 @@
 <?php
 include_once('php/config.php');
 define("PAGENAME","Create New");
-include_once('/include/header.php');
+include_once('include/header.php');
 $user = new USER($conn);
 require_once("include/session.php");
 

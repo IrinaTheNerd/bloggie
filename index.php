@@ -1,7 +1,7 @@
 <?php
 include_once('php/config.php');
 define("PAGENAME","Blogging platform");
-include_once('/include/header.php');
+include_once('include/header.php');
 
 ?>
 				<header id="index">

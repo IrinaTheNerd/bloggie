@@ -1,7 +1,7 @@
 <?php
 	include_once('php/config.php');
 	define("PAGENAME","Latest Posts");
-	include_once('/include/header.php');
+	include_once('include/header.php');
 ?>
 					<div class="post">
 						<div class="feat span_10_of_12">

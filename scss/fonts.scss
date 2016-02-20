@@ -1,5 +1,6 @@
 
 /*Icons taken from http://fontello.com/ in open source lisence*/
+
 @font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello.eot?6498180');
@@ -10,6 +11,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
+
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
@@ -55,17 +58,14 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-
- 
-
-.icon-facebook-circled:before { content: '\e800'; } /* '' */
-.icon-twitter-circled:before { content: '\e801'; } /* '' */
-.icon-googleplus-rect:before { content: '\e802'; } /* '' */
-.icon-doc-new-circled:before { content: '\e803'; } /* '' */
-.icon-mail:before { content: '\e804'; } /* '' */
-.icon-book:before { content: '\e805'; } /* '' */
-.icon-help-circled:before { content: '\e807'; } /* '' */
+.icon-facebook-circled:before { content: '\e800'; }
+.icon-twitter-circled:before { content: '\e801'; }
+.icon-googleplus-rect:before { content: '\e802'; }
+.icon-doc-new-circled:before { content: '\e803'; }
+.icon-mail:before { content: '\e804'; }
+.icon-book:before { content: '\e805'; }
+.icon-help-circled:before { content: '\e807'; }
 /*general setting*/
  [class^="icon-"] {
-	font-size: 2em;
+  font-size: 2em;
 }
