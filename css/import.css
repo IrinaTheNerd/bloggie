@@ -96,7 +96,7 @@ footer a { color: #fff; }
 footer .button { padding: 1em 3em; background: #006064; color: #fff; }
 footer .button:hover { border: 2px solid #e4ebeb; background: transparent; color: #e4ebeb; transition: all 1s; }
 
-.dashboard { padding-top: 2em; text-align: left; float: left; display: block; overflow: hidden; clear: both; width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; margin: 0 auto; display: block; float: none; }
+.dashboard { padding-top: 2em; text-align: left; float: left; display: block; overflow: hidden; clear: both; width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; margin: 0 auto !important; display: block; float: none; }
 @media screen and (min-width: 35.5em) { .dashboard { width: 90.90909%; vertical-align: top; } }
 .dashboard h2 { font-size: 1.2em; color: #ad1457; }
 
@@ -175,7 +175,7 @@ header .feat .last { width: 100%; font-size: inherit; float: left; display: inli
 .container { float: left; display: block; overflow: hidden; clear: both; clear: both; padding: 0px; margin: 0px; overflow: hidden; }
 
 .blue { margin-bottom: 2em; }
-.blue .first { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0.6%; margin: 0 auto; display: block; float: none; padding: 0; }
+.blue .first { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0.6%; margin: 0 auto !important; display: block; float: none; padding: 0; }
 @media screen and (min-width: 35.5em) { .blue .first { width: 91.66667%; vertical-align: top; } }
 .blue .first .middle { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0.6%; margin: auto 1.75%; }
 @media screen and (min-width: 35.5em) { .blue .first .middle { width: 29.62963%; vertical-align: top; } }
@@ -190,12 +190,12 @@ header .feat .last { width: 100%; font-size: inherit; float: left; display: inli
 #testimonials .middle:nth-child(1) { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; vertical-align: none; padding: 0; float: none; display: inline-block; overflow: auto; }
 @media screen and (min-width: 35.5em) { #testimonials .middle:nth-child(1) { width: 33.33333%; vertical-align: top; } }
 
-.intro { float: left; display: block; overflow: hidden; clear: both; width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; margin: 0 auto; display: block; float: none; }
+.intro { float: left; display: block; overflow: hidden; clear: both; width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; margin: 0 auto !important; display: block; float: none; }
 @media screen and (min-width: 35.5em) { .intro { width: 75%; vertical-align: top; } }
 
-.bottom-margin { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; margin: 0 auto; display: block; float: none; }
+.bottom-margin { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; margin: 0 auto !important; display: block; float: none; }
 @media screen and (min-width: 35.5em) { .bottom-margin { width: 33.33333%; vertical-align: top; } }
-.bottom-margin .inputs .first { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; margin: 0 auto; display: block; float: none; }
+.bottom-margin .inputs .first { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; margin: 0 auto !important; display: block; float: none; }
 @media screen and (min-width: 35.5em) { .bottom-margin .inputs .first { width: 33.33333%; vertical-align: top; } }
 .bottom-margin .middle { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0.6%; float: none; margin: 0; }
 @media screen and (min-width: 35.5em) { .bottom-margin .middle { width: 12.5%; vertical-align: top; } }
@@ -203,9 +203,20 @@ header .feat .last { width: 100%; font-size: inherit; float: left; display: inli
 @media screen and (min-width: 35.5em) { .bottom-margin .col { width: 100%; vertical-align: top; } }
 
 .post { float: left; display: block; overflow: hidden; clear: both; }
-.post .box { padding-top: 1%; width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0.6%; margin: 0 auto; display: block; float: none; margin-top: 1em; }
+.post .box { padding-top: 1%; width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0.6%; margin: 0 auto !important; display: block; float: none; margin-top: 1em; }
 @media screen and (min-width: 35.5em) { .post .box { width: 91.66667%; vertical-align: top; } }
-.post .box:nth-child(1) { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; margin: 0 auto; display: block; float: none; }
+.post .box:nth-child(1) { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; margin: 0 auto !important; display: block; float: none; }
 @media screen and (min-width: 35.5em) { .post .box:nth-child(1) { width: 91.66667%; vertical-align: top; } }
-.post .box:nth-last-child(1) { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0.6%; margin: 0 auto; display: block; float: none; margin-top: 1em; margin-bottom: 3em; }
+.post .box:nth-last-child(1) { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0.6%; margin: 0 auto !important; display: block; float: none; margin-top: 1em; margin-bottom: 3em; }
 @media screen and (min-width: 35.5em) { .post .box:nth-last-child(1) { width: 91.66667%; vertical-align: top; } }
+
+main { float: left; display: block; overflow: hidden; clear: both; width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0.6%; }
+@media screen and (min-width: 35.5em) { main { width: 100%; vertical-align: top; } }
+
+.create { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; margin: 0 auto !important; display: block; float: none; }
+@media screen and (min-width: 35.5em) { .create { width: 83.33333%; vertical-align: top; } }
+
+form .create { width: 100%; font-size: inherit; float: left; display: inline-block; box-sizing: border-box; padding: 1% 0 1% 0; margin: 0 auto !important; display: block; float: none; }
+@media screen and (min-width: 35.5em) { form .create { width: 66.66667%; vertical-align: top; } }
+form .create input { width: 100%; line-height: 20px; padding-left: 10px; }
+form .create textarea { width: 100%; height: 311px; max-width: 793px; }

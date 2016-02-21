@@ -18,8 +18,8 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
-		<div id="main" class="span_12_of_12" role="main">
-				<div class="feat span_8_of_12">
+		<main>
+				<div class="feat create">
 					<h1 class="dashboard">Create a new post</h1>
 
 					<div class="dashboard">
@@ -29,44 +29,47 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 				</div>
 
 
-			<form action="include/functions/insert.php" method="POST" class="auto inputs span_8_of_12">
+			<form action="include/functions/insert.php" method="POST" class="auto inputs create">
 
-						<div class="margins span_12_of_12">
-							<div class="span_1_of_12">
+						<div class="margins create">
+							<div class="explain">
 								<label>Title:</label>
 							</div>
-							<div class="span_12_of_12">
-									<input type="text" name="heading"  class="col span_12_of_12">
+							<div>
+							<small>Blah blah blah</small>
+									<input type="text" name="heading">
 							</div>
 						</div>
 
-						<div class="margins span_12_of_12">
-							<div class="span_1_of_12">
-								<label>Subtitle:</label>
+						<div class="margins create">
+							<div class="explain">
+								<label>Subitle:</label>
 							</div>
-							<div class="span_12_of_12">
-									<input type="text" name="subtitle"  class="col span_12_of_12">
+							<div>
+							<small>Blah blah blah</small>
+									<input type="text" name="subtitle">
 							</div>
 						</div>
-						<div class="margins span_12_of_12">
-							<div class="span_1_of_12">
-								<label>Preview:</label>
+						<div class="margins create">
+							<div class="explain">
+								<label>Summary:</label>
 							</div>
-								<div class="span_12_of_12">
-									<textarea name="preview"  class="col span_12_of_12"></textarea>
+							<div>
+							<small>Blah blah blah</small>
+									<textarea name="preview"></textarea>
 
 								</div>
 							</div>
-								<div class="margins span_12_of_12">
+								<div class="margins create">
 										<div class="simple-editor">
 						<h2>This is your main text :)</h2>
 						<p>Make sure that most important information is on top of the page, it's valuable and consice</p>
 				</div>
 			</div>
 
-					<input type="submit" class="auto feat span_12_of_12">
+					<input type="submit" class="feat create">
 			</form>
-	</div>
+	</main>
 
 
 				<?php
