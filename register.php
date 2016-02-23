@@ -1,7 +1,7 @@
 <?php
 include_once('php/config.php');
 define("PAGENAME","Register");
-include_once('include/header.php');
+include_once('/include/header.php');
 	$user = new USER($conn);
 if($user->loggedin()!="")
 {
@@ -53,17 +53,17 @@ if(isset($_POST['signup']))
 
 
 				<header>
-					<div class="feat span_6_of_12">
+					<div class="feat">
 						<h1 class="main">Please, register</h1>
 					</div>
 
 			</header>
-			<div class="intro">
-				<div class="feat span_8_of_12">
+			<section class="intro">
+				<div class="feat ">
 					<h2>Welcome back! Just login though our services or alternatively login through one of our social media integrations</h2>
 				</div>
 
-			</div>
+			</section>
 			<?php
 if(isset($error))
 {
@@ -85,33 +85,32 @@ else if(isset($_GET['joined']))
 		 <?php
 }
 ?>
-<div class="bottom-margin">
-	<form method="post" class="inputs feat first">
-			<h3>Our fancy form</h3>
-			<div class="feat">
-				<div class="feat middle">
+			<section class="bottom-margin">
+				<form method="POST" class="inputs feat first">
+						<h3>Our fancy form</h3>
+						<div class="feat">
+							<div class="feat middle">
+								<a href="#"><span class="icon-facebook-circled"></span></a>
+							</div>
+							<div class="feat middle">
+								<a href="#"><span class="icon-twitter-circled"></span></a>
+							</div>
+							<div class="feat middle">
+								<a href="#"><span class="icon-googleplus-rect"></span></a>
+							</div>
+						</div>
+						<div class="feat">
+							<label  class="feat col">email:</label>
+							<input type="text" name="email"  class="feat col">
+						</div>
+						<div class="feat">
+							<label class="feat col">password:</label>
+							<input type="password" name="password" class="feat col">
+						</div>
+						<input type="submit" value="submit" name="signup">
 
-						<a href="#"><span class="icon-facebook-circled"></span></a>
-					</div>
-					<div class="feat middle">
-						<a href="#"><span class="icon-twitter-circled"></span></a>
-					</div>
-					<div class="feat middle">
-						<a href="#"><span class="icon-googleplus-rect"></span></a>
-					</div>
-				</div>
-				<div class="feat">
-					<label  class="feat col">email:</label>
-					<input type="text" name="email"  class="feat col">
-				</div>
-				<div class="feat">
-					<label class="feat col">password:</label>
-					<input type="password" name="password" class="feat col">
-				</div>
-				<input type="submit" name="login_button" value="submit">
-
-		</form>
-	</div>
+				</form>
+			</section>
 	<?php
 include_once('include/footer.php');
 ?>

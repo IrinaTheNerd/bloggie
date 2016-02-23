@@ -15,6 +15,7 @@ class USER
   public function register($email,$password){
     try {
       $pass = password_hash($password, PASSWORD_DEFAULT); //hashing function for security
+			// LEFT JOIN userblog ON users.userID = userblog.userID
       $query = $this->db->prepare("INSERT INTO users (email, password)
       VALUES (:email, :password)");
       $query->bindParam(':email',$email);
