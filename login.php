@@ -4,7 +4,7 @@
 // include_once ('include/session.php');
 	$login = new USER($conn);
 	define("PAGENAME","Login");
-	include_once('/include/header.php');
+	include_once('include/header.php');
 
 	if($login->loggedin()!="")
 	{
