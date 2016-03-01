@@ -1,9 +1,85 @@
 //tablet
 
 /*  GO FULL WIDTH BELOW 1100 PIXELS */
-@media screen and (max-width: 48em) {
-	article > h2 {
-	font-size:1.5em;
-}
 
+
+@media screen and (max-width:72em) {
+	nav {
+		.first {
+			@include col(1,4);
+		}
+    .middle {
+    margin:0.5em 0;
+		@include col(1,4);
+		a {
+			font-size:1.5em;
+		}
+  }
+  .last {
+    margin-top:0.5em;
+		@include col(99,100);
+		input[type='search']{
+			font-size:1.5em;
+			@include col(99,100);
+		}
+
+  }
+	form {
+		background-color:$white;
+		input[type='submit']{
+			@include col(99,100);
+			height:auto;
+
+		}
+	}
+}
+header {
+  .feat{
+    .middle {
+      width:60%;
+      margin:0 20%;
+    }
+  h1 {
+    font-size: 2.5em;
+  }
+	.last {
+		width:100%;
+	}
+}
+}
+.intro h2 {
+  font-size: 1.5em;
+  padding:0 1%;
+}
+article{
+  margin-top: 1em;
+  padding: 0;
+}
+  .blue .first .middle {
+    width:98%;
+    margin:0 1% 2% 1%;
+  }
+  .bottom-margin .feat .middle {
+    width:30%;
+  }
+  .board {
+    width: 98%;
+    margin: 0 1%;
+  }
+  .dashboard {
+    width:90%;
+    margin: 0 5%;
+    h2 {
+      font-size: 0.85em;
+    }
+    .board {
+      margin-bottom:2%;
+    }
+    .post.box .middle{
+      margin-bottom:2% !important;
+    }
+  }
+  .tile {
+    margin-bottom:2%;
+  }
 }

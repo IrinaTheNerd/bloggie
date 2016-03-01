@@ -20,8 +20,9 @@
 @import 'new-post'; // a style for the new posts
 
 //responsive stuff
-@import 'tablet';
-@import 'mobile';
+@import 'tablet'; //big tablet
+@import 'mid-mobile'; //middle break point
+@import 'mobile'; //mobile
 //debate whether usage of webfonts is detabatble
 //http://www.creativenightly.com/2015/02/Optimising-Typekit-for-mobile-devices/
 //https://varvy.com/pagespeed/web-font-options.html
