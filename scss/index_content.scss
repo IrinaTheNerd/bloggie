@@ -12,7 +12,9 @@ header {
       @include col(3,4);
     }
   }
+
 }
+
 .container {
   @include row();
   clear: both;

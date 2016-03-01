@@ -58,12 +58,12 @@ if(isset($_POST['signup']))
 					</div>
 
 			</header>
-			<section class="intro">
+			<div class="intro">
 				<div class="feat ">
 					<h2>Welcome back! Just login though our services or alternatively login through one of our social media integrations</h2>
 				</div>
 
-			</section>
+			</div>
 			<?php
 if(isset($error))
 {

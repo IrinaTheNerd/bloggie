@@ -20,6 +20,8 @@ class USER
       VALUES (:email, :password)");
       $query->bindParam(':email',$email);
       $query->bindParam(':password',$pass);
+	//		$id = "SELECT userID FROM users WHERE :email=email  limit 1";
+//			$query->bindParam(':userID',$id);
       $query->execute(); //runs the statement
 
       return $query;

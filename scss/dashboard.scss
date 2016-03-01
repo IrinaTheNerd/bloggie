@@ -15,6 +15,9 @@
 h1.dashboard {
 	font-size: 1.8em;
 	color:$blue;
+	@media screen and (max-width: 35.5em) {
+		font-size: 1em;
+	}
 }
 
 /*dashboard stuff*/
@@ -38,7 +41,7 @@ h1.dashboard {
   box-shadow: -1px 3px 10px -5px #006064;
   margin-bottom: 6em;
     /*comments*/
-		  > h3 {
+		&  > h3 {
 			font-size: 1.9em;
 			color: #01579b;
 			font-weight: 500;
