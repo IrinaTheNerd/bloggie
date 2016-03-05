@@ -3,7 +3,7 @@ include_once('php/config.php');
 define("PAGENAME","Create New");
 include_once('include/header.php');
 $user = new USER($conn);
-require_once("include/session.php");
+require_once("php/session.php");
 
 if(!$user->loggedin())
 {
@@ -36,7 +36,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 								<label>Title:</label>
 							</div>
 							<div>
-							<small>Blah blah blah</small>
+							<small>Your title should contain the essence of your topic</small>
 									<input type="text" name="heading">
 							</div>
 						</div>
@@ -46,7 +46,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 								<label>Subitle:</label>
 							</div>
 							<div>
-							<small>Blah blah blah</small>
+							<small>This is a the question you're answering in your post</small>
 									<input type="text" name="subtitle">
 							</div>
 						</div>
@@ -55,15 +55,21 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 								<label>Summary:</label>
 							</div>
 							<div>
-							<small>Blah blah blah</small>
+							<small>Make sure that most important information is on top of the page, it's valuable and consice</small>
 									<textarea name="preview"></textarea>
 
 								</div>
 							</div>
 								<div class="margins create">
+								<div class="explain">
+								<label>Main Text:</label>
+							</div>
+							<div>
+							<small>Make sure that most important information is on top of the page, it's valuable and consice</small>
+									
 										<div class="simple-editor">
 						<h2>This is your main text :)</h2>
-						<p>Make sure that most important information is on top of the page, it's valuable and consice</p>
+						<p></p>
 				</div>
 			</div>
 

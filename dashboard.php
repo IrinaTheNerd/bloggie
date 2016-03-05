@@ -21,7 +21,8 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 
 				<header>
 					<div class="feat">
-						<h1 class="dashboard">Hello, Username!</h1>
+						<h1 class="dashboard">Hello,
+						Web Traveller!</h1>
 
 						<div class="dashboard">
 							<h2>Create catching content with a press of a button, take advantage of our guides to help you write and plan your content, delivery and further strategy. Keep in touch with other writers, share your opinions and add to our knowledge base.</h2>

@@ -145,3 +145,14 @@ article {
 	overflow: auto;
 	background-size: cover;
 }
+
+.explain{
+  label {
+    color: $blue;
+    font-family: $heading-font;
+    font-size: 1.5em;
+    }
+}
+small {
+  font-size: 1em;
+}

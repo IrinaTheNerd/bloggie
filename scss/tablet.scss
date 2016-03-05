@@ -82,4 +82,9 @@ article{
   .tile {
     margin-bottom:2%;
   }
+
+  //forms to login and register
+  .bottom-margin{
+    @include col(99,100);
+  }
 }

@@ -85,7 +85,7 @@ else if(isset($_GET['joined']))
 		 <?php
 }
 ?>
-			<section class="bottom-margin">
+			<div class="bottom-margin">
 				<form method="POST" class="inputs feat first">
 						<h3>Our fancy form</h3>
 						<div class="feat">
@@ -110,7 +110,7 @@ else if(isset($_GET['joined']))
 						<input type="submit" value="submit" name="signup">
 
 				</form>
-			</section>
+			</div>
 	<?php
 include_once('include/footer.php');
 ?>
