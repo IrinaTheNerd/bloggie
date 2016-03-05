@@ -1,5 +1,5 @@
 <?php
-	require_once('include/session.php');
+	require_once('php/session.php');
 
 	require_once('php/user.php');
 	$user_logout = new USER($conn);
