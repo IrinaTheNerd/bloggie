@@ -2,7 +2,7 @@
           /** Default editor configuration **/
           $('.simple-editor')
           .trumbowyg({
-              btns: ['btnGrp-semantic']
+            //  btns: ['btnGrp-semantic']
           })
           .on('dblclick', function(){
               $(this).trumbowyg();
