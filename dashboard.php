@@ -14,7 +14,7 @@ if(!$user->loggedin())
  //echo 'hi';
 }
 $userID = $_SESSION['user_session'];
-$stmt = $conn->prepare("SELECT * FROM users WHERE userID=:userID");
+$stmt = $conn->prepare("SELECT * FROM user WHERE userID=:userID");
 $stmt->execute(array(":userID"=>$userID));
 $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 ?>

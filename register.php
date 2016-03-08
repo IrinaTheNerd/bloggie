@@ -2,10 +2,10 @@
 include_once('php/config.php');
 define("PAGENAME","Register");
 include_once('include/header.php');
-	$user = new USER($conn);
-if($user->loggedin()!="")
+	$user = new USER($conn); //creating object user
+if($user->loggedin()!="") //if user log in is snot null
 {
-    $user->redirect('dashboard.php');
+    $user->redirect('dashboard.php'); //redirect to dashboard
 }
 
 if(isset($_POST['signup']))
@@ -39,6 +39,7 @@ if(isset($_POST['signup']))
          {
             if($user->register($email,$password))
             {
+							
                 $user->redirect('dashboard.php?joined');
             }
          }

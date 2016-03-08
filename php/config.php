@@ -1,12 +1,14 @@
 <?php
 define("SITENAME", "Bloggie");
-define("SITEURL","http://localhost/");
+define("SITEURL","http://irinapetrova.uk/");
 define("SITEEMAIL","hello@irinapetrova.uk");
 
 $dbhost = 'localhost';
 $pass = 'Us2wVrHZBG4QWXGW';
+//$dbuser = 'irinnlso_admin';
+//$dbname='irinnlso_bloggie';
 $dbuser = '5wfO[qwdaS1.231';
-$dbname='bloggie';
+$dbname = 'bloggie';
 $conn;
 
 try {

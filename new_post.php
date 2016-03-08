@@ -1,5 +1,6 @@
 <?php
 include_once('php/config.php');
+include_once('php/blog.php');
 define("PAGENAME","Create New");
 include_once('include/header.php');
 $user = new USER($conn);
@@ -11,11 +12,48 @@ if(!$user->loggedin())
  //echo 'hi';
 }
 $userID = $_SESSION['user_session'];
-$stmt = $conn->prepare("SELECT * FROM users WHERE userID=:userID");
-$stmt->execute(array(":userID"=>$userID));
-$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+$query = $conn->prepare("SELECT email FROM user WHERE  email=:email");
+$query->execute(array(':email'=>$email));
+$row=$query->fetch(PDO::FETCH_ASSOC);
+$ask =  $conn->prepare("SELECT userID FROM user WHERE  email=:email");
+$result = $ask->fetch(PDO::FETCH_ASSOC);
+echo $result;
+$final_query = $conn->prepare("INSERT INTO blogpost (userID) VALUES (userID=:userID)");
+$stmt->bindParam(':userID', $result);
+$blog = new BLOG($conn);
+/*if(isset($_POST['send_post']))
+{
 
+	 $title =  trim($_POST["heading"]);
+	 $subtitle = trim($_POST['subtitle']);
+	 $preview = trim($_POST['preview']);
+	 $main_text = trim($_POST['main_text']);
+	 if($title=="") {
+			$error[] = "Please, write your title!";
+	 }
+	 else if($main_text=="") {
+			$error[] = "Write your post!";
+	 }
+	 else if($preview=="") {
+			$error[] = "Write your preview!";
+	 }
 
+	 else
+	 {
+
+	  try {
+		  $query->fetch(PDO::FETCH_ASSOC);
+
+			if ($blog->insert($title, $subtitle, $preview, $main_text)){
+				 header('Location: index.php');
+			}
+		}
+		catch (PDOException $e)
+		{
+			 echo $e->getMessage();
+		}
+ }
+*/
 ?>
 
 		<main>
@@ -66,14 +104,14 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 							</div>
 							<div>
 							<small>Make sure that most important information is on top of the page, it's valuable and consice</small>
-									
+
 										<div class="simple-editor">
 						<h2>This is your main text :)</h2>
 						<p></p>
 				</div>
 			</div>
 
-					<input type="submit" class="feat create">
+					<input type="submit" name="send_post" class="feat create">
 			</form>
 	</main>
 

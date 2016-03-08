@@ -1,6 +1,18 @@
 //Grid mixin, done with responsivegrid.com and
 //http://thesassway.com/intermediate/simple-grid-mixins
 
+/*
+noow, there are two ways of creating the grid for my blog system:
+1st generate the grid with a mixin and write new grid classes that could be called in the html
+2nd generate mixin and write includes into already created html elements
+
+I'm using 2nd version after consulting with Joanne, to me it's easier to manipulate and maintain.
+For a bigger project a full grid system would be applied.
+
+the grid is also inspired by the previously used grid responsivegridsystem.com
+
+*/
+
 @mixin row() {
   float:left;
   display:block;
