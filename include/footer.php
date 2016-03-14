@@ -1,16 +1,16 @@
 		<footer>
 				<div class="feat">
 					<div class="social">
-						<p><a href="#"><img src="img/email.png" alt="facebook icon"></a> </p>
+						<p><a href="#"><span class="icon-facebook-circled"></span></a> </p>
 					</div>
 					<div class="social">
-						<p><a href="#"><img src="img/twitter.png" alt="facebook icon"></a></p>
+						<p><a href="#"><span class="icon-twitter-circled"></span></a></p>
 					</div>
 					<div class="social">
-						<p><a href="#"><img src="img/fb-icon.png" alt="facebook icon"></a> </p>
+						<p><a href="#"><span class="icon-googleplus-rect"></span></a> </p>
 					</div>
 					<div class="social">
-						<p><a href="#"><img src="img/ggle.png" alt="facebook icon"></a> </p>
+						<p><a href="#"><span class="icon-mail"></span></a> </p>
 					</div>
 					<div class="last">
 						<a href="#" class="button">Contact Support</a>

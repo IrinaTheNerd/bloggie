@@ -28,7 +28,7 @@ if(isset($_POST['signup']))
    {
       try
       {
-         $query = $conn->prepare("SELECT email FROM users WHERE  email=:email");
+         $query = $conn->prepare("SELECT email FROM user WHERE  email=:email");
          $query->execute(array(':email'=>$email));
          $row=$query->fetch(PDO::FETCH_ASSOC);
 
@@ -39,7 +39,7 @@ if(isset($_POST['signup']))
          {
             if($user->register($email,$password))
             {
-							
+
                 $user->redirect('dashboard.php?joined');
             }
          }

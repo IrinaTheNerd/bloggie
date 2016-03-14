@@ -12,14 +12,14 @@ if(!$user->loggedin())
  //echo 'hi';
 }
 $userID = $_SESSION['user_session'];
-$query = $conn->prepare("SELECT email FROM user WHERE  email=:email");
-$query->execute(array(':email'=>$email));
-$row=$query->fetch(PDO::FETCH_ASSOC);
-$ask =  $conn->prepare("SELECT userID FROM user WHERE  email=:email");
-$result = $ask->fetch(PDO::FETCH_ASSOC);
-echo $result;
-$final_query = $conn->prepare("INSERT INTO blogpost (userID) VALUES (userID=:userID)");
-$stmt->bindParam(':userID', $result);
+$query = $conn->prepare("SELECT userID FROM user WHERE  email=:email");
+$query->execute(array(':userID'=>$userID));
+$query->fetch(PDO::FETCH_ASSOC);
+//$ask =  $conn->prepare("SELECT userID FROM user WHERE  email=:email");
+//$result = $ask->fetch(PDO::FETCH_ASSOC);
+//echo $result;
+//$final_query = $conn->prepare("INSERT INTO blogpost (userID) VALUES (userID=:userID)");
+//$stmt->bindParam(':userID', $result);
 $blog = new BLOG($conn);
 /*if(isset($_POST['send_post']))
 {
