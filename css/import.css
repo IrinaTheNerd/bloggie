@@ -674,15 +674,18 @@ header .feat .last {
           width: 33.33333%;
           vertical-align: top; } }
 
+#testimonial {
+  height: 300px; }
+
 .slider-container {
-  width: 270px;
-  height: 250px;
-  overflow: hidden; }
+  width: 270px !important;
+  height: 200px !important;
+  overflow: hidden !important; }
 
 .slider {
   float: left;
   width: 270px;
-  height: 260px; }
+  height: 180px; }
 
 .load {
   opacity: 1; }
@@ -703,19 +706,17 @@ header .feat .last {
 #testimonial3 {
   background-color: #BBDEFB; }
 
-.slideLink {
-  margin: 5px auto; }
-  .slideLink ul {
-    left: 45%;
-    position: absolute;
-    padding: 0;
-    margin: 0; }
-    .slideLink ul li {
-      list-style: none;
-      display: inline-block;
-      margin: 10px;
-      border: 5px solid #C2185B;
-      border-radius: 50%; }
+.slideLink ul {
+  left: 45%;
+  position: absolute;
+  padding: 0;
+  margin: 0; }
+  .slideLink ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+    border: 5px solid #C2185B;
+    border-radius: 50%; }
 
 .intro {
   float: left;

@@ -1,14 +1,17 @@
 //slider
+#testimonial {
+  height:300px;
+}
 .slider-container {
-width:270px;
-height:250px;
-overflow:hidden;
+width:270px !important;
+height:200px !important;
+overflow: hidden !important;
 }
 
 .slider {
   float:left;
   width:270px;
-  height:260px;
+  height:180px;
 }
 .load {
     opacity: 1;
@@ -33,7 +36,6 @@ overflow:hidden;
 .slideLink{
   //width:275px;
 //  width:33%;
-  margin: 5px auto;
   ul {
     left: 45%;
     position:absolute;
