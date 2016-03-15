@@ -22,5 +22,6 @@ catch(PDOException $e)
     echo "Error: " . $e->getMessage();
     }
     include_once 'user.php';
+    include_once 'blog.php';
 //    $user = new USER($conn);
 ?>

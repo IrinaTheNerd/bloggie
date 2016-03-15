@@ -1,9 +1,10 @@
 <?php
 include_once('php/config.php');
-include_once('php/blog.php');
+//include_once('php/blog.php');
 define("PAGENAME","Create New");
 include_once('include/header.php');
 $user = new USER($conn);
+$blog = new BLOG($conn);
 require_once("php/session.php");
 
 if(!$user->loggedin())
@@ -14,13 +15,13 @@ if(!$user->loggedin())
 $userID = $_SESSION['user_session'];
 $query = $conn->prepare("SELECT userID FROM user WHERE  email=:email");
 $query->execute(array(':userID'=>$userID));
-$query->fetch(PDO::FETCH_ASSOC);
+$result = $query->fetch(PDO::FETCH_ASSOC);
 //$ask =  $conn->prepare("SELECT userID FROM user WHERE  email=:email");
 //$result = $ask->fetch(PDO::FETCH_ASSOC);
-//echo $result;
+echo $result;
 //$final_query = $conn->prepare("INSERT INTO blogpost (userID) VALUES (userID=:userID)");
 //$stmt->bindParam(':userID', $result);
-$blog = new BLOG($conn);
+
 /*if(isset($_POST['send_post']))
 {
 
@@ -75,7 +76,7 @@ $blog = new BLOG($conn);
 							</div>
 							<div>
 							<small>Your title should contain the essence of your topic</small>
-									<input type="text" name="heading">
+									<input type="text"  maxlength="50" name="heading">
 							</div>
 						</div>
 

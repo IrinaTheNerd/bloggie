@@ -102,7 +102,7 @@ else if(isset($_GET['joined']))
 						</div>
 						<div class="feat">
 							<label  class="feat col">email:</label>
-							<input type="text" name="email"  class="feat col">
+							<input type="text" maxlength="50" name="email"  class="feat col">
 						</div>
 						<div class="feat">
 							<label class="feat col">password:</label>
