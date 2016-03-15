@@ -1,3 +1,14 @@
+/*
+noow, there are two ways of creating the grid for my blog system:
+1st generate the grid with a mixin and write new grid classes that could be called in the html
+2nd generate mixin and write includes into already created html elements
+
+I'm using 2nd version after consulting with Joanne, to me it's easier to manipulate and maintain.
+For a bigger project a full grid system would be applied.
+
+the grid is also inspired by the previously used grid responsivegridsystem.com
+
+*/
 body {
   font-family: "Lato", sans-serif;
   color: #3d3c3c;
@@ -662,6 +673,49 @@ header .feat .last {
         #testimonials .middle:nth-child(1) {
           width: 33.33333%;
           vertical-align: top; } }
+
+.slider-container {
+  width: 270px;
+  height: 250px;
+  overflow: hidden; }
+
+.slider {
+  float: left;
+  width: 270px;
+  height: 260px; }
+
+.load {
+  opacity: 1; }
+
+.transition {
+  -webkit-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
+  transition: opacity 2s ease-in; }
+
+#testimonial1 {
+  background-color: #1976D2; }
+
+#testimonial2 {
+  background-color: #FFC107; }
+
+#testimonial3 {
+  background-color: #BBDEFB; }
+
+.slideLink {
+  margin: 5px auto; }
+  .slideLink ul {
+    left: 45%;
+    position: absolute;
+    padding: 0;
+    margin: 0; }
+    .slideLink ul li {
+      list-style: none;
+      display: inline-block;
+      margin: 10px;
+      border: 5px solid #C2185B;
+      border-radius: 50%; }
 
 .intro {
   float: left;

@@ -48,29 +48,27 @@ include_once('include/header.php');
 			<!-- Testimonials http://www.webchief.co.uk/blog/simple-jquery-slideshow/ -->
 			<!-- http://css-plus.com/2013/10/create-your-own-jquery-image-slider/ -->
 			<!-- Needs work-->
-			<section id="testimonials">
+			<section id="testimonials" class="slider-container">
 				<div class="first feat">
-					    <div class="middle">
-					 		<!--<input type="radio" id="testimony1" name="slide" checked>
-					 		<label for="testimony1"></label>-->
 
-					        <img src="img/testim-one.gif" alt="Jane Doe">
-					        <p>This is an amazing platform</p>
-
-					    </div>
 					    <div class="middle">
 					    	<!--<input type="radio" id="testimony1" name="slide" checked>
 					 		<label for="testimony1"></label>-->
-					        <img src="img/testim-one.gif" alt="Erica Doe">
-					        <p>I simply &hearts; this</p>
+							<div id="testimonial1" class="slider transition">
 					    </div>
-					     <div class="middle">
-					    	<!--<input type="radio" id="testimony1" name="slide" checked>
-					 		<label for="testimony1"></label>-->
-					        <img src="img/testim-one.gif" alt="Erica Doe">
-					        <p>There are three of me</p>
+					     <div id="testimonial2" class="slider transition">
+					    </div>
+					     <div id="testimonial3" class="transition slider">
+					    </div>
+					    <div class="slideLink">
+					      <ul> <!--can add links -->
+					        <a href="#testimonial1"><li  class="link"></li></a>
+					        <a href="#testimonial2"><li  class="link"></li></a>
+					        <a href="#testimonial3"><li  class="link"></li></a>
+					       </ul>
 					    </div>
 
+					    </div>
 
 					</ul>
 				</div>

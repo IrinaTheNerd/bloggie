@@ -1,1 +1,51 @@
 //slider
+.slider-container {
+width:270px;
+height:250px;
+overflow:hidden;
+}
+
+.slider {
+  float:left;
+  width:270px;
+  height:260px;
+}
+.load {
+    opacity: 1;
+}
+.transition {
+    -webkit-transition: opacity 2s ease-in;
+       -moz-transition: opacity 2s ease-in;
+        -ms-transition: opacity 2s ease-in;
+         -o-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
+}
+
+#testimonial1 {
+  background-color:#1976D2;
+}
+#testimonial2 {
+  background-color:#FFC107;
+}
+#testimonial3 {
+  background-color:#BBDEFB;
+}
+.slideLink{
+  //width:275px;
+//  width:33%;
+  margin: 5px auto;
+  ul {
+    left: 45%;
+    position:absolute;
+    padding:0;
+    margin:0;
+
+    li {
+      list-style:none;
+      display:inline-block;
+      margin:10px;
+      border:5px solid #C2185B;
+      border-radius:50%;
+    }
+  }
+}
