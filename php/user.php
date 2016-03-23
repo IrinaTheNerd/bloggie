@@ -16,7 +16,7 @@ class USER
     try {
       $pass = password_hash($password, PASSWORD_DEFAULT); //hashing function for security
 			// LEFT JOIN userblog ON users.userID = userblog.userID
-      $query = $this->db->prepare("INSERT INTO user (email, password)
+      $query = $this->db->prepare("INSERT INTO users (email, password)
       VALUES (:email, :password)");
       $query->bindParam(':email',$email);
       $query->bindParam(':password',$pass);
@@ -33,7 +33,7 @@ class USER
   }
   public function login($email,$password){
     try {
-      $query = $this->db->prepare("SELECT * FROM user WHERE email=:email LIMIT 1");
+      $query = $this->db->prepare("SELECT * FROM users WHERE email=:email LIMIT 1");
       $query->execute(array(':email'=>$email));
       $row=$query->fetch(PDO::FETCH_ASSOC);
       if($query->rowCount() > 0){

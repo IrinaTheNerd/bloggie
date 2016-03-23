@@ -13,7 +13,7 @@ if(!$user->loggedin())
  //echo 'hi';
 }
 $userID = $_SESSION['user_session'];
-$query = $conn->prepare("SELECT userID FROM user WHERE  email=:email");
+$query = $conn->prepare("SELECT userID FROM users WHERE  email=:email");
 $query->execute(array(':userID'=>$userID));
 $result = $query->fetch(PDO::FETCH_ASSOC);
 //$ask =  $conn->prepare("SELECT userID FROM user WHERE  email=:email");
