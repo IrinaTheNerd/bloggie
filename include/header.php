@@ -3,14 +3,10 @@
 		<head>
 			<title><?php echo SITENAME . ' - '. PAGENAME;?> </title>
 
-			<!--TypeKit fonts-->
-			<script src="https://use.typekit.net/cde8idd.js"></script>
-			<script>try{Typekit.load({ async: true });}catch(e){}</script>
-			<!--end of Typekit Fonts
-			<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>-->
+		
 			<link href="css/import.css" rel="stylesheet" type="text/css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-		  <link rel="stylesheet"  type="text/css" href="dist/ui/trumbowyg.css">
+	
 		</head>
 		<body>
 			<nav>

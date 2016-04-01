@@ -1,6 +1,6 @@
 <?php
 
-	include_once('php/config.php');
+	include_once('config.php');
 //based on the previous class and procedural code
 class BLOG
 {
@@ -10,26 +10,35 @@ class BLOG
     {
       $this->db =$conn;
     }
-		public function insert($title, $subtitle, $preview, $main_text){
-			try {
-				$stmt = $conn->prepare("INSERT INTO blogposts (title, subtitle, preview, main_text )
-				VALUES (:title, :subtitle, :preview, :main_text)");
-				$stmt->bindParam(':title', $_POST['title']);
-				$stmt->bindParam(':subtitle', $_POST['subtitle']);
-				$stmt->bindParam(':main_text', $_POST['main_text']);
-				$stmt->bindParam(':preview', $_POST['preview']);
+			public function showBlog() {
+				try {
+		echo "<div class='post'>
+								<div class='feat span_10_of_12'>";
+		    $query = $this->db->prepare("SELECT blogID, title, subtitle, preview FROM blogpost");
+		    $query->execute();
+		    $result=$query->fetchAll();
 
-				$stmt->execute();
+		        $showOne = $this->db->prepare("SELECT blogID, title, subtitle, preview, main_text FROM blogpost");
+		     	$showOne->execute();
+		     	$singlePost=$showOne->fetch();
+		    foreach($result as $row){
+		    	echo "<div class='box bg middle'>";
+		    	echo  "<h3>{$row['title']}</h3>";
+		    	echo "<h4>{$row['subtitle']}</h4>";
+		    	echo $row['preview'];
+		    	echo "<a href='view.php?ID={$row['blogID']}'>Read More</a>";
+		    	echo "</div>";
+		    }
 
-				return $stmt;
-				}
+		    echo "</div></div>";
 
-				catch(PDOException $e)
-					{
-							echo $e->getMessage();
+		    }
+		catch(PDOException $e)
+		    {
+		    echo "Error: " . $e->getMessage();
+		    }
+
 					}
-
-			}
 		}
 
 ?>

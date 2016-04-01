@@ -1,61 +1,34 @@
 <?php
 include_once('php/config.php');
-//include_once('php/blog.php');
 define("PAGENAME","Create New");
 include_once('include/header.php');
 $user = new USER($conn);
-$blog = new BLOG($conn);
 require_once("php/session.php");
+
 
 if(!$user->loggedin())
 {
 	$user->redirect('login.php');
- //echo 'hi';
+
 }
+
 $userID = $_SESSION['user_session'];
-$query = $conn->prepare("SELECT userID FROM users WHERE  email=:email");
-$query->execute(array(':userID'=>$userID));
-$result = $query->fetch(PDO::FETCH_ASSOC);
-//$ask =  $conn->prepare("SELECT userID FROM user WHERE  email=:email");
-//$result = $ask->fetch(PDO::FETCH_ASSOC);
-echo $result;
-//$final_query = $conn->prepare("INSERT INTO blogpost (userID) VALUES (userID=:userID)");
-//$stmt->bindParam(':userID', $result);
+$stmt = $conn->prepare("SELECT * FROM user WHERE userID=:userID");
+$stmt->execute(array(":userID"=>$userID));
+$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 
-/*if(isset($_POST['send_post']))
+
+
+if(isset($_POST['send_post']))
 {
+   $title = trim($_POST['title']);
+   $subtitle = trim($_POST['subtitle']);
+   $preview = trim($_POST['preview']);
+   $main_text = trim($_POST['main_text']);
+   $user->insertBlog($userID, $title, $subtitle, $preview, $main_text);
+     }
 
-	 $title =  trim($_POST["heading"]);
-	 $subtitle = trim($_POST['subtitle']);
-	 $preview = trim($_POST['preview']);
-	 $main_text = trim($_POST['main_text']);
-	 if($title=="") {
-			$error[] = "Please, write your title!";
-	 }
-	 else if($main_text=="") {
-			$error[] = "Write your post!";
-	 }
-	 else if($preview=="") {
-			$error[] = "Write your preview!";
-	 }
-
-	 else
-	 {
-
-	  try {
-		  $query->fetch(PDO::FETCH_ASSOC);
-
-			if ($blog->insert($title, $subtitle, $preview, $main_text)){
-				 header('Location: index.php');
-			}
-		}
-		catch (PDOException $e)
-		{
-			 echo $e->getMessage();
-		}
- }
-*/
-?>
+     ?>
 
 		<main>
 				<div class="feat create">
@@ -68,7 +41,7 @@ echo $result;
 				</div>
 
 
-			<form action="include/functions/insert.php" method="POST" class="auto inputs create">
+			<form method="POST" class="auto inputs create">
 
 						<div class="margins create">
 							<div class="explain">
@@ -106,9 +79,7 @@ echo $result;
 							<div>
 							<small>Make sure that most important information is on top of the page, it's valuable and consice</small>
 
-										<div class="simple-editor">
-						<h2>This is your main text :)</h2>
-						<p></p>
+							<textarea name="main_text" class="simple-editor"></textarea>
 				</div>
 			</div>
 

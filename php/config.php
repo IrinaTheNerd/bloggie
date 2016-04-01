@@ -5,10 +5,8 @@ define("SITEEMAIL","hello@irinapetrova.uk");
 
 $dbhost = 'localhost';
 $pass = 'Us2wVrHZBG4QWXGW';
-//$dbuser = 'irinnlso_admin';
-//$dbname='irinnlso_bloggie';
-$dbuser = '5wfO[qwdaS1.231';
-$dbname = 'bloggie';
+$dbuser = 'irinnlso_admin';
+$dbname='irinnlso_bloggie';
 $conn;
 
 try {
@@ -20,8 +18,12 @@ try {
 catch(PDOException $e)
     {
     echo "Error: " . $e->getMessage();
+   // print_r(PDO->errorInfo());
+
+
     }
     include_once 'user.php';
     include_once 'blog.php';
+  //  include_once 'blog.php';
 //    $user = new USER($conn);
 ?>
