@@ -25,7 +25,26 @@ if(isset($_POST['send_post']))
    $subtitle = trim($_POST['subtitle']);
    $preview = trim($_POST['preview']);
    $main_text = trim($_POST['main_text']);
-   $user->insertBlog($userID, $title, $subtitle, $preview, $main_text);
+
+/*	 if($title == ""){
+		 echo "<div class='warning'>Oh no! You need a title for your post!</div>";
+	 }
+	 else if($subtitle == ""){
+		 echo "<div class='warning'>Oh no! You need a subtitle for your post!</div>";
+	 }
+	else if($preview==""){
+		 echo "<div class='warning'>Oh no! What's your etract?</div>";
+	 }
+	 else if($main_text==""){
+		 echo "<div class='warning'>Oh no! C'mon, you need to write your post! This is a blog, afterall!</div>";
+	 }
+	 else {*/
+		 if($user->insertBlog($userID, $title, $subtitle, $preview, $main_text))
+		 {
+ 		 		$user->redirect('all_posts.php');
+		 }
+
+//	 }
      }
 
      ?>

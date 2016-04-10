@@ -2,7 +2,20 @@
 define("SITENAME", "Bloggie");
 define("SITEURL","http://irinapetrova.uk/");
 define("SITEEMAIL","hello@irinapetrova.uk");
+/*
+$appId = '1594490410869816'; //Facebook App ID
+$appSecret = '70562c2caae0622c66139ec3a8da7ac3'; // Facebook App Secret
+$homeurl = 'http://bloggie.irinapetrova.uk/';  //return to home
+$fbPermissions = 'email';  //Required facebook permissions
 
+//Call Facebook API
+$facebook = new Facebook(array(
+  'appId'  => $appId,
+  'secret' => $appSecret
+
+));
+$fbuser = $facebook->getUser();
+*/
 $dbhost = 'localhost';
 $pass = 'Us2wVrHZBG4QWXGW';
 $dbuser = 'irinnlso_admin';

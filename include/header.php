@@ -3,10 +3,10 @@
 		<head>
 			<title><?php echo SITENAME . ' - '. PAGENAME;?> </title>
 
-		
+
 			<link href="css/import.css" rel="stylesheet" type="text/css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 		</head>
 		<body>
 			<nav>
@@ -21,12 +21,12 @@
 				</div>
 				<div class="middle">
 					<a href="register.php" class="button">register</a>
-				
+
 				</div>
 				<!-- Search Bar -->
-				<form class="last">
+				<form class="last" action="search.php" method="get">
 					<label class="hidden" for="search">Search</label>
 					<input value="Search.." type="search" name="search" id="search">
-					<input type="submit" value="submit" onclick="window.location='/dashboard';">
+					<input type="submit" value="submit">
 				</form>
 			</nav>
