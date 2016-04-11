@@ -26,7 +26,7 @@
 				<!-- Search Bar -->
 				<form class="last" action="search.php" method="get">
 					<label class="hidden" for="search">Search</label>
-					<input value="Search.." type="search" name="search" id="search">
+					<input placeholder="Search.." type="search" name="search" id="search">
 					<input type="submit" value="submit">
 				</form>
 			</nav>

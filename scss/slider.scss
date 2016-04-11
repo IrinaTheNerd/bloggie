@@ -1,53 +1,188 @@
-//slider
-#testimonial {
-  height:300px;
-}
-.slider-container {
-width:270px !important;
-height:200px !important;
-overflow: hidden !important;
+
+
+#testimonials {
+    background: #006064;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    width: 100%
 }
 
-.slider {
-  float:left;
-  width:270px;
-  height:180px;
-}
-.load {
-    opacity: 1;
-}
-.transition {
-    -webkit-transition: opacity 2s ease-in;
-       -moz-transition: opacity 2s ease-in;
-        -ms-transition: opacity 2s ease-in;
-         -o-transition: opacity 2s ease-in;
-            transition: opacity 2s ease-in;
+#testimonials .first {
+    width: 100%;
+    font-size: inherit;
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1% 0 1% 0;
+    vertical-align: none;
+    padding: 0;
+    float: none;
+    margin-top: 1em;
+    display: block;
+    overflow: auto
 }
 
-#testimonial1 {
-  background-color:#1976D2;
-}
-#testimonial2 {
-  background-color:#FFC107;
-}
-#testimonial3 {
-  background-color:#BBDEFB;
-}
-.slideLink{
-  //width:275px;
-//  width:33%;
-  ul {
-    left: 45%;
-    position:absolute;
-    padding:0;
-    margin:0;
-
-    li {
-      list-style:none;
-      display:inline-block;
-      margin:10px;
-      border:5px solid #C2185B;
-      border-radius:50%;
+@media screen and (min-width: 35.5em) {
+    #testimonials .first {
+        width: 66.66667%;
+        vertical-align: top
     }
-  }
+}
+
+#testimonials .middle {
+    width: 100%;
+    font-size: inherit;
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1% 0 1% 0.6%;
+    padding: 0;
+    margin: 0
+}
+
+@media screen and (min-width: 35.5em) {
+    #testimonials .middle {
+        width: 33.33333%;
+        vertical-align: top
+    }
+}
+
+#testimonials .middle:nth-child(1) {
+    width: 100%;
+    font-size: inherit;
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1% 0 1% 0;
+    vertical-align: none;
+    padding: 0;
+    float: none;
+    display: inline-block;
+    overflow: auto
+}
+
+@media screen and (min-width: 35.5em) {
+    #testimonials .middle:nth-child(1) {
+        width: 33.33333%;
+        vertical-align: top
+    }
+}
+
+#testimonials {
+    height: 300px;
+    width: 100%;
+    overflow: hidden
+}
+
+@media screen and (min-width: 65em) {
+    #testimonials {
+        height: 450px
+    }
+}
+
+#slider {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    border-radius: 4px
+}
+
+#slider ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    list-style: none
+}
+
+#slider ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    height: 300px;
+    text-align: center
+}
+
+#slider ul li img {
+    width: 300px
+}
+
+.hover-image:hover img {
+    transition: 1s all;
+    opacity: 0.1
+}
+
+.hover-image:hover .hover-text {
+    transition: 1s all;
+    opacity: 1
+}
+
+.hover-text {
+    background: rgba(61, 60, 60, 0.9);
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    margin-top: -229px;
+    opacity: 0
+}
+
+.hover-text p {
+    margin: 0
+}
+
+a.control_prev,
+a.control_next {
+    position: absolute;
+    top: 40%;
+    z-index: 999;
+    display: block;
+    padding: 4% 3%;
+    width: auto;
+    height: auto;
+    background: #ddd;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0.8;
+    cursor: pointer
+}
+
+a.control_prev:hover,
+a.control_next:hover {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease
+}
+
+a.control_prev:hover img,
+a.control_next:hover img {
+    margin: 0
+}
+
+a.control_prev {
+    border-radius: 0 2px 2px 0
+}
+
+a.control_prev img {
+    margin: 0 !important
+}
+
+a.control_next {
+    right: 0;
+    border-radius: 2px 0 0 2px
+}
+
+a.control_next img {
+    margin: 0 !important
+}
+
+.slider_option {
+    position: relative;
+    margin: 10px auto;
+    width: 160px;
+    font-size: 18px
 }

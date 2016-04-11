@@ -1,14 +1,16 @@
 {
-  "uploadOnSave": false,
+  "uploadOnSave": true,
   "deleteLocal": false,
   "hostname": "server194.web-hosting.com",
   "port": "21",
-  "target": "/home/irinnlso/public_html/bloggie",
+  "target": "/home/irinnlso/www/public_html/bloggie",
   "ignore": [
     ".remote-sync.json",
-    ".git/**"
+    ".git/**",
+    "scss/**"
   ],
   "username": "irinnlso",
   "transport": "ftp",
-  "password": "HEWLf_hSdJ_nW"
+  "password": "HEWLf_hSdJ_nW",
+  "useAtomicWrites": false
 }
