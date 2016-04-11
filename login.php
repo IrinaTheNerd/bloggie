@@ -24,6 +24,9 @@
 		 $error = "Wrong Details !";
 		}
 	}
+	
+
+
 ?>
 
 				<header>
@@ -37,6 +40,7 @@
 				<div class="feat">
 					<h2>Welcome back! Just login though our services or alternatively login through one of our social media integrations</h2>
 				</div>
+		
 			</div>
 			<div class="bottom-margin">
 				<form method="post" class="inputs feat first">
@@ -55,6 +59,8 @@
 			            }
 			            ?>
 								<a href="#"><span class="icon-facebook-circled"></span></a>
+
+
 							</div>
 							<div class="feat middle">
 								<a href="#"><span class="icon-twitter-circled"></span></a>

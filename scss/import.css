@@ -1,14 +1,3 @@
-/*
-noow, there are two ways of creating the grid for my blog system:
-1st generate the grid with a mixin and write new grid classes that could be called in the html
-2nd generate mixin and write includes into already created html elements
-
-I'm using 2nd version after consulting with Joanne, to me it's easier to manipulate and maintain.
-For a bigger project a full grid system would be applied.
-
-the grid is also inspired by the previously used grid responsivegridsystem.com
-
-*/
 body {
   font-family: "Lato", sans-serif;
   color: #3d3c3c;
@@ -73,10 +62,6 @@ header {
   display: inline-block;
   box-sizing: border-box;
   padding: 1% 0 1% 0.6%; }
-  @media screen and (min-width: 35.5em) {
-    header {
-      width: 100%;
-      vertical-align: top; } }
 
 hg, .container {
   clear: both;
@@ -97,10 +82,6 @@ section {
   display: inline-block;
   box-sizing: border-box;
   padding: 1% 0 1% 0.6%; }
-  @media screen and (min-width: 35.5em) {
-    section {
-      width: 100%;
-      vertical-align: top; } }
   section .feat {
     margin: -2em auto; }
     section .feat :nth-last-of-type(1) {
@@ -157,14 +138,6 @@ article {
   overflow: auto;
   background-size: cover; }
 
-.explain label {
-  color: #01579b;
-  font-family: "museo-sans-rounded", sans-serif;
-  font-size: 1.5em; }
-
-small {
-  font-size: 1em; }
-
 nav {
   padding: 1% 0;
   clear: both;
@@ -179,10 +152,6 @@ nav {
   display: inline-block;
   box-sizing: border-box;
   padding: 1% 0 1% 0.6%; }
-  @media screen and (min-width: 35.5em) {
-    nav {
-      width: 100%;
-      vertical-align: top; } }
   nav .button {
     border: 2px solid #ad1457;
     color: #ad1457; }
@@ -197,10 +166,6 @@ nav {
     display: inline-block;
     box-sizing: border-box;
     padding: 1% 0 1% 0; }
-    @media screen and (min-width: 35.5em) {
-      nav .first {
-        width: 66.66667%;
-        vertical-align: top; } }
     nav .first img {
       width: inherit; }
   nav a {
@@ -236,10 +201,6 @@ nav {
     box-sizing: border-box;
     padding: 1% 0 1% 0.6%;
     text-align: center; }
-    @media screen and (min-width: 35.5em) {
-      nav .middle {
-        width: 8.33333%;
-        vertical-align: top; } }
   nav .last {
     width: 100%;
     font-size: inherit;
@@ -247,10 +208,6 @@ nav {
     display: inline-block;
     box-sizing: border-box;
     padding: 1% 0 1% 0.6%; }
-    @media screen and (min-width: 35.5em) {
-      nav .last {
-        width: 33.33333%;
-        vertical-align: top; } }
 
 .inputs {
   padding: 3%;
@@ -300,10 +257,6 @@ footer {
   display: inline-block;
   box-sizing: border-box;
   padding: 1% 0 1% 0.6%; }
-  @media screen and (min-width: 35.5em) {
-    footer {
-      width: 100%;
-      vertical-align: top; } }
   footer .feat {
     width: 100%;
     font-size: inherit;
@@ -311,10 +264,6 @@ footer {
     display: inline-block;
     box-sizing: border-box;
     padding: 1% 0 1% 0.6%; }
-    @media screen and (min-width: 35.5em) {
-      footer .feat {
-        width: 100%;
-        vertical-align: top; } }
   footer .social {
     width: 100%;
     font-size: inherit;
@@ -322,10 +271,6 @@ footer {
     display: inline-block;
     box-sizing: border-box;
     padding: 1% 0 1% 0.6%; }
-    @media screen and (min-width: 35.5em) {
-      footer .social {
-        width: 25%;
-        vertical-align: top; } }
     footer .social img {
       width: inherit; }
   footer .last {
@@ -335,10 +280,6 @@ footer {
     display: inline-block;
     box-sizing: border-box;
     padding: 1% 0 1% 0.6%; }
-    @media screen and (min-width: 35.5em) {
-      footer .last {
-        width: 100%;
-        vertical-align: top; } }
   footer a {
     color: #fff; }
   footer .button {
@@ -367,10 +308,6 @@ footer {
   margin: 0 auto !important;
   display: block;
   float: none; }
-  @media screen and (min-width: 35.5em) {
-    .dashboard {
-      width: 90.90909%;
-      vertical-align: top; } }
   .dashboard h2 {
     font-size: 1.2em;
     color: #ad1457; }
@@ -426,10 +363,6 @@ h1.dashboard {
   box-sizing: border-box;
   padding: 1% 0 1% 0.6%;
   margin: 2%; }
-  @media screen and (min-width: 35.5em) {
-    .board {
-      width: 44.44444%;
-      vertical-align: top; } }
   .board:hover {
     background: #ad1457;
     transition: 1s all;
@@ -547,10 +480,6 @@ header .feat .first {
   display: inline-block;
   box-sizing: border-box;
   padding: 1% 0 1% 0.6%; }
-  @media screen and (min-width: 35.5em) {
-    header .feat .first {
-      width: 100%;
-      vertical-align: top; } }
 header .feat .middle {
   float: left;
   display: block;
@@ -562,10 +491,6 @@ header .feat .middle {
   display: inline-block;
   box-sizing: border-box;
   padding: 1% 0 1% 0; }
-  @media screen and (min-width: 35.5em) {
-    header .feat .middle {
-      width: 25%;
-      vertical-align: top; } }
 header .feat .last {
   width: 100%;
   font-size: inherit;
@@ -573,10 +498,6 @@ header .feat .last {
   display: inline-block;
   box-sizing: border-box;
   padding: 1% 0 1% 0.6%; }
-  @media screen and (min-width: 35.5em) {
-    header .feat .last {
-      width: 75%;
-      vertical-align: top; } }
 
 .container {
   float: left;
@@ -601,10 +522,6 @@ header .feat .last {
     display: block;
     float: none;
     padding: 0; }
-    @media screen and (min-width: 35.5em) {
-      .blue .first {
-        width: 91.66667%;
-        vertical-align: top; } }
     .blue .first .middle {
       width: 100%;
       font-size: inherit;
@@ -613,10 +530,6 @@ header .feat .last {
       box-sizing: border-box;
       padding: 1% 0 1% 0.6%;
       margin: auto 1.75%; }
-      @media screen and (min-width: 35.5em) {
-        .blue .first .middle {
-          width: 29.62963%;
-          vertical-align: top; } }
       .blue .first .middle:nth-last-child(1) {
         padding-bottom: 13px; }
 
@@ -640,10 +553,6 @@ header .feat .last {
     margin-top: 1em;
     display: block;
     overflow: auto; }
-    @media screen and (min-width: 35.5em) {
-      #testimonials .first {
-        width: 66.66667%;
-        vertical-align: top; } }
   #testimonials .middle {
     width: 100%;
     font-size: inherit;
@@ -653,10 +562,6 @@ header .feat .last {
     padding: 1% 0 1% 0.6%;
     padding: 0;
     margin: 0; }
-    @media screen and (min-width: 35.5em) {
-      #testimonials .middle {
-        width: 33.33333%;
-        vertical-align: top; } }
     #testimonials .middle:nth-child(1) {
       width: 100%;
       font-size: inherit;
@@ -669,129 +574,6 @@ header .feat .last {
       float: none;
       display: inline-block;
       overflow: auto; }
-      @media screen and (min-width: 35.5em) {
-        #testimonials .middle:nth-child(1) {
-          width: 33.33333%;
-          vertical-align: top; } }
-
-#testimonials {
-  height: 300px;
-  width: 100%;
-  overflow: hidden; }
-  @media screen and (min-width: 65em) {
-    #testimonials {
-      height: 450px; } }
-
-/*  img.left {
-//  top:20px;
-width:100px;
-height:100px;
-left:190px;
-}
-img.right {
-//top:20px;
-width:100px;
-height:100px;
-
-}
-}
-#content-slider {
-overflow: hidden;
-position:relative;
-height:auto;
-float:left;
-li {
-float:left;
-position: relative;
-}
-}
-.controls {
-height:100px;
-overflow:hidden;
-@media screen and (min-width:64em){
-bottom:300px;
-}
-}*/
-#slider {
-  position: relative;
-  overflow: hidden;
-  margin: 20px auto 0 auto;
-  border-radius: 4px; }
-
-#slider ul {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  height: 300px;
-  list-style: none; }
-
-#slider ul li {
-  position: relative;
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 500px;
-  height: 300px;
-  text-align: center; }
-  #slider ul li img {
-    width: 300px; }
-
-.hover-image:hover img {
-  transition: 1s all;
-  opacity: 0.1; }
-.hover-image:hover .hover-text {
-  transition: 1s all;
-  opacity: 1; }
-
-.hover-text {
-  background: rgba(61, 60, 60, 0.9);
-  color: #fff;
-  overflow: hidden;
-  position: relative;
-  margin-top: -229px;
-  opacity: 0; }
-  .hover-text p {
-    margin: 0; }
-
-a.control_prev, a.control_next {
-  position: absolute;
-  top: 40%;
-  z-index: 999;
-  display: block;
-  padding: 4% 3%;
-  width: auto;
-  height: auto;
-  background: #ddd;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
-  cursor: pointer; }
-
-a.control_prev:hover, a.control_next:hover {
-  opacity: 1;
-  -webkit-transition: all 0.2s ease; }
-  a.control_prev:hover img, a.control_next:hover img {
-    margin: 0; }
-
-a.control_prev {
-  border-radius: 0 2px 2px 0; }
-  a.control_prev img {
-    margin: 0 !important; }
-
-a.control_next {
-  right: 0;
-  border-radius: 2px 0 0 2px; }
-  a.control_next img {
-    margin: 0 !important; }
-
-.slider_option {
-  position: relative;
-  margin: 10px auto;
-  width: 160px;
-  font-size: 18px; }
 
 .intro {
   float: left;
@@ -807,10 +589,6 @@ a.control_next {
   margin: 0 auto !important;
   display: block;
   float: none; }
-  @media screen and (min-width: 35.5em) {
-    .intro {
-      width: 75%;
-      vertical-align: top; } }
 
 .bottom-margin {
   width: 100%;
@@ -822,10 +600,6 @@ a.control_next {
   margin: 0 auto !important;
   display: block;
   float: none; }
-  @media screen and (min-width: 35.5em) {
-    .bottom-margin {
-      width: 33.33333%;
-      vertical-align: top; } }
   .bottom-margin .inputs .first {
     width: 100%;
     font-size: inherit;
@@ -836,10 +610,6 @@ a.control_next {
     margin: 0 auto !important;
     display: block;
     float: none; }
-    @media screen and (min-width: 35.5em) {
-      .bottom-margin .inputs .first {
-        width: 33.33333%;
-        vertical-align: top; } }
   .bottom-margin .middle {
     width: 100%;
     font-size: inherit;
@@ -849,10 +619,6 @@ a.control_next {
     padding: 1% 0 1% 0.6%;
     float: none;
     margin: 0; }
-    @media screen and (min-width: 35.5em) {
-      .bottom-margin .middle {
-        width: 12.5%;
-        vertical-align: top; } }
   .bottom-margin .col {
     width: 100%;
     font-size: inherit;
@@ -861,10 +627,6 @@ a.control_next {
     box-sizing: border-box;
     padding: 1% 0 1% 0.6%;
     margin: 0; }
-    @media screen and (min-width: 35.5em) {
-      .bottom-margin .col {
-        width: 100%;
-        vertical-align: top; } }
 
 .post {
   float: left;
@@ -882,12 +644,7 @@ a.control_next {
     margin: 0 auto !important;
     display: block;
     float: none;
-    margin-bottom: 1% !important;
     margin-top: 1em; }
-    @media screen and (min-width: 35.5em) {
-      .post .box {
-        width: 91.66667%;
-        vertical-align: top; } }
     .post .box:nth-child(1) {
       width: 100%;
       font-size: inherit;
@@ -897,12 +654,7 @@ a.control_next {
       padding: 1% 0 1% 0;
       margin: 0 auto !important;
       display: block;
-      float: none;
-      margin-bottom: 1% !important; }
-      @media screen and (min-width: 35.5em) {
-        .post .box:nth-child(1) {
-          width: 91.66667%;
-          vertical-align: top; } }
+      float: none; }
     .post .box:nth-last-child(1) {
       width: 100%;
       font-size: inherit;
@@ -915,10 +667,6 @@ a.control_next {
       float: none;
       margin-top: 1em;
       margin-bottom: 3em; }
-      @media screen and (min-width: 35.5em) {
-        .post .box:nth-last-child(1) {
-          width: 91.66667%;
-          vertical-align: top; } }
 
 main {
   float: left;
@@ -931,10 +679,6 @@ main {
   display: inline-block;
   box-sizing: border-box;
   padding: 1% 0 1% 0.6%; }
-  @media screen and (min-width: 35.5em) {
-    main {
-      width: 100%;
-      vertical-align: top; } }
 
 .create {
   width: 100%;
@@ -946,10 +690,6 @@ main {
   margin: 0 auto !important;
   display: block;
   float: none; }
-  @media screen and (min-width: 35.5em) {
-    .create {
-      width: 83.33333%;
-      vertical-align: top; } }
 
 form .create {
   width: 100%;
@@ -961,10 +701,6 @@ form .create {
   margin: 0 auto !important;
   display: block;
   float: none; }
-  @media screen and (min-width: 35.5em) {
-    form .create {
-      width: 66.66667%;
-      vertical-align: top; } }
   form .create input {
     width: 100%;
     line-height: 20px;
@@ -975,202 +711,69 @@ form .create {
     max-width: 793px; }
 
 /*  GO FULL WIDTH BELOW 1100 PIXELS */
-@media screen and (max-width: 72em) {
-  nav .first {
-    width: 100%;
-    font-size: inherit;
-    float: left;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 1% 0 1% 0.6%; } }
-  @media screen and (max-width: 72em) and (min-width: 35.5em) {
-    nav .first {
-      width: 25%;
-      vertical-align: top; } }
-@media screen and (max-width: 72em) {
-  nav .middle {
-    margin: 0.5em 0;
-    width: 100%;
-    font-size: inherit;
-    float: left;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 1% 0 1% 0.6%; } }
-  @media screen and (max-width: 72em) and (min-width: 35.5em) {
-    nav .middle {
-      width: 25%;
-      vertical-align: top; } }
-@media screen and (max-width: 72em) {
-    nav .middle a {
-      font-size: 1.5em; }
-  nav .last {
-    margin-top: 0.5em;
-    width: 100%;
-    font-size: inherit;
-    float: left;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 1% 0 1% 0.6%; } }
-  @media screen and (max-width: 72em) and (min-width: 35.5em) {
-    nav .last {
-      width: 99%;
-      vertical-align: top; } }
-@media screen and (max-width: 72em) {
-    nav .last input[type='search'] {
-      font-size: 1.5em;
-      width: 100%;
-      font-size: inherit;
-      float: left;
-      display: inline-block;
-      box-sizing: border-box;
-      padding: 1% 0 1% 0.6%; } }
-    @media screen and (max-width: 72em) and (min-width: 35.5em) {
-      nav .last input[type='search'] {
-        width: 99%;
-        vertical-align: top; } }
-@media screen and (max-width: 72em) {
-  nav form {
-    background-color: #fff; }
-    nav form input[type='submit'] {
-      width: 100%;
-      font-size: inherit;
-      float: left;
-      display: inline-block;
-      box-sizing: border-box;
-      padding: 1% 0 1% 0.6%;
-      height: auto; } }
-    @media screen and (max-width: 72em) and (min-width: 35.5em) {
-      nav form input[type='submit'] {
-        width: 99%;
-        vertical-align: top; } }
-
-@media screen and (max-width: 72em) {
-  header .feat .middle {
-    width: 60%;
-    margin: 0 20%; }
-  header .feat h1 {
-    font-size: 2.5em; }
-  header .feat .last {
-    width: 100%; }
-
-  .intro h2 {
-    font-size: 1.5em;
-    padding: 0 1%; }
-
-  article {
-    margin-top: 1em;
-    padding: 0; }
-
-  .blue .first .middle {
-    width: 98%;
-    margin: 0 1% 2% 1%; }
-
-  .bottom-margin .feat .middle {
-    width: 30%; }
-
-  .board {
-    width: 98%;
-    margin: 0 1%; }
-
-  .dashboard {
-    width: 90%;
-    margin: 0 5%; }
-    .dashboard h2 {
-      font-size: 0.85em; }
-    .dashboard .board {
-      margin-bottom: 2%; }
-    .dashboard .post.box .middle {
-      margin-bottom: 2% !important; }
-
-  .tile {
-    margin-bottom: 2%; }
-
-  .bottom-margin {
-    width: 100%;
-    font-size: inherit;
-    float: left;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 1% 0 1% 0.6%; } }
-  @media screen and (max-width: 72em) and (min-width: 35.5em) {
-    .bottom-margin {
-      width: 99%;
-      vertical-align: top; } }
-
-@media screen and (max-width: 72em) {
-  #testimonials {
-    height: 400px; }
-
-  #slider ul {
-    height: 400px;
-    width: 90%; }
-    #slider ul li {
-      width: 300px;
-      height: 450px; }
-
-  a.control_prev, a.control_next {
-    top: 30%; }
-
-  .hover-text {
-    margin-top: -100px; } }
-@media screen and (max-width: 37.5em) {
-  nav .middle {
-    margin: 0.5em 0; }
-  nav .last {
-    margin-top: 0.5em; }
-
-  header .feat .middle {
-    width: 60%;
-    margin: 0 20%; }
-  header .feat h1 {
+@media screen and (max-width: 1200px) {
+  article > h2 {
     font-size: 1.5em; }
 
-  .intro h2 {
-    font-size: 1em;
-    padding: 0 1%; }
+  .main {
+    font-size: 2em;
+    top: 17em;
+    left: 5em; }
 
-  article {
-    margin-top: 1em;
-    padding: 0; }
+  nav {
+    text-align: center;
+    font-size: 2em; }
 
-  .blue .first .middle {
-    width: 98%;
-    margin: 0 1% 2% 1%; }
+  nav .col {
+    min-height: 2em;
+    max-height: 4em; }
 
-  .bottom-margin .feat .middle {
-    width: 30%; }
-
-  .board {
+  nav form.span_4_of_12 {
     width: 98%;
     margin: 0 1%; }
 
-  .dashboard {
+  nav form input[type=search] {
+    width: 97%;
+    height: 4em; }
+
+  /*responsive forms*/
+  .inputs {
+    border: none;
+    padding: 0; }
+
+  input[type="text"], input[type="password"], input.col.span_11_of_12, textarea.col.span_11_of_12 {
     width: 90%;
-    margin: 0 5%; }
-    .dashboard h2 {
-      font-size: 0.85em; }
-    .dashboard .board {
-      margin-bottom: 2%; }
-    .dashboard .post.box .middle {
-      margin-bottom: 2% !important; }
+    min-height: 2em;
+    margin: auto 5%; }
 
-  .tile {
-    margin-bottom: 2%; }
+  /*specific grid solutions*/
+  .feat.span_9_of_12 > .col.feat.span_4_of_12 {
+    width: 33%;
+    font-size: 2em; }
 
-  #testimonials {
-    height: 400px; }
+  form.span_4_of_12 {
+    width: 90%;
+    margin: auto;
+    padding: 2em 0; }
 
-  #slider ul {
-    height: 400px;
-    width: 90%; }
-    #slider ul li {
-      width: 300px;
-      height: 450px; }
+  /*footer columns*/
+  footer .span_3_of_12 {
+    width: 50%; }
 
-  a.control_prev, a.control_next {
-    top: 30%; }
+  /*Dashboard*/
+  .board {
+    height: 15em; }
 
-  .hover-text {
-    margin-top: -100px; } }
+  section.feat {
+    margin: 0;
+    overflow: hidden; }
+
+  .tile.col.span_7_of_12 {
+    height: auto;
+    padding: 0;
+    margin: -3.5em 0; }
+
+  .dashboard {
+    padding: 1% 5%; } }
 
 /*# sourceMappingURL=import.css.map */

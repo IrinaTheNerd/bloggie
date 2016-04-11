@@ -25,9 +25,6 @@
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
 			<script src="js/scripts.js"></script>
 			<!--Taken from: http://mynameismatthieu.com/WOW/docs.html-->
-		<script src="js/wow.min.js"></script>
-            <script>
-              new WOW().init();
-            </script> 
+
 		</body>
 	</html>

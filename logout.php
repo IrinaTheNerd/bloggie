@@ -13,4 +13,5 @@
 		$user_logout->logout();
 		$user_logout->redirect('index.php');
 	}
+
 ?>

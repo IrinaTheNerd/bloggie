@@ -1,8 +1,7 @@
 <?php
 
-include_once("php/config.php");
-define("PAGENAME","Search Results");
-include_once("include/header.php");
+include_once("config.php");
+include_once("../include/header.php");
 try
  {
   $name="%".$_GET["search"]."%";
@@ -34,7 +33,7 @@ try
      echo $row['subtitle'];
      echo $row['preview'];
 
-     $search_str=$row['blogid'];
+     $search_str=$row['id'];
      echo "<a href='view.php?id=$search_str'>Edit</a>";
 
    }
@@ -48,5 +47,5 @@ try
  $conn = null;
  echo "</section>";
 
- include_once("include/footer.php");
+ include_once("../include/footer.php");
  ?>

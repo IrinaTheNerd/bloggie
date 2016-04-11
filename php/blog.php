@@ -85,7 +85,7 @@ class BLOG
 			 {
 				 $name="%".$_GET["search"]."%";
 				   $stmt =  $this->db->prepare("SELECT title, subtitle, preview FROM blogpost where title LIKE :name");
-				   $stmt->execute(array(':name' => '%'$name'%');
+				   $stmt->execute(array(':name' => $name));
 				   $result = $stmt->fetchAll();
 
 			  if( ! $result)
