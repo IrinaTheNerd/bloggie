@@ -37,11 +37,14 @@ $(document).ready(function() {
         i();
     }), $("a.control_next").click(function() {
         e();
-    }), $(".fade:nth-child(1)").animate({
+    });
+    $(".fade:nth-child(1)").animate({
         opacity: 1
-    }, 5e3), $(".fade:nth-child(2)").animate({
+    }, 5000);
+    $(".fade:nth-child(2)").animate({
         opacity: 1
-    }, 7e3), $(".fade:nth-child(3)").animate({
+    }, 7000);
+     $(".fade:nth-child(3)").animate({
         opacity: 1
-    }, 9e3);
+    }, 9000);
 });
