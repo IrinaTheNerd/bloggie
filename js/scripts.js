@@ -14,9 +14,9 @@ $(document).ready(function() {
             $("#slider ul li:first-child").appendTo("#slider ul"), $("#slider ul").css("left", "");
         });
     }
-    $(window).width() >= 1100 ? $("#index").addClass("image") : ($(".main").removeClass("absolute"), $("#index").removeClass("image")), $("input[type=search]").focus(function() {
-        $(this).val("");
-    }), $("input[type=submit]").mouseover(function() {
+    // old code 
+    // $(window).width() >= 1100 ? $("#index").addClass("image") : ($(".main").removeClass("absolute"), $("#index").removeClass("image"));
+    $("input[type=submit]").mouseover(function() {
         $("nav form").addClass("transition")
     }).mouseleave(function() {
         $("nav form").removeClass("transition");

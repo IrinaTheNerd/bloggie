@@ -64,8 +64,6 @@ a {
 //default elements
 header {
 	margin: 2em 0 2em 0;
-
-	/*box-shadow: -5px 5px 20px -5px #006064;*/
   padding: 0px;
   margin: 0px;
   overflow: hidden;
@@ -128,6 +126,9 @@ article {
 .margins {
 	margin: 1em 0 2em;
 }
+.fade {
+  opacity:0;
+}
 //buttons
 .button {
 	padding: 0.25em 1em;
@@ -138,7 +139,7 @@ article {
 	top: 4.75em;
 }
 .logo {
-	padding-left: 2%;
+	padding-left: 5%;
 }
 .image {
 	background: url('../img/landing-img.jpg') no-repeat center center;

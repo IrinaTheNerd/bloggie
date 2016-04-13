@@ -38,12 +38,12 @@ h1.dashboard {
 /*Box property*/
 .box {
 	padding-bottom: 3em;
-  box-shadow: -1px 3px 10px -5px #006064;
+  box-shadow: -1px 3px 10px -5px $green;
   margin-bottom: 6em;
     /*comments*/
 		&  > h3 {
 			font-size: 1.9em;
-			color: #01579b;
+			color: $pink;
 			font-weight: 500;
 		}
 
@@ -70,11 +70,11 @@ h1.dashboard {
 
 .board{
 	display: block;
-	background: #006064;
+	background: $green;
 	@include col(8,18);
 	margin:2%;
 	&:hover {
-		background: #ad1457;
+		background: $pink;
 		transition: 1s all;
 		text-decoration: none;
 	}

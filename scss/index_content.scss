@@ -14,7 +14,27 @@ header {
   }
 
 }
+//new index
+#index {
+  text-align: center;
+//  background: linear-gradient(180deg, $post-bg, $green);
+//  background-size: 400% 400%;
+  
+  white-space: nowrap;
+  overflow:hidden;
+  animation:4s steps(60, end);
+//-webkit-animation: gradient 16s ease infinite;
+//-moz-animation: gradient 16s ease infinite;
+//animation: gradient 16s ease infinite;
+  h1 {
 
+  }
+}
+
+
+@keyframes type{
+  from { width: 0; }
+}
 .container {
   @include row();
   clear: both;

@@ -1,9 +1,7 @@
 //nav
 
 nav {
-  padding:1% 0;
-  clear: both;
-  overflow: hidden;
+  box-shadow: -1px 2px 10px -5px $blue;
   background-color:fade-out($border-color, 0.8), ;
   @include col(1,1);
   .button {
@@ -16,7 +14,7 @@ nav {
    }
   }
   .first {
-    @include col(2,3,$first:true);
+    @include col(7,10,$first:true);
     img {
       width:inherit;
     }
@@ -28,7 +26,9 @@ nav {
     background-color: $post-bg;
     outline: $post-bg;
     width:auto;
+    @media screen and (min-width:72em){
     padding:.25em !important; //overriding the padding
+    }
     input[type=search] {
     	width:70%;
     	border: 1px solid $post-bg;

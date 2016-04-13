@@ -59,7 +59,6 @@ a {
 
 header {
   margin: 2em 0 2em 0;
-  /*box-shadow: -5px 5px 20px -5px #006064;*/
   padding: 0px;
   margin: 0px;
   overflow: hidden;
@@ -141,6 +140,9 @@ article {
 .margins {
   margin: 1em 0 2em; }
 
+.fade {
+  opacity: 0; }
+
 .button {
   padding: 0.25em 1em;
   border: 2px solid transparent;
@@ -150,7 +152,7 @@ article {
   top: 4.75em; }
 
 .logo {
-  padding-left: 2%; }
+  padding-left: 5%; }
 
 .image {
   background: url("../img/landing-img.jpg") no-repeat center center;
@@ -166,9 +168,7 @@ small {
   font-size: 1em; }
 
 nav {
-  padding: 1% 0;
-  clear: both;
-  overflow: hidden;
+  box-shadow: -1px 2px 10px -5px #01579b;
   background-color: rgba(221, 221, 221, 0.2);
   width: 100%;
   font-size: inherit;
@@ -196,7 +196,7 @@ nav {
     padding: 1% 0 1% 0; }
     @media screen and (min-width: 35.5em) {
       nav .first {
-        width: 66.66667%;
+        width: 70%;
         vertical-align: top; } }
     nav .first img {
       width: inherit; }
@@ -205,8 +205,10 @@ nav {
   nav form {
     background-color: #e4ebeb;
     outline: #e4ebeb;
-    width: auto;
-    padding: .25em !important; }
+    width: auto; }
+    @media screen and (min-width: 72em) {
+      nav form {
+        padding: .25em !important; } }
     nav form input[type=search] {
       width: 70%;
       border: 1px solid #e4ebeb;
@@ -398,7 +400,7 @@ h1.dashboard {
   /*comments*/ }
   .box > h3 {
     font-size: 1.9em;
-    color: #01579b;
+    color: #ad1457;
     font-weight: 500; }
 
 .feat {
@@ -449,27 +451,6 @@ h1.main {
   font-size: 3.2em;
   margin-top: 1em; }
 
-/*Animations mixin!!!!!*/
-.pulse {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1); }
-  50% {
-    -webkit-transform: scale(1.05); }
-  100% {
-    -webkit-transform: scale(1); } }
-@keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.1); }
-  100% {
-    transform: scale(1); } }
 /*Icons taken from http://fontello.com/ in open source lisence*/
 @font-face {
   font-family: 'fontello';
@@ -577,6 +558,15 @@ header .feat .last {
       width: 75%;
       vertical-align: top; } }
 
+#index {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 4s steps(60, end); }
+
+@keyframes type {
+  from {
+    width: 0; } }
 .container {
   float: left;
   display: block;

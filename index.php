@@ -5,20 +5,17 @@ include_once('include/header.php');
 
 ?>
 <header id="index">
-	<div class="feat">
-
+	<!--<div class="feat">
+old design
 		<div class="middle">
 			<img src="img/logov2.png" alt="bloggie, a friendly blogging platform">
 		</div>
-
 		<div class="last">
 			<h1 class="main absolute">
 				a friendly blogging platform</h1>
 			</div>
-
-
-		</div>
-
+		</div>-->
+		<h1 class="main">Bloggie, a super friendly blogging platform</h1>
 	</header>
 
 	<div class="container">
