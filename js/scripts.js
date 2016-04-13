@@ -14,7 +14,7 @@ $(document).ready(function() {
             $("#slider ul li:first-child").appendTo("#slider ul"), $("#slider ul").css("left", "");
         });
     }
-    // old code 
+    // old code
     // $(window).width() >= 1100 ? $("#index").addClass("image") : ($(".main").removeClass("absolute"), $("#index").removeClass("image"));
     $("input[type=submit]").mouseover(function() {
         $("nav form").addClass("transition")
@@ -40,10 +40,10 @@ $(document).ready(function() {
     });
     $(".fade:nth-child(1)").animate({
         opacity: 1
-    }, 5000);
+    }, 7000);
     $(".fade:nth-child(2)").animate({
         opacity: 1
-    }, 7000);
+    }, 8000);
      $(".fade:nth-child(3)").animate({
         opacity: 1
     }, 9000);
