@@ -13,7 +13,6 @@ class BLOG
 			public function showBlog() {
 				try {
 		echo "
-								<div class='feat span_10_of_12'>
 								<div class='post'>";
 		    $query = $this->db->prepare("SELECT blogID, title, subtitle, preview FROM blogpost");
 		    $query->execute();
@@ -33,7 +32,7 @@ class BLOG
 		    	echo "</div>";
 		    }
 
-		    echo "</div></div>";
+		    echo "</div>";
 
 		    }
 		catch(PDOException $e)

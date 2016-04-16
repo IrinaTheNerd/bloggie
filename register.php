@@ -53,18 +53,14 @@ if(isset($_POST['signup']))
 ?>
 
 
-				<header>
+				<header class="big-header">
 					<div class="feat">
-						<h1 class="main">Please, register</h1>
+						<h1>Please, register</h1>
+						<h2>Welcome back! Just login though our services or alternatively login through one of our social media integrations</h2>
 					</div>
 
 			</header>
-			<div class="intro">
-				<div class="feat ">
-					<h2>Welcome back! Just login though our services or alternatively login through one of our social media integrations</h2>
-				</div>
 
-			</div>
 			<?php
 if(isset($error))
 {
@@ -86,20 +82,10 @@ else if(isset($_GET['joined']))
 		 <?php
 }
 ?>
-			<div class="bottom-margin">
+			<div class="bottom-margin intro">
 				<form method="POST" class="inputs feat first">
 						<h3>Our fancy form</h3>
-						<div class="feat">
-							<div class="feat middle">
-								<a href="#"><span class="icon-facebook-circled"></span></a>
-							</div>
-							<div class="feat middle">
-								<a href="#"><span class="icon-twitter-circled"></span></a>
-							</div>
-							<div class="feat middle">
-								<a href="#"><span class="icon-googleplus-rect"></span></a>
-							</div>
-						</div>
+					<!--removed social logins-->
 						<div class="feat">
 							<label  class="feat col">email:</label>
 							<input type="text" maxlength="50" name="email"  class="feat col">

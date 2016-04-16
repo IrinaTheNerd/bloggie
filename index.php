@@ -4,7 +4,7 @@ define("PAGENAME","Blogging platform");
 include_once('include/header.php');
 
 ?>
-<header id="index">
+<header class="big-header">
 	<!--<div class="feat">
 old design
 		<div class="middle">
@@ -15,13 +15,12 @@ old design
 				a friendly blogging platform</h1>
 			</div>
 		</div>-->
-		<h1 class="main">Bloggie, a super friendly blogging platform</h1>
+		<h1>Bloggie, a super friendly blogging platform</h1>
+			<h2>Write well structured and adapted content for all platforms</h2>
 	</header>
 
 	<div class="container">
-		<article>
-			<h2>Write well structured and adapted content for all platforms</h2>
-		</article>
+
 		<div class="blue">
 			<div class="feat first">
 				<div class="box bg middle fade">

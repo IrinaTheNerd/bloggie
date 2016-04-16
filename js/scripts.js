@@ -20,8 +20,10 @@ $(document).ready(function() {
         $("nav form").addClass("transition")
     }).mouseleave(function() {
         $("nav form").removeClass("transition");
-    }), $("a.board").hover(function() {
-        $(this > ".title").addClass("pulse");
+    });
+    $("input[type=search]").on("click",function(){
+        $("nav form").addClass("transition");
+        $("input[type=submit]").addClass("hover");
     });
     var l = $("#slider ul li").length,
         t = $("#slider ul li").width(),

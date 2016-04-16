@@ -7,16 +7,16 @@
 						<p><a href="#"><span class="icon-twitter-circled"></span></a></p>
 					</div>
 					<div class="social">
-						<p><a href="#"><span class="icon-googleplus-rect"></span></a> </p>
+						<p><a href="#"><span class="icon-gplus-circled"></span></a> </p>
 					</div>
 					<div class="social">
-						<p><a href="#"><span class="icon-mail"></span></a> </p>
+						<p><a href="#"><span class="icon-mail-alt"></span></a> </p>
 					</div>
 					<div class="last">
 						<a href="#" class="button">Contact Support</a>
 					</div>
 					<div class="last">
-						<p>Made with &hearts; by <a href="http://irinapetrova.uk">IrinaTheNerd</a></p>
+						<p>Made with <span class="icon-heart-filled"></span> by <a href="http://irinapetrova.uk">IrinaTheNerd</a></p>
 					</div>
 
 				</div>

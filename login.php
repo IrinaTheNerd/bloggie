@@ -24,30 +24,20 @@
 		 $error = "Wrong Details !";
 		}
 	}
-	
+
 
 
 ?>
 
-				<header>
-					<div class="feat">
-						<h1>Please, log in</h1>
-					</div>
-
-
+				<header class="big-header">
+						<h1 class="no-margin">Please, log in</h1>
 			</header>
-			<div class="intro">
-				<div class="feat">
-					<h2>Welcome back! Just login though our services or alternatively login through one of our social media integrations</h2>
-				</div>
-		
-			</div>
-			<div class="bottom-margin">
-				<form method="post" class="inputs feat first">
 
-						<h3>Loginning is so easy</h3>
-						<div class="feat">
-							<div class="feat middle">
+			<div class="intro bottom-margin">
+				<form method="post" class="inputs feat first">
+					<div class="light-green">
+						<h2>Just fill in your details</h2>
+					</div>
 								<?php
 			            if(isset($error))
 			            {
@@ -58,24 +48,15 @@
 			                  <?php
 			            }
 			            ?>
-								<a href="#"><span class="icon-facebook-circled"></span></a>
+				 <!-- removed social login -->
 
-
-							</div>
-							<div class="feat middle">
-								<a href="#"><span class="icon-twitter-circled"></span></a>
-							</div>
-							<div class="feat middle">
-								<a href="#"><span class="icon-googleplus-rect"></span></a>
-							</div>
+						<div class="feat">
+							<label  class="left col">Email:</label>
+							<input type="text" maxlength="50" placeholder="email" name="email"  class="feat col">
 						</div>
 						<div class="feat">
-							<label  class="feat col">email:</label>
-							<input type="text" maxlength="50" name="email"  class="feat col">
-						</div>
-						<div class="feat">
-							<label class="feat col">password:</label>
-							<input type="password" name="password" class="feat col">
+							<label class="left col">Password:</label>
+							<input type="password" name="password" placeholder="password" class="feat col">
 						</div>
 						<input type="submit" name="login_button" value="submit">
 

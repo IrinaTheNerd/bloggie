@@ -11,16 +11,16 @@
 		<body>
 			<nav>
 				<div class="first">
-					<a href="index.php"><img src="img/logo-small.png" alt="logo, or get back to the index page" class="logo"></a>
+					<a href="index"><img src="img/logo-small.png" alt="logo, or get back to the index page" class="logo"></a>
 				</div>
 				<div class="middle">
-					<a href="all_posts.php">latest blogs</a>
+					<a href="all_posts">latest blogs</a>
 				</div>
 				<div class="middle">
-					<a href="login.php" class="button">login</a>
+					<a href="login" class="button">login</a>
 				</div>
 				<div class="middle">
-					<a href="register.php" class="button">register</a>
+					<a href="register" class="button">register</a>
 
 				</div>
 				<!-- Search Bar -->

@@ -1,10 +1,9 @@
-//login and register pages markup
+
 .intro {
   @include row();
   @include col(3,4,$first:true);
   @include centr();
 }
-
 //exend didn't work
  .bottom-margin {
 
@@ -13,7 +12,7 @@
 
     .inputs .first {
       @include col(1,3,$first:true);
-      @include centr(); 
+      @include centr();
     }
 
     .middle {
