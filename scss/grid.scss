@@ -30,6 +30,7 @@ the grid is also inspired by the previously used grid responsivegridsystem.com
   @media screen and (min-width: 35.5em) {
       width:percentage($col/$sum);
       vertical-align: $align;
+      padding:1% 0;
 
   }
 

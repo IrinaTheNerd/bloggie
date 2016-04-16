@@ -17,17 +17,20 @@
   }
   .last {
     margin-top:0.5em;
-		@include col(99,100);
+		@include col(1,1);
+		padding:1% 0;
 		input[type='search']{
 			font-size:1.5em;
-			@include col(99,100);
+			@include col(1,1);
+			padding:1% 0;
 		}
 
   }
 	form {
 		background-color:$white;
 		input[type='submit']{
-			@include col(99,100);
+			@include col(1,1);
+			padding:1% 0;
 			height:auto;
 
 		}
@@ -85,6 +88,7 @@ article{
 
   //forms to login and register
   .bottom-margin{
-    @include col(99,100);
+    @include col(1,1);
+		padding:1% 0;
   }
 }
