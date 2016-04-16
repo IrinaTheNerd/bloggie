@@ -25,3 +25,9 @@
       margin:0;
     }
   }
+//alert message
+.alert {
+  background: fade-out($pink, 0.5);
+  padding: 2% 0;
+  color: $white;
+}

@@ -13,6 +13,7 @@ class USER
                 {
                                 try {
                                                 $pass  = password_hash($password, PASSWORD_DEFAULT); //hashing function for security
+                                            
                                                 // LEFT JOIN userblog ON users.userID = userblog.userID was a bad idea, so made another function
                                                 $query = $this->db->prepare("INSERT INTO user (email, password)
       VALUES (:email, :password)");
@@ -55,22 +56,22 @@ class USER
                                                 $query->execute(array(
                                                                 ':email' => $email
                                                 ));
-                                                
+
                                                 if ($firstQuery->rowCount() > 0) {
                                                                 $update = $this->db->prepare("UPDATE user SET oauth_provider = :oauth_provider, oauth_uid = :oauth_uid, email = :email, locale = :locale, modified = GETDATE() WHERE oauth_provider = :oauth_provider. AND oauth_uid = :oauth_uid");
-                                                                
+
                                                 } else {
                                                                 // No rows returned!
                                                                 $insert = $this->db->prepare("INSERT INTO user SET oauth_provider = :oauth_provider, oauth_uid = :oauth_uid, email = :email, locale = :locale, modified = GETDATE() WHERE oauth_provider = :oauth_provider. AND oauth_uid = :oauth_uid");
-                                                                
+
                                                 }
                                                 $query  = $this->db->prepare("SELECT * FROM user WHERE oauth_provider = :oauth_provider AND oauth_uid = :$oauth_uid");
-                                       
+
                                                 $query->bindParam(':oauth_provider', $oauth_provider);
                                                 $query->bindParam(':oauth_uid', $oauth_uid);
                                                 $query->bindParam(':email', $email);
                                                 $query->bindParam(':locale', $locale);
-                                                
+
                                                 $query->execute();
                                                 return $result;
                                 }
@@ -81,7 +82,7 @@ class USER
                                 	if(!$fbuser){
 	$fbuser = null;
 	$loginUrl = $facebook->getLoginUrl(array('redirect_uri'=>$homeurl,'scope'=>$fbPermissions));
-	$output = '<a href="'.$loginUrl.'"><img src="images/fb_login.png"></a>'; 	
+	$output = '<a href="'.$loginUrl.'"><img src="images/fb_login.png"></a>';
 }else{
 	$user_profile = $facebook->api('/me?fields=id,first_name,last_name,email,gender,locale,picture');
 
@@ -92,7 +93,7 @@ class USER
         $output .= '<br/>Email : ' . $user_data['email'];
         $output .= '<br/>Locale : ' . $user_data['locale'];
         $output .= '<br/>You are login with : Facebook';
-        $output .= '<br/>Logout from <a href="logout.php?logout">Facebook</a>'; 
+        $output .= '<br/>Logout from <a href="logout.php?logout">Facebook</a>';
 	}
 	else
 	{
@@ -100,7 +101,7 @@ class USER
 	}
 }
                                 */
-                                
+
            //     }
                 public function loggedin()
                 {
@@ -124,23 +125,23 @@ class USER
                                 try {
                                                 $query = $this->db->prepare("INSERT INTO blogpost (userID, title, subtitle, preview, main_text)
                 VALUES (:userID, :title, :subtitle, :preview, :main_text)");
-                                                
+
                                                 $query->bindParam(':userID', $userID);
                                                 $query->bindParam(':title', $title);
                                                 $query->bindParam(':subtitle', $subtitle);
                                                 $query->bindParam(':main_text', $main_text);
                                                 $query->bindParam(':preview', $preview);
-                                                
+
                                                 $query->execute();
                                                 return $query;
                                 }
-                                
+
                                 catch (PDOException $e) {
                                                 echo $e->getMessage();
                                 }
-                                
+
                 }
-                
-                
+
+
 }
 ?>

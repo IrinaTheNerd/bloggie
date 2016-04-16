@@ -24,7 +24,15 @@ $(document).ready(function() {
     $("input[type=search]").on("click",function(){
         $("nav form").addClass("transition");
         $("input[type=submit]").addClass("hover");
+    }).mouseleave(function() {
+        $("nav form").removeClass("transition");
+        $("input[type=submit]").removeClass("hover");
     });
+    if ($(".alert").length > 0 ) {
+      $("input[type=text]").css("border","2px solid #ad1457");
+      $("input[type=password]").css("border","2px solid #ad1457");
+    }
+
     var l = $("#slider ul li").length,
         t = $("#slider ul li").width(),
         n = $("#slider ul li").height(),

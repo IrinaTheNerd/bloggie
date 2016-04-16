@@ -12,18 +12,25 @@ if(isset($_POST['signup']))
 {
    $email = trim($_POST['email']);
    $password = trim($_POST['password']);
+	 $confirmed_password = trim($_POST['confirm_password']);
    if($email=="") {
-      $error[] = "provide email id !";
+      $error[] = "Provide your email!";
    }
    else if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $error[] = 'Please enter a valid email address !';
+      $error[] = 'Please enter a valid email address!';
    }
    else if($password=="") {
-      $error[] = "provide password !";
+      $error[] = "Provide a password!";
    }
    else if(strlen($password) < 6){
       $error[] = "Password must be atleast 6 characters";
    }
+	 else if ($password !== $confirmed_password){
+		 $error[] = 'Please check your passwords';
+	 }
+	 else if ($confirmed_password == ""){
+		 $error[] = 'Please check your passwords';
+	 }
    else
    {
       try
@@ -38,9 +45,11 @@ if(isset($_POST['signup']))
          else
          {
             if($user->register($email,$password))
-            {
+            {    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+									$user->redirect('dashboard.php?joined');
+								}
 
-                $user->redirect('dashboard.php?joined');
+
             }
          }
      }
@@ -53,51 +62,44 @@ if(isset($_POST['signup']))
 ?>
 
 
-				<header class="big-header">
-					<div class="feat">
-						<h1>Please, register</h1>
-						<h2>Welcome back! Just login though our services or alternatively login through one of our social media integrations</h2>
-					</div>
+<header class="big-header">
+		<h1 class="no-margin">Please, log in</h1>
+</header>
 
-			</header>
+<div class="intro bottom-margin">
+<form method="post" class="inputs feat first">
+	<div class="light-green">
+		<h2>It's very easy to sign up</h2>
+	</div>
 
 			<?php
 if(isset($error))
 {
-	 foreach($error as $error)
-	 {
-			?>
-			<div class="alert alert-danger">
-					Nooo &nbsp; <?php echo $error; ?>
+
+		foreach ($error as $value) {	?>
+			<div class="alert" >
+					Nooo <?php echo $value; ?>
 			</div>
 			<?php
-	 }
 }
-else if(isset($_GET['joined']))
-{
-		 ?>
-		 <div class="alert alert-info">
-				Yay &nbsp; Successfully registered <a href='index.php'>login</a> here
-		 </div>
-		 <?php
 }
 ?>
-			<div class="bottom-margin intro">
-				<form method="POST" class="inputs feat first">
-						<h3>Our fancy form</h3>
-					<!--removed social logins-->
-						<div class="feat">
-							<label  class="feat col">email:</label>
-							<input type="text" maxlength="50" name="email"  class="feat col">
-						</div>
-						<div class="feat">
-							<label class="feat col">password:</label>
-							<input type="password" name="password" class="feat col">
-						</div>
-						<input type="submit" value="submit" name="signup">
+				<div class="feat">
+					<label  class="left col">Email:</label>
+					<input type="text" maxlength="50" placeholder="email" name="email"  class="feat col">
+				</div>
+				<div class="feat">
+					<label class="left col">Password:</label>
+					<input type="password" name="password" placeholder="password" class="feat col">
+				</div>
+				<div class="feat">
+					<label class="left col">Confirm Password:</label>
+					<input type="password" name="confirm_password" placeholder="confirm password" class="feat col">
+				</div>
+				<input type="submit" name="signup" value="submit">
 
-				</form>
 			</div>
+		</div>
 	<?php
 include_once('include/footer.php');
 ?>

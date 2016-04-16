@@ -11,11 +11,13 @@
 		color: $post-bg;
 		font-size: 0.75em;
 		margin: 2em 0;
+		width:50%;
+
 	  &:hover {
 	    border: 2px solid $blue;
 	    padding:1em 2em;
 	    background: transparent;
-	    color: $green;
+	    color: $blue;
 	    transition: 1s all;
 
 	  }
@@ -27,11 +29,20 @@
   	border: 1px solid $border-color;
   	margin: 1em 5%;
 		width: 90%;
+		border-radius: 10px;
+		outline:none;
+		text-align: left;
+		padding: 0 2%;
+		&:focus {
+			border: 1px solid $green;
+		}
 
   }
+
 }
 textarea {
 	min-height: 8em;
+	border-radius: 10px;
 }
 
 .light-green {

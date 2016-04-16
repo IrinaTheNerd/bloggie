@@ -42,8 +42,8 @@
 			            if(isset($error))
 			            {
 			                  ?>
-			                  <div class="alert alert-danger">
-			                      <strong>Oh no!</strong> <?php echo $error; ?> !
+			                  <div class="alert">
+			                      <strong>Oh no! <?php echo $error; ?> </strong> 
 			                  </div>
 			                  <?php
 			            }
