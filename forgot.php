@@ -11,6 +11,7 @@
 		$email = $_POST['email'];
 		if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 					$user->passwordRecovery($email);
+					$message[] = "If your email is valid, we will send you a message. Please check your spam folder too!";
 			}
 	}
 
@@ -28,11 +29,11 @@
 						<h2>Just fill in your details</h2>
 					</div>
 								<?php
-			            if(isset($error))
+			            if(isset($message))
 			            {
 			                  ?>
-			                  <div class="alert">
-			                      <strong>Oh no! <?php echo $error; ?> </strong>
+			                  <div class="message">
+			                      <strong> <?php echo $message; ?> </strong>
 			                  </div>
 			                  <?php
 			            }

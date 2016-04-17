@@ -19,7 +19,7 @@ class USER
       $query = $this->db->prepare("INSERT INTO user (email, password) VALUES (:email, :password)");
       $query->bindParam(':email', $email);
       $query->bindParam(':password', $pass);
-      //        $id = "SELECT userID FROM users WHERE :email=email  limit 1";
+      //   tried to encorporate blogs too     $id = "SELECT userID FROM users WHERE :email=email  limit 1";
       //            $query->bindParam(':userID',$id);
       $query->execute(); //runs the statement
       return $query;
@@ -103,12 +103,14 @@ $output = '<h3 style="color:red">Some problem occurred, please try again.</h3>';
 */
 
 //     }
+//logged in method that sets the session
 public function loggedin()
 {
   if (isset($_SESSION['user_session'])) {
     return true;
   }
 }
+//redirect method
 public function redirect($url)
 {
   header("Location: $url");
