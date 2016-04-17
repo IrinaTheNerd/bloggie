@@ -151,71 +151,57 @@ function passwordRecovery($email){
     ));
     $row = $query->fetch(PDO::FETCH_ASSOC);
     if ($query->rowCount() > 0) {
-        $key = hash('sha512',$row['userID']);
-        $to = $row['email'];
-        $from = "Bloggie";
-        $subject = "Your password";
-        $url = "http://bloggie.irinapetrova.uk";
-        $message = "Hello! So sorry to hear that you lost your password,
-        <br> don't worry though, just follow the link below, to reset it!
-        <br><a href='http://bloggie.irinapetrova.uk/reset?key={$key}&action=reset'>https://bloggie.irinapetrova.uk/reset.php?key={$key}&action=reset</a>
-        ";
-        $headers = "From: " . strip_tags($from) . "\r\n";
-        $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
-        $headers .= "MIME-Version: 1.0\r\n";
-        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-        mail($to,$subject,$message,$headers);
-      }
+      $key = hash('sha512',$row['userID']);
+      $to = $row['email'];
+      $from = "Bloggie";
+      $subject = "Your password";
+      $url = "http://bloggie.irinapetrova.uk";
+      $message = "Hello! So sorry to hear that you lost your password,
+      <br> don't worry though, just follow the link below, to reset it!
+      <br><a href='http://bloggie.irinapetrova.uk/reset?key={$key}&action=reset'>https://bloggie.irinapetrova.uk/reset.php?key={$key}&action=reset</a>
+      ";
+      $headers = "From: " . strip_tags($from) . "\r\n";
+      $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
+      $headers .= "MIME-Version: 1.0\r\n";
+      $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+      mail($to,$subject,$message,$headers);
     }
+  }
 
   catch (PDOException $e) {
     echo $e->getMessage();
   }
 }
-  function updateDetails($email,$password){
-    try {
-      $query = $this->db->prepare("UPDATE user SET password = :password WHERE email = :email");
-      $renewPass  = password_hash($password, PASSWORD_DEFAULT);
-      $query->bindParam(':email', $email);
-      $query->bindParam(':password', $renewPass);
+function updateDetails($email,$password){
+  try {
+    $query = $this->db->prepare("UPDATE user SET password = :password WHERE email = :email");
+    $renewPass  = password_hash($password, PASSWORD_DEFAULT);
+    $query->bindParam(':email', $email);
+    $query->bindParam(':password', $renewPass);
 
-      $query->execute();
-      return $query;
-    }
-
-    catch (PDOException $e) {
-      echo $e->getMessage();
-    }
+    $query->execute();
+    return $query;
   }
-  //tidying up reset
-  function resetVerify ($email){
-    try
-    {
-       $query = $conn->prepare("SELECT userID FROM user WHERE email = :email");
-       $query->execute(array(':email'=>$email));
-       $row=$query->fetch(PDO::FETCH_ASSOC);
-       $userID = hash('sha512', $row['userID']);
 
-
-       if($userID !== $currentID) {
-          $error[] = "I think you have the wrong email!";
-       }
-       else
-       {
-        if($reset->updateDetails($email,$password))
-          {
-            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                this->login($email, $password);
-                this->redirect('login.php');
-              }
-          }
-       }
-   }
-   catch(PDOException $e)
-   {
-      echo $e->getMessage();
-   }
+  catch (PDOException $e) {
+    echo $e->getMessage();
+  }
 }
-  }
+//tidying up reset
+/*function resetVerify($email){
+  try
+  {
+    $query = $conn->prepare("SELECT userID FROM user WHERE email = :email");
+    $query->execute(array(':email'=>$email));
+    $row=$query->fetch(PDO::FETCH_ASSOC);
+    $userID = hash('sha512', $row['userID']);
+
+
+}
+catch(PDOException $e)
+{
+  echo $e->getMessage();
+}
+}*/
 }
 ?>
