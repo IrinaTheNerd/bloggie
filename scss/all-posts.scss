@@ -17,7 +17,7 @@
             @include col(11,12);
             @include centr();
             margin-top:1em;
-            margin-bottom:3em;
+            margin-bottom:3em !important;
           }
           article {
             h3, h4 {
@@ -25,4 +25,8 @@
             }
           }
         }
+}
+.read-more{
+  float: right;
+  padding-right: 3%;
 }

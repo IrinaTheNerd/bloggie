@@ -5,6 +5,11 @@
 
 
 	$blog = new BLOG($conn);
+
+	echo '<header class="big-header">
+			<h1 class="no-margin">Your latest posts</h1>
+	</header>';
+
 	$blog->showBlog();
 
 

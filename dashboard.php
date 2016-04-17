@@ -34,9 +34,9 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 					</div>
 				</header>
 				<div class="feat dashboard">
-					<a href="new_post.php" class="box board">
+					<a href="new_post" class="box board">
 						<div class="tile">
-							<span class="icon-doc-new-circled"></span>
+							<span class="icon-doc-add"></span>
 						</div>
 						<div class="tile">
 							<h3>Write new..</h3>
@@ -54,15 +54,15 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 			<div class="feat dashboard">
 				<a href="mailto:hello@irinapetrova.uk" class="box board">
 					<div class="tile">
-						<span class="icon-mail"></span>
+						<span class="icon-mail-alt"></span>
 					</div>
 					<div class="tile">
 						<h3>Support</h3>
 					</div>
 				</a>
-			<a href="all_posts.html" class="box board">
+			<a href="all_posts" class="box board">
 					<div class="tile">
-						<span class="icon-book"></span>
+						<span class="icon-th-list"></span>
 					</div>
 						<div class="tile">
 						<h3>View all posts</h3>

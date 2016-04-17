@@ -10,6 +10,7 @@
 	h2 {
 		font-size: 1.2em;
 		color: $pink;
+		text-align: left;
 	}
 }
 h1.dashboard {
@@ -45,6 +46,10 @@ h1.dashboard {
 			font-size: 1.9em;
 			color: $pink;
 			font-weight: 500;
+			padding: 0 2%;
+		}
+		& > h4 {
+			padding: 0 2%;
 		}
 
 }

@@ -26,8 +26,8 @@ class BLOG
 		    	echo "<div class='box bg middle'>";
 					echo  "<h3>{$row['title']}</h3>";
 	 			 echo "<h4>{$row['subtitle']}</h4>";
-	 			 echo "<p>{$row['preview']}</p>";
-		    	echo "<a href='view.php?ID={$row['blogID']}'>Read More</a>";
+	 			 echo "<p>{$row['preview']}<br>";
+		    	echo "<a href='view.php?ID={$row['blogID']}' class='read-more'>Read More</a></p>";
 
 		    	echo "</div>";
 		    }

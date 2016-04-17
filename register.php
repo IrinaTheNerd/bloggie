@@ -63,7 +63,7 @@ if(isset($_POST['signup']))
 
 
 <header class="big-header">
-		<h1 class="no-margin">Please, log in</h1>
+		<h1 class="no-margin">Please, register</h1>
 </header>
 
 <div class="intro bottom-margin">

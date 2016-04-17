@@ -60,7 +60,7 @@ if(isset($_POST['send_post']))
 				</div>
 
 
-			<form method="POST" class="auto inputs create">
+			<form method="POST" id="new_post" class="auto inputs create">
 
 						<div class="margins create">
 							<div class="explain">
@@ -87,7 +87,7 @@ if(isset($_POST['send_post']))
 							</div>
 							<div>
 							<small>Make sure that most important information is on top of the page, it's valuable and consice</small>
-									<textarea name="preview"></textarea>
+							<textarea name="preview"></textarea>
 
 								</div>
 							</div>

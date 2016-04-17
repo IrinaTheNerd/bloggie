@@ -1,6 +1,17 @@
 <!Doctype html>
 	<html lang="en">
 		<head>
+			<!-- favicons -->
+			<!--general browser -->
+			<link href="img/favicon.ico" rel="icon" type="image/x-icon">
+			<!--Specific for each device -->
+			<link href="img/favicon_opera.png" rel="icon" type="image/png">
+			<link href="img/ipad.png" rel="apple-touch-icon-precomposed" sizes="72x72" type="image/png">
+			<link href="img/retina.png" rel="apple-touch-icon-precomposed" sizes="114x114" type="image/png">
+			<link href="img/iphone.png" rel="apple-touch-icon-precomposed" sizes="57x57" type="image/png">
+
+
+
 			<title><?php echo SITENAME . ' - '. PAGENAME;?> </title>
 
 

@@ -40,6 +40,20 @@
   }
 
 }
+#new_post {
+	background: $post-bg;
+	border:none;
+	input[type="text"],textarea{
+		margin: 1em 0;
+	}
+	.trumbowyg-box, .trumbowyg-editor{
+		background:$white;
+	}
+	input[type=submit]{
+		width: 62%;
+		margin: 0 17% !important;
+	}
+}
 textarea {
 	min-height: 8em;
 	border-radius: 10px;

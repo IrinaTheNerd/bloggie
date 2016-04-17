@@ -14,7 +14,7 @@ header {
   }
   background: fade-out($border-color, 0.8);
   padding: 5% 0;
-  box-shadow: -1px 6px 5px -5px $blue;
+  box-shadow: -1px 6px 5px -5px $border-color;
   margin-bottom: 3em;
 
 

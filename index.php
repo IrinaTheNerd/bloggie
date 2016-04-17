@@ -35,7 +35,7 @@ old design
 				</div>
 				<div class="box bg middle fade">
 					<h3>Responsive</h3>
-					<p>It's lightweight and responsive, you can write on the go, or read from your tablet.
+					<p>It's lightweight and responsive, you can write and read from whereever you are, whatever your device is.
 					</p>
 				</div>
 			</div>
@@ -53,7 +53,7 @@ old design
 				<ul>
 					<li>
 						<div class="hover-image">
-							<img src="img/testim-one.jpg" alt="first testimony">
+							<img src="img/testim-one.gif" alt="first testimony">
 							<div class="hover-text">
 								<p>This is an awesome platform</p>
 							</div>

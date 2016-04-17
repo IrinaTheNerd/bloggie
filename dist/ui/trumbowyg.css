@@ -21,9 +21,9 @@
   display: block;
   position: relative;
   border: 1px solid #DDD;
-  width: 100%;
+  width: 94%;
   min-height: 350px;
-  margin: 20px auto; }
+  margin: 20px 0; }
 
 .trumbowyg-box .trumbowyg-editor {
   margin: 0 auto;
