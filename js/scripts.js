@@ -37,7 +37,8 @@ $(document).ready(function() {
      event.stopPropagation();
      $("nav .last").toggle();
     });
-    $(document).on("click",function(){
+    //if click on header, then search box disappears
+  $("header").on("click",function(){
       $("nav .last").hide();
     });
   }

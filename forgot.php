@@ -1,28 +1,17 @@
 <?php
 	include_once('php/config.php');
-  session_start();
-// include_once ('include/session.php');
-	$login = new USER($conn);
-	define("PAGENAME","Login");
+
+	$user = new USER($conn);
+	define("PAGENAME","Request new Password");
 	include_once('include/header.php');
 
-	if($login->loggedin()!="")
-	{
-	 $login->redirect('dashboard.php');
-	}
-	if(isset($_POST['login_button']))
+
+	if(isset($_POST['send_password']))
 	{
 		$email = $_POST['email'];
-		$pass = $_POST['password'];
-
-		if($login->login($email,$pass))
-		{
-		 $login->redirect('dashboard.php');
-		}
-		else
-		{
-		 $error = "Wrong Details !";
-		}
+		if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+					$user->passwordRecovery($email);
+			}
 	}
 
 
@@ -54,14 +43,7 @@
 							<label  class="left col">Email:</label>
 							<input type="text" maxlength="50" placeholder="email" name="email"  class="feat col">
 						</div>
-						<div class="feat">
-							<label class="left col">Password:</label>
-							<input type="password" name="password" placeholder="password" class="feat col">
-						</div>
-						<div class="feat">
-							<small><a href="forgot">Forgot your password?</a></small>
-						</div>
-						<input type="submit" name="login_button" value="submit">
+						<input type="submit" name="send_password" value="submit">
 
 				</form>
 			</div>

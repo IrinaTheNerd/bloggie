@@ -27,7 +27,7 @@ class BLOG
 					echo  "<h3>{$row['title']}</h3>";
 	 			 echo "<h4>{$row['subtitle']}</h4>";
 	 			 echo "<p>{$row['preview']}<br>";
-		    	echo "<a href='view.php?ID={$row['blogID']}' class='read-more'>Read More</a></p>";
+		    	echo "<a href='view?ID={$row['blogID']}' class='read-more'>Read More</a></p>";
 
 		    	echo "</div>";
 		    }
@@ -69,7 +69,7 @@ class BLOG
 		 <div class='fb-like' data-href='https://developers.facebook.com/docs/plugins/' data-layout='button' data-action='like' data-show-faces='true' data-share='true'></div>
 		 <a href='https://twitter.com/share' class='twitter-share-button' data-via='irinathenerd' data-hashtags='bloggie'><span class='icon-twitter-circled'></span></a>
 
-		
+
 <script src='https://apis.google.com/js/platform.js' async defer></script>
 
 <div class='g-plus' data-action='share' data-annotation='none'></div>";
@@ -114,7 +114,7 @@ class BLOG
 			     echo  "<h3>{$row['title']}</h3>";
 			     echo "<h4>{$row['subtitle']}</h4>";
 			     echo "<p>{$row['preview']}</p>";
-			     echo "<a href='view.php?ID={$row['blogID']}'>Read More</a>";
+			     echo "<a href='view?ID={$row['blogID']}'>Read More</a>";
 
 			     echo "</div></div>";
 

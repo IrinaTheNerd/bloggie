@@ -26,7 +26,7 @@ the grid is also inspired by the previously used grid responsivegridsystem.com
   float:left;
   display: inline-block;
   box-sizing: border-box;
-  padding: 1% 0 1% if($first, 0, $gap);
+  padding: 1% 0 1% 0;
   @media screen and (min-width: 35.5em) {
       width:percentage($col/$sum);
       vertical-align: $align;
