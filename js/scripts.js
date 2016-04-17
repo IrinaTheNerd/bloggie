@@ -34,8 +34,11 @@ $(document).ready(function() {
   //responsive search code
   if ($(window).width() <= 800 ){
    $(".responsive").on("click", function(){
-     console.log("yay");
+     event.stopPropagation();
      $("nav .last").toggle();
+    });
+    $(document).on("click",function(){
+      $("nav .last").hide();
     });
   }
 
