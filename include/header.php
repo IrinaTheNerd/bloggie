@@ -23,6 +23,7 @@
 			<nav>
 				<div class="first">
 					<a href="index"><img src="img/logo-small.png" alt="logo, or get back to the index page" class="logo"></a>
+					<span class="icon-search responsive hidden"></span>
 				</div>
 				<div class="middle">
 					<a href="all_posts">latest blogs</a>

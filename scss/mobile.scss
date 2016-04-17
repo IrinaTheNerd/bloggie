@@ -6,9 +6,29 @@
     margin:0.5em 0;
   }
   .last {
-    margin-top:0.5em;
+    display:none;
+    position: absolute;
+    top: 68px;
+    width: 70%;
+    right: 0;
+    height: 100px;
+    input[type=search], input[type=submit] {
+      width: 90%;
+      margin: 5%;
+    }
+     input[type=submit]{
+       margin-top:0;
+       margin-bottom:0;
+     }
   }
 
+
+}
+.responsive {
+  display: block;
+  float:right;
+  font-size: 50px;
+  cursor:pointer;
 }
 header {
   text-align: center;
