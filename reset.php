@@ -1,17 +1,19 @@
 <?php
+  //merge between registration method, online tutorial and previous code
 	include_once('php/config.php');
   session_start();
-// include_once ('include/session.php');
 	$reset = new USER($conn);
 	define("PAGENAME","Reset");
 	include_once('include/header.php');
-
+//once form is submitted php is going to ...
   if(isset($_POST['reset_password']))
   {
+    //trim email and passwords
      $email = trim($_POST['email']);
      $password = trim($_POST['password']);
   	 $confirmed_password = trim($_POST['confirm_password']);
-     $currentID = $_GET['key'];
+     $currentID = $_GET['key']; //get the key from the url
+     //print out error messages if information isn't filled correctly
      if($email=="") {
         $error[] = "Provide your email!";
      }
@@ -31,34 +33,8 @@
   		 $error[] = 'Please check your passwords';
   	 }
      else
-     {
-        try
-        {
-           $query = $conn->prepare("SELECT userID FROM user WHERE email = :email");
-           $query->execute(array(':email'=>$email));
-           $row=$query->fetch(PDO::FETCH_ASSOC);
-           $userID = hash('sha512', $row['userID']);
-
-
-           if($userID !== $currentID) {
-              $error[] = "I think you have the wrong email!";
-           }
-           else
-           {
-            if($reset->updateDetails($email,$password))
-              {    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  									//$user->redirect('dashboard.php?joined');
-  								}
-
-
-              }
-           }
-       }
-       catch(PDOException $e)
-       {
-          echo $e->getMessage();
-       }
-    }
+     {//if details are filled properly then run another query
+        $reset->resetVerify($email);
   }
 
 ?>

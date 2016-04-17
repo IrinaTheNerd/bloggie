@@ -172,6 +172,50 @@ function passwordRecovery($email){
     echo $e->getMessage();
   }
 }
+  function updateDetails($email,$password){
+    try {
+      $query = $this->db->prepare("UPDATE user SET password = :password WHERE email = :email");
+      $renewPass  = password_hash($password, PASSWORD_DEFAULT);
+      $query->bindParam(':email', $email);
+      $query->bindParam(':password', $renewPass);
 
+      $query->execute();
+      return $query;
+    }
+
+    catch (PDOException $e) {
+      echo $e->getMessage();
+    }
+  }
+  //tidying up reset
+  function resetVerify ($email){
+    try
+    {
+       $query = $conn->prepare("SELECT userID FROM user WHERE email = :email");
+       $query->execute(array(':email'=>$email));
+       $row=$query->fetch(PDO::FETCH_ASSOC);
+       $userID = hash('sha512', $row['userID']);
+
+
+       if($userID !== $currentID) {
+          $error[] = "I think you have the wrong email!";
+       }
+       else
+       {
+        if($reset->updateDetails($email,$password))
+          {
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                this->login($email, $password);
+                this->redirect('login.php');
+              }
+          }
+       }
+   }
+   catch(PDOException $e)
+   {
+      echo $e->getMessage();
+   }
+}
+  }
 }
 ?>
