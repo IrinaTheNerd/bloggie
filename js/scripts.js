@@ -32,7 +32,7 @@ $(document).ready(function() {
   }, 9000);
 
   //responsive search code
-  if ($(window).width() <= 800 ){
+  if ($(window).width() <= 1025 ){
    $(".responsive").on("click", function(){
      event.stopPropagation();
      $("nav .last").toggle();

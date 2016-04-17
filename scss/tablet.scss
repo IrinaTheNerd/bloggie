@@ -15,7 +15,10 @@
 				font-size:1.5em;
 			}
 			.last {
-				width:auto;
+				width: 65%;
+				vertical-align: top;
+				padding: 1%;
+				margin-left: 5%;
 			}
 			form {
 				@include col(3,4,$first:true);
