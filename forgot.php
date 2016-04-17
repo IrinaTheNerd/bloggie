@@ -11,7 +11,7 @@
 		$email = $_POST['email'];
 		if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 					$user->passwordRecovery($email);
-					$message[] = "If your email is valid, we will send you a message. Please check your spam folder too!";
+					$message = "If your email is valid, we will send you a message. Please check your spam folder too!";
 			}
 	}
 

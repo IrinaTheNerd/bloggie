@@ -144,12 +144,9 @@ article {
 .no-margin {
   margin:0;
 }
-.image {
-	background: url('../img/landing-img.jpg') no-repeat center center;
-	overflow: auto;
-	background-size: cover;
+.message {
+  background: fade-out($green, 0.8);
 }
-
 .explain{
   label {
     color: $blue;
