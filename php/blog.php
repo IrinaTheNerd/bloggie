@@ -17,7 +17,7 @@ class BLOG
 			echo "
 			<div class='post'>";
 			//selecting appropriate fields from the database
-			$query = $this->db->prepare("SELECT blogID, title, subtitle, preview FROM blogpost");
+			$query = $this->db->prepare("SELECT blogID, title, subtitle, preview FROM blogpost ORDER BY time DESC LIMIT 0, 10");
 			$query->execute();
 			$result=$query->fetchAll();
 
@@ -81,7 +81,7 @@ class BLOG
 			echo "Error: " . $e->getMessage();
 		}
 	}
-	//whildcards search 
+	//whildcards search
 	public function search(){
 		try
 		{

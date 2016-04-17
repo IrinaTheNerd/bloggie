@@ -20,7 +20,25 @@ old design
 	</header>
 
 	<div class="container">
-
+		<div class="blue">
+			<div class="feat first">
+				<div class=" middle">
+					<div class="round">
+					<h3>Create</h3>
+				</div>
+				</div>
+				<div class="middle">
+					<div class="round">
+					<h3>Enjoy</h3>
+				</div>
+				</div>
+				<div class="middle">
+					<div class="round">
+					<h3>Learn</h3>
+				</div>
+				</div>
+			</div>
+		</div>
 		<div class="blue">
 			<div class="feat first">
 				<div class="box bg middle fade">
