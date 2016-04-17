@@ -23,10 +23,16 @@
             h3, h4 {
               padding:0 1.25em;
             }
+            h3 {
+              text-align: center;
+            }
           }
         }
 }
 .read-more{
   float: right;
   padding-right: 3%;
+}
+.g-plus{
+  margin:3px!important;
 }

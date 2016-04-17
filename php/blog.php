@@ -53,9 +53,10 @@ class BLOG
 				 }
 		 echo "<div class='post'>";
 	 echo "<div class='box bg middle'>";
-				 echo  "<article><h3>{$row['title']}</h3>";
-				 echo "<h4>{$row['subtitle']}</h4>";
-				 echo "<p>{$row['main_text']}</p></article>";
+				 echo  "<article><h2>{$row['title']}</h2>";
+				 echo "<h3>{$row['subtitle']}</h3>";
+				 echo "<p><i>{$row['preview']}</i></p>";
+				 echo "{$row['main_text']}</article>";
 				 echo "<div class='social-buttons'><div id='fb-root'></div>
 		 <script>(function(d, s, id) {
 		 var js, fjs = d.getElementsByTagName(s)[0];
@@ -66,13 +67,12 @@ class BLOG
 		 }(document, 'script', 'facebook-jssdk'));</script>
 
 		 <div class='fb-like' data-href='https://developers.facebook.com/docs/plugins/' data-layout='button' data-action='like' data-show-faces='true' data-share='true'></div>
-		 <a href='https://twitter.com/share' class='twitter-share-button' data-via='irinathenerd' data-hashtags='bloggie'>Tweet</a>
-		 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-		 <!-- Place this tag in your head or just before your close body tag. -->
-		 <script src='https://apis.google.com/js/platform.js' async defer></script>
+		 <a href='https://twitter.com/share' class='twitter-share-button' data-via='irinathenerd' data-hashtags='bloggie'><span class='icon-twitter-circled'></span></a>
 
-		 <!-- Place this tag where you want the share button to render. -->
-		 <div class='g-plus' data-action='share'></div>";
+		
+<script src='https://apis.google.com/js/platform.js' async defer></script>
+
+<div class='g-plus' data-action='share' data-annotation='none'></div>";
 			 echo "</div></div>";
 			}
 			catch(PDOException $e)
