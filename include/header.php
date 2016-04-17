@@ -28,7 +28,7 @@
 					<a href="all_posts">latest blogs</a>
 				</div>
 				<div class="middle">
-					<a href="login" class="button">login</a>
+					<a href="login">login</a>
 				</div>
 				<div class="middle">
 					<a href="register" class="button">register</a>
