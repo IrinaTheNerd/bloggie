@@ -97,9 +97,8 @@ if(isset($error))
 					<input type="password" name="confirm_password" placeholder="confirm password" class="feat col">
 				</div>
 				<input type="submit" name="signup" value="submit">
-
+			</form>
 			</div>
-		</div>
 	<?php
 include_once('include/footer.php');
 ?>

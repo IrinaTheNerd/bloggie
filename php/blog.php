@@ -32,7 +32,7 @@ class BLOG
 				echo "</div>";
 			}
 
-			echo "</div>";
+			echo "</div></div>";
 
 		}
 		catch(PDOException $e)
