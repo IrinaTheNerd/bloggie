@@ -17,9 +17,13 @@
 
 			<link href="css/import.css" rel="stylesheet" type="text/css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- meta tags for SEO-->
+			<meta name="description" content="Bloggie, content oriented blogging platform">
+			<meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
 		</head>
 		<body>
+			<!-- Navigation -->
 			<nav>
 				<div class="first">
 					<a href="index"><img src="img/logo-small.png" alt="logo, or get back to the index page" class="logo"></a>
