@@ -51,12 +51,12 @@
 				 <!-- removed social login -->
 
 						<div class="feat">
-							<label  class="left col">Email:</label>
-							<input type="text" maxlength="50" placeholder="email" name="email"  class="feat col">
+							<label  for="email" class="left col">Email:</label>
+							<input type="text" id="email" maxlength="50" placeholder="email" name="email"  class="feat col">
 						</div>
 						<div class="feat">
-							<label class="left col">Password:</label>
-							<input type="password" name="password" placeholder="password" class="feat col">
+							<label for="password" class="left col">Password:</label>
+							<input type="password" id="password" name="password" placeholder="password" class="feat col">
 						</div>
 						<div class="feat">
 							<small><a href="forgot">Forgot your password?</a></small>

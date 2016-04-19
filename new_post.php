@@ -64,41 +64,41 @@ if(isset($_POST['send_post']))
 
 						<div class="margins create">
 							<div class="explain">
-								<label>Title:</label>
+								<label for="heading">Title:</label>
 							</div>
 							<div>
 							<small>Your title should contain the essence of your topic</small>
-									<input type="text"  maxlength="50" name="heading">
+									<input type="text" id="heading" maxlength="50" name="heading">
 							</div>
 						</div>
 
 						<div class="margins create">
 							<div class="explain">
-								<label>Subitle:</label>
+								<label for="subtitle">Subitle:</label>
 							</div>
 							<div>
 							<small>This is a the question you're answering in your post</small>
-									<input type="text" name="subtitle">
+									<input type="text" id="subtitle" name="subtitle">
 							</div>
 						</div>
 						<div class="margins create">
 							<div class="explain">
-								<label>Summary:</label>
+								<label for="preview">Summary:</label>
 							</div>
 							<div>
 							<small>Make sure that most important information is on top of the page, it's valuable and consice</small>
-							<textarea name="preview"></textarea>
+							<textarea name="preview" id="preview"></textarea>
 
 								</div>
 							</div>
 								<div class="margins create">
 								<div class="explain">
-								<label>Main Text:</label>
+								<label for="main_text">Main Text:</label>
 							</div>
 							<div>
 							<small>Make sure that most important information is on top of the page, it's valuable and consice</small>
-
-							<textarea name="main_text" class="simple-editor"></textarea>
+							<!-- .simple-editor calls for Trumbowyg to do it's magic -->
+							<textarea name="main_text" id="main_text" class="simple-editor"></textarea>
 				</div>
 			</div>
 

@@ -36,7 +36,8 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 				<div class="feat dashboard">
 					<a href="new_post" class="box board">
 						<div class="tile">
-							<span class="icon-doc-add"></span>
+							<span class="icon-doc-add" aria-hidden="true"></span>
+							<span class="access">Create new post</span>
 						</div>
 						<div class="tile">
 							<h3>Write new..</h3>
@@ -44,7 +45,8 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 					</a>
 				<a href="#" class="box board">
 					<div class="tile">
-						<span class="icon-help-circled"></span>
+						<span class="icon-help-circled" aria-hidden="true"></span>
+						<span class="access">Tips and Tricks</span>
 					</div>
 					<div class="tile">
 						<h3>Tips</h3>
@@ -54,7 +56,8 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 			<div class="feat dashboard">
 				<a href="mailto:hello@irinapetrova.uk" class="box board">
 					<div class="tile">
-						<span class="icon-mail-alt"></span>
+						<span class="icon-mail-alt" aria-hidden="true"></span>
+						<span class="access">Email support directly</span>
 					</div>
 					<div class="tile">
 						<h3>Support</h3>
@@ -62,7 +65,8 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 				</a>
 			<a href="all_posts" class="box board">
 					<div class="tile">
-						<span class="icon-th-list"></span>
+						<span class="icon-th-list" aria-hidden="true"></span>
+						<span class="access">View all posts</span>
 					</div>
 						<div class="tile">
 						<h3>View all posts</h3>

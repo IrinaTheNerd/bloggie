@@ -137,6 +137,14 @@ article {
 .message {
   background: fade-out($green, 0.8);
 }
+//accessibility support for icon links only taken from:http://www.purplebabyhippo.co.uk/make-font-awesome-accessible/
+.access {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
 .explain{
   label {
     color: $blue;

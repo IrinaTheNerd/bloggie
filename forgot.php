@@ -41,8 +41,8 @@
 				 <!-- removed social login -->
 
 						<div class="feat">
-							<label  class="left col">Email:</label>
-							<input type="text" maxlength="50" placeholder="email" name="email"  class="feat col">
+							<label for="email" class="left col">Email:</label>
+							<input type="text" maxlength="50" id="email" placeholder="email" name="email"  class="feat col">
 						</div>
 						<input type="submit" name="send_password" value="submit">
 

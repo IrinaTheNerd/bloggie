@@ -119,12 +119,12 @@ class BLOG
 			echo "<p>{$row['preview']}</p>";
 			echo "<a href='view?ID={$row['blogID']}' class='read-more'>Read More</a>";
 
-			echo "</div></div>";
+			echo "</div>";
 
 		}
 
 
-	echo "</div></div>";
+	echo "</div>";
 }
 }
 catch(PDOException $e)

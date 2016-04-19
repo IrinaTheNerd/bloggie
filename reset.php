@@ -37,16 +37,16 @@
         try
         {
            $query = $conn->prepare("SELECT userID FROM user WHERE email = :email");
-           $query->execute(array(':email'=>$email));
-           $row=$query->fetch(PDO::FETCH_ASSOC);
-           $userID = hash('sha512', $row['userID']);
+           $query->execute(array(':email'=>$email)); //checks if there is an array of results
+           $row=$query->fetch(PDO::FETCH_ASSOC); //fetches the results
+           $userID = hash('sha512', $row['userID']); //encrypt the id
 
 
-           if($userID !== $currentID) {
+           if($userID !== $currentID) { //if the current id != to the id from the db
               $error[] = "I think you have the wrong email!";
            }
            else
-           {
+           {//run the update method
             if($reset->updateDetails($email,$password))
               {    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $reset->login($email, $password);
@@ -89,17 +89,17 @@
           }
           ?>
           <div class="feat">
-            <label class="left col">Email:</label>
-            <input type="text" name="email" placeholder="email" class="feat col">
+            <label for="email" class="left col">Email:</label>
+            <input type="text" id="email" name="email" placeholder="email" class="feat col">
           </div>
 
             <div class="feat">
-              <label class="left col">Password:</label>
-              <input type="password" name="password" placeholder="password" class="feat col">
+              <label for="password" class="left col">Password:</label>
+              <input type="password" id="password" name="password" placeholder="password" class="feat col">
             </div>
             <div class="feat">
-              <label class="left col">Confirm Password:</label>
-              <input type="password" name="confirm_password" placeholder="confirm password" class="feat col">
+              <label for="confirm_password" class="left col">Confirm Password:</label>
+              <input type="password"  id="confirm_password" name="confirm_password" placeholder="confirm password" class="feat col">
             </div>
 						<input type="submit" name="reset_password" value="submit">
 
