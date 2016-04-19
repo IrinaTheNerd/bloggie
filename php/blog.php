@@ -88,9 +88,9 @@ class BLOG
 			$name="%".$_GET["search"]."%";
 			$query =  $this->db->prepare("SELECT blogID, title, subtitle, preview FROM blogpost where title LIKE :name");
 			$query->execute(array(':name' => $name));
-			$result = $stmt->fetchAll();
+			$result = $query->fetchAll();
 
-			if( ! $result)
+			if(!$result)
 			{
 				print('No Records Found');
 			}
@@ -108,19 +108,21 @@ class BLOG
 	}
 	*/
 
-	echo "<div class='post'><div class='feat span_10_of_12'>";
-	foreach($result as $row)
-	{
+	echo "<div class='post'>";
 
-		echo "<div class='box bg middle'>";
-		echo  "<h3>{$row['title']}</h3>";
-		echo "<h4>{$row['subtitle']}</h4>";
-		echo "<p>{$row['preview']}</p>";
-		echo "<a href='view?ID={$row['blogID']}'>Read More</a>";
+		foreach($result as $row)
+		{
 
-		echo "</div></div>";
+			echo "<div class='box bg middle'>";
+			echo  "<h3>{$row['title']}</h3>";
+			echo "<h4>{$row['subtitle']}</h4>";
+			echo "<p>{$row['preview']}</p>";
+			echo "<a href='view?ID={$row['blogID']}' class='read-more'>Read More</a>";
 
-	}
+			echo "</div></div>";
+
+		}
+
 
 	echo "</div></div>";
 }
