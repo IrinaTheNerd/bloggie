@@ -32,7 +32,7 @@ class BLOG
 				echo "</div>";
 			}
 
-			echo "</div></div>";
+			echo "</div>";
 
 		}
 		catch(PDOException $e)
@@ -74,7 +74,7 @@ class BLOG
 			<script src='https://apis.google.com/js/platform.js' async defer></script>
 
 			<div class='g-plus' data-action='share' data-annotation='none'></div>";
-			echo "</div></div>";
+			echo "</div></div></div>";
 		}
 		catch(PDOException $e)
 		{
