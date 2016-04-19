@@ -18,29 +18,25 @@ old design
 		<h1>Bloggie, a super friendly blogging platform</h1>
 			<h2>Write well structured and adapted content for all platforms</h2>
 	</header>
-
+<!-- add element reveals on scroll-->
 	<div class="container">
 		<div class="blue">
 			<div class="feat first">
-				<div class=" middle">
+				<div class="middle fade">
 					<div class="round">
 					<h3>Create</h3>
 				</div>
 				</div>
-				<div class="middle">
+				<div class="middle fade">
 					<div class="round">
 					<h3>Enjoy</h3>
 				</div>
 				</div>
-				<div class="middle">
+				<div class="middle fade">
 					<div class="round">
 					<h3>Learn</h3>
 				</div>
 				</div>
-			</div>
-		</div>
-		<div class="blue">
-			<div class="feat first">
 				<div class="box bg middle fade">
 					<h3>Blogging</h3>
 					<p>Bloggie will guide you through the forest of content, structuring and simply improve writing for web.
@@ -62,7 +58,7 @@ old design
 	<!-- Testimonials http://www.webchief.co.uk/blog/simple-jquery-slideshow/ -->
 	<!-- http://codepen.io/doodlemarks/pen/aFcly -->
 	<!-- Needs work-->
-	<section id="testimonials">
+	<div id="testimonials">
 		<div class="first feat">
 
 			<div id="slider">
@@ -98,7 +94,8 @@ old design
 
 
 
-		</section>
+		</div>
+
 
 		<?php
 		include_once('include/footer.php');
