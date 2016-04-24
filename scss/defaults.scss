@@ -155,3 +155,15 @@ article {
 small {
   font-size: 1em;
 }
+
+//setting 404.php
+#error-page{
+  background-image: url('../img/starwars.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height:100vh;
+  header {
+    background: fade-out($border-color, 0.5);
+  }
+}
