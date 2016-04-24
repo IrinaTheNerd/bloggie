@@ -5,8 +5,7 @@
 	require_once '/php/user.php';
 	$session = new USER($conn);
 
-	// if user session is not active(not loggedin) this page will help 'home.php and profile.php' to redirect to login page
-	// put this file within secured pages that users (users can't access without login)
+	// checks whether usersessions are active and redirect to login.php, if not
 
 	if(!$session->loggedin())
 	{

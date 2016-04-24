@@ -34,6 +34,7 @@
 			<script src="https://use.typekit.net/cde8idd.js"></script>
 			<script>try{Typekit.load({ async: true });}catch(e){}</script>
 			<!--end of Typekit Fonts-->
+			<!-- cdn for jquery -->
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 			<script src="js/scripts.js"></script>
 

@@ -49,8 +49,8 @@
            {//run the update method
             if($reset->updateDetails($email,$password))
               {    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    $reset->login($email, $password);
-  									$reset->redirect('login.php');
+                    $reset->login($email, $password); //if successful then login
+  									$reset->redirect('dashboard.php'); //and redirect to dashboard
   								}
 
 
@@ -75,7 +75,7 @@
 					<div class="light-green">
 						<h2>Confirm your new details</h2>
 					</div>
-
+					<!--same as before, error showing :)  -->
           			<?php
           if(isset($error))
           {

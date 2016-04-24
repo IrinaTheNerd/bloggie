@@ -1,4 +1,6 @@
 <?php
+
+//NOT USED ANYMORE
 include_once('../../php/config.php');
 
 

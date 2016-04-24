@@ -2,6 +2,7 @@
 
 include_once('config.php');
 //based on the previous class and procedural code
+//followed tutorials https://daveismyname.com/creating-a-blog-from-scratch-with-php-bp and http://codepen.io/terf/post/creating-a-search-engine-with-php-pdo-mysql
 class BLOG
 {
 	private $db;
@@ -20,7 +21,7 @@ class BLOG
 			$query = $this->db->prepare("SELECT blogID, title, subtitle, preview FROM blogpost ORDER BY time DESC LIMIT 0, 10");
 			$query->execute();
 			$result=$query->fetchAll();
-
+			// for each blog that's in the db wrap content in classes..
 			foreach($result as $row){
 
 				echo "<div class='box bg middle'>";
@@ -52,6 +53,7 @@ class BLOG
 			if($row == "") {
 				echo "OH NO";
 			}
+			//added social sharing buttons from twitter, facebook and g+
 			echo "<div class='post'>";
 			echo "<div class='box bg middle'>";
 			echo  "<article><h2>{$row['title']}</h2>";
@@ -95,7 +97,7 @@ class BLOG
 				print('No Records Found');
 			}
 			else
-			{
+			{ //tried levenshtein search, didn't understand it so didn't implement it
 				/*$q = $_POST['search'];
 				$result = array();
 				foreach($this->db->prepare("SELECT title, subtitle, preview FROM blogpost") as $name){
@@ -110,18 +112,18 @@ class BLOG
 
 	echo "<div class='post'>";
 
-		foreach($result as $row)
-		{
+	foreach($result as $row)
+	{
 
-			echo "<div class='box bg middle'>";
-			echo  "<h3>{$row['title']}</h3>";
-			echo "<h4>{$row['subtitle']}</h4>";
-			echo "<p>{$row['preview']}</p>";
-			echo "<a href='view?ID={$row['blogID']}' class='read-more'>Read More</a>";
+		echo "<div class='box bg middle'>";
+		echo  "<h3>{$row['title']}</h3>";
+		echo "<h4>{$row['subtitle']}</h4>";
+		echo "<p>{$row['preview']}</p>";
+		echo "<a href='view?ID={$row['blogID']}' class='read-more'>Read More</a>";
 
-			echo "</div>";
+		echo "</div>";
 
-		}
+	}
 
 
 	echo "</div>";

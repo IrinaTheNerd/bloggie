@@ -1,6 +1,8 @@
 <?php
+//typical include statements, connecting to the database and defining page information
 include_once('php/config.php');
 define("PAGENAME","Blogging platform");
+//header doesn't change throughout pages, so keeping it as an include
 include_once('include/header.php');
 
 ?>
@@ -37,6 +39,7 @@ old design
 					<h3>Learn</h3>
 				</div>
 				</div>
+				<!-- nice fancy boxes -->
 				<div class="box bg middle fade">
 					<h3>Blogging</h3>
 					<p>Bloggie will guide you through the forest of content, structuring and simply improve writing for web.
@@ -77,7 +80,7 @@ old design
 						<div class="hover-image">
 							<img src="img/writing.jpg" alt="first testimony">
 							<div class="hover-text">
-								<p>This is an awesome platform</p>
+								<p>Writing is so easy!</p>
 							</div>
 						</div></li>
 						<li>
@@ -98,5 +101,6 @@ old design
 
 
 		<?php
+		//footer also stays the same throughout
 		include_once('include/footer.php');
 		?>

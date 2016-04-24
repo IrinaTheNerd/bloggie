@@ -35,8 +35,7 @@ catch(PDOException $e)
 
 
     }
+    //include all classes that will be useful 
     include_once 'user.php';
     include_once 'blog.php';
-  //  include_once 'blog.php';
-//    $user = new USER($conn);
 ?>

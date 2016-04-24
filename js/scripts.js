@@ -2,11 +2,13 @@ $(document).ready(function() {
 
   // old code
   // $(window).width() >= 1100 ? $("#index").addClass("image") : ($(".main").removeClass("absolute"), $("#index").removeClass("image"));
+  //own code :D when hover on submit of search the form turns blue and back, when the mouse leaves the form
   $("input[type=submit]").mouseover(function() {
     $("nav form").addClass("transition")
   }).mouseleave(function() {
     $("nav form").removeClass("transition");
   });
+  //if clicked on the input same happens
   $("input[type=search]").on("click",function(){
     $("nav form").addClass("transition");
     $("input[type=submit]").addClass("hover");
@@ -14,14 +16,14 @@ $(document).ready(function() {
     $("nav form").removeClass("transition");
     $("input[type=submit]").removeClass("hover");
   });
+  //if php gives an error and the class is on the page, inputs change border colours
   if ($(".alert").length > 0 ) {
     $("input[type=text]").css("border","2px solid #ad1457");
     $("input[type=password]").css("border","2px solid #ad1457");
+    $("#preview").css("border","2px solid #ad1457");
+    $(".trumbowyg-button-pane").css("background-color","#ad1457");
   }
-
-
-  //own code again
-
+//fake transition for each .fade; could tidy up
   $(".fade:nth-child(1)").animate({
   opacity: 1
 }, 500);

@@ -14,8 +14,9 @@ class USER
   public function register($email, $password)
   {
     try {
+      //php.net recommended method of salting and hashing passwords with bcrypt
       $pass  = password_hash($password, PASSWORD_DEFAULT); //hashing function for security
-
+      //query = the object run db prepare the statement insert into user where values are
       $query = $this->db->prepare("INSERT INTO user (email, password) VALUES (:email, :password)");
       $query->bindParam(':email', $email);
       $query->bindParam(':password', $pass);
@@ -24,20 +25,27 @@ class USER
       $query->execute(); //runs the statement
       return $query;
     }
+    //catching exceptions
     catch (PDOException $e) {
       echo $e->getMessage();
     }
   }
+  //login method
   public function login($email, $password)
   {
     try {
+      //compare the email with inserted eemail
       $query = $this->db->prepare("SELECT * FROM user WHERE email=:email LIMIT 1");
       $query->execute(array(
         ':email' => $email
       ));
+      //fetch all rows
       $row = $query->fetch(PDO::FETCH_ASSOC);
+      //if  there are rows containing that email
       if ($query->rowCount() > 0) {
+        //compare the passwords and verify them
         if (password_verify($password, $row['password'])) {
+          //if correct - start a session
           $_SESSION['user_session'] = $row['userID'];
           return true;
         } else {
@@ -104,6 +112,7 @@ $output = '<h3 style="color:red">Some problem occurred, please try again.</h3>';
 
 //     }
 //logged in method that sets the session
+//if logged in the session is set to true
 public function loggedin()
 {
   if (isset($_SESSION['user_session'])) {
@@ -115,6 +124,7 @@ public function redirect($url)
 {
   header("Location: $url");
 }
+//log out kills the session
 public function logout()
 {
   session_destroy();
@@ -122,6 +132,7 @@ public function logout()
   return true;
 }
 //only users can insert posts
+//insert into blogs needs to be here, however  the user id should be recorder in the database
 public function insertBlog($userID, $title, $subtitle, $preview, $main_text)
 {
   try {
@@ -174,6 +185,7 @@ function passwordRecovery($email){
     echo $e->getMessage();
   }
 }
+//written without following tutorials :D 
 function updateDetails($email,$password){
   try {
     $query = $this->db->prepare("UPDATE user SET password = :password WHERE email = :email");

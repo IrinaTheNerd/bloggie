@@ -1,6 +1,0 @@
-[09-Apr-2016 18:30:30 America/New_York] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1680 but version 1672 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
-[09-Apr-2016 18:39:23 America/New_York] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1680 but version 1672 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
-[09-Apr-2016 18:39:28 America/New_York] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1680 but version 1672 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
-[09-Apr-2016 18:39:28 America/New_York] PHP Notice:  Undefined index: search in /home/irinnlso/public_html/bloggie/php/search.php on line 6
-[09-Apr-2016 18:39:28 America/New_York] PHP Stack trace:
-[09-Apr-2016 18:39:28 America/New_York] PHP   1. {main}() /home/irinnlso/public_html/bloggie/php/search.php:0

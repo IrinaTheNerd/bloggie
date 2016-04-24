@@ -1,15 +1,15 @@
 <?php
 	include_once('php/config.php');
   session_start();
-// include_once ('include/session.php');
 	$login = new USER($conn);
 	define("PAGENAME","Login");
 	include_once('include/header.php');
-
+//if logged in already rediret
 	if($login->loggedin()!="")
 	{
 	 $login->redirect('dashboard.php');
 	}
+	//if not, then check details through running a method
 	if(isset($_POST['login_button']))
 	{
 		$email = $_POST['email'];
@@ -21,7 +21,7 @@
 		}
 		else
 		{
-		 $error = "Wrong Details !";
+		 $error = "Wrong Details!";
 		}
 	}
 

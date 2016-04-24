@@ -11,7 +11,7 @@
 			<link href="img/iphone.png" rel="apple-touch-icon-precomposed" sizes="57x57" type="image/png">
 
 
-
+			<!-- allows for defines to work their magic :)  -->
 			<title><?php echo SITENAME . ' - '. PAGENAME;?> </title>
 
 
@@ -27,6 +27,7 @@
 			<nav>
 				<div class="first">
 					<a href="index"><img src="img/logo-small.png" alt="logo, or get back to the index page" class="logo"></a>
+					<!-- only shows up on a mobile device: tablet or a phone -->
 					<span class="icon-search responsive hidden"></span>
 				</div>
 				<div class="middle">
