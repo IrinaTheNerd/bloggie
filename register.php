@@ -8,7 +8,7 @@ if($user->loggedin()!="") //if user log in is snot null
     $user->redirect('dashboard.php'); //redirect to dashboard
 }
 //once signup input is clicked ...
-if(isset($_POST['signup']))
+if(isset($_POST['signup'])){
 //getting rid of whitespace around sqlite_unbuffered_query
    $email = trim($_POST['email']);
    $password = trim($_POST['password']);

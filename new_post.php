@@ -1,9 +1,10 @@
 <?php
+require_once("php/session.php");
 include_once('php/config.php');
 define("PAGENAME","Create New");
 include_once('include/header.php');
 $user = new USER($conn);
-require_once("php/session.php");
+
 
 
 if(!$user->loggedin())
@@ -32,16 +33,16 @@ if(isset($_POST['send_post']))
 	else if($subtitle == ""){
 		$error[] = "Oh no! You need a subtitle for your post!";
 	}
-	else if($preview==""){
-		$error[] = "Oh no! What's your etract?";
+	else if($preview== ""){
+		$error[] = "Oh no! What's your extract?";
 	}
-	else if($main_text==""){
+	else if($main_text== ""){
 		$error[] = "Oh no! C'mon, you need to write your post! This is a blog, afterall!";
 	}
 	else {
 		if($user->insertBlog($userID, $title, $subtitle, $preview, $main_text))
 		{
-			$user->redirect('all_posts.php');
+			$user->redirect('all_posts');
 		}
 
 	}
@@ -81,7 +82,7 @@ if(isset($_POST['send_post']))
 			</div>
 			<div>
 				<small>Your title should contain the essence of your topic</small>
-				<input type="text" id="heading" maxlength="50" name="heading">
+				<input type="text" id="heading" maxlength="50" name="title">
 			</div>
 		</div>
 

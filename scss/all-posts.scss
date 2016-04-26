@@ -1,5 +1,6 @@
 //all posts page
 .post {
+  //includes the mixin from the container
   @include row();
   .box {
     padding-top:1%;

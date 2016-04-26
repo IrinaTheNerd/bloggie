@@ -44,13 +44,20 @@ header {
     padding: 0;
     .middle {
       @include col(8,27);
-      margin:auto 1.75%;
+      margin:1.75%;
       &:nth-last-child(1) {
         padding-bottom:13px; //since not enough content
       }
+
     }
   }
 }
+//for loop
+/*
+@for $i from 1 through 3 {
+  .fade { margin-bottom: 3em; }
+}*/
+
 
 //need to re-do, ugly
 
@@ -72,7 +79,7 @@ header {
     border:1px dashed $pink;
     margin:0 auto;
     h3{
-          margin: 40% 0;
+          margin: 45% 0;
           color:$pink;
     }
   }
