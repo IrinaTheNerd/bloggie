@@ -2,6 +2,7 @@
 .post {
   //includes the mixin from the container
   @include row();
+  float:none; // fixing the small width 
   .box {
     padding-top:1%;
 

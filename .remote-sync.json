@@ -1,3 +1,15 @@
 {
-
+  "port": "21098",
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "server194.web-hosting.com",
+  "target": "/www/bloggie",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "irinnlso",
+  "password": "HEWLf_hSdJ_nW",
+  "transport": "scp"
 }

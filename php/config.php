@@ -1,4 +1,5 @@
 <?php
+session_start();
 define("SITENAME", "Bloggie");
 define("SITEURL","http://irinapetrova.uk/");
 define("SITEEMAIL","hello@irinapetrova.uk");
@@ -35,7 +36,7 @@ catch(PDOException $e)
 
 
     }
-    //include all classes that will be useful 
+    //include all classes that will be useful
     include_once 'user.php';
     include_once 'blog.php';
 ?>

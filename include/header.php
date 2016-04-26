@@ -1,3 +1,6 @@
+<?php
+$session = new USER($conn);
+?>
 <!Doctype html>
 	<html lang="en">
 		<head>
@@ -30,6 +33,7 @@
 					<!-- only shows up on a mobile device: tablet or a phone -->
 					<span class="icon-search responsive hidden"></span>
 				</div>
+				<?php if(!$session->loggedin()){ ?>
 				<div class="middle">
 					<a href="all_posts">latest blogs</a>
 				</div>
@@ -40,6 +44,19 @@
 					<a href="register" class="button">register</a>
 
 				</div>
+				<?php }
+				else {?>
+					<div class="middle">
+						<a href="dashboard">dashboard</a>
+					</div>
+					<div class="middle">
+						<a href="logout.php?logout=true">log out</a>
+					</div>
+					<div class="middle">
+						<a href="new_post" class="button">new post</a>
+
+					</div>
+					<?php } ?>
 				<!-- Search Bar -->
 				<form class="last" action="search.php" method="get">
 					<label class="hidden" for="search">Search</label>

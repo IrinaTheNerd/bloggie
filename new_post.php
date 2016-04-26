@@ -1,15 +1,15 @@
 <?php
-require_once("php/session.php");
+
 include_once('php/config.php');
 define("PAGENAME","Create New");
-include_once('include/header.php');
+include_once('include/header');
 $user = new USER($conn);
 
 
 
 if(!$user->loggedin())
 {
-	$user->redirect('login.php');
+	$user->redirect('login');
 
 }
 

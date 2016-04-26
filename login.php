@@ -1,6 +1,5 @@
 <?php
 	include_once('php/config.php');
-  session_start();
 	$login = new USER($conn);
 	define("PAGENAME","Login");
 	include_once('include/header.php');

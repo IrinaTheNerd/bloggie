@@ -27,7 +27,6 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC)
 			<div class="dashboard">
 				<h2>Create catching content with a press of a button, take advantage of our guides to help you write and plan your content, delivery and further strategy. Keep in touch with other writers, share your opinions and add to our knowledge base.</h2>
 
-				<h3><a href="logout.php?logout=true">Sign Out</a></h3>
 
 			</div>
 		</div>
