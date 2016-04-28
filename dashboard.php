@@ -42,14 +42,13 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC)
 				<h3>Write new...</h3>
 			</div>
 		</a>
-		<!-- this is currently out of scope, however it still links to a useful article about writing -->
-		<a href="http://www.enchantingmarketing.com/writing-for-the-web-vs-print/" target="_blank" class="box board">
+		<a href="my_posts" class="box board">
 			<div class="tile">
-				<span class="icon-help-circled" aria-hidden="true"></span>
-				<span class="access">Tips and Tricks</span>
+				<span class="icon-th-list" aria-hidden="true"></span>
+				<span class="access">View your posts</span>
 			</div>
 			<div class="tile">
-				<h3>Tips</h3>
+				<h3>View all posts</h3>
 			</div>
 		</a>
 	</div>
@@ -63,13 +62,14 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC)
 				<h3>Support</h3>
 			</div>
 		</a>
-		<a href="all_posts" class="box board">
+	<!-- this is currently out of scope, however it still links to a useful article about writing -->
+		<a href="http://www.enchantingmarketing.com/writing-for-the-web-vs-print/" target="_blank" class="box board">
 			<div class="tile">
-				<span class="icon-th-list" aria-hidden="true"></span>
-				<span class="access">View all posts</span>
+				<span class="icon-help-circled" aria-hidden="true"></span>
+				<span class="access">Tips and Tricks</span>
 			</div>
 			<div class="tile">
-				<h3>View all posts</h3>
+				<h3>Tips</h3>
 			</div>
 		</a>
 	</div>

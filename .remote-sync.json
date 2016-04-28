@@ -4,7 +4,7 @@
   "useAtomicWrites": false,
   "deleteLocal": false,
   "hostname": "server194.web-hosting.com",
-  "target": "/www/bloggie",
+  "target": "/htdocs/bloggie",
   "ignore": [
     ".remote-sync.json",
     ".git/**"

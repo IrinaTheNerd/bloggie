@@ -154,6 +154,115 @@ public function insertBlog($userID, $title, $subtitle, $preview, $main_text)
   }
 
 }
+//select from blog but scoping to user only
+public function ownPosts($userID)
+{
+  try {
+    $query = $this->db->prepare("SELECT blogID, title, subtitle, preview FROM blogpost WHERE userID = :userID");
+    $query->bindParam(':userID', $userID);
+    $query->execute();
+    $result=$query->fetchAll();
+
+    foreach ($result as $row) {
+      $key = $row['blogID'];
+      echo "<div class='box bg middle'>";
+      echo  "<h3>{$row['title']}</h3>";
+      echo "<h4>{$row['subtitle']}</h4>";
+      echo "<p>{$row['preview']}<br>";
+      echo "<a href='edit?ID={$key}' class='read-more button'>Read More</a></p>";
+      echo "</div>";
+
+    }
+  }
+
+  catch (PDOException $e) {
+    echo $e->getMessage();
+  }
+
+}
+
+public function showOnePost(){
+  try{
+
+    $query = $this->db->prepare("SELECT * FROM blogpost WHERE blogID = :blogID");
+    $query->execute(array(':blogID' => $_GET['ID']));
+    $row=$query->fetch();
+    //echo ;
+    if($row == "") {
+      echo "OH NO";
+    }
+    else{
+    //  if(':userID' == $userID){
+    //added social sharing buttons from twitter, facebook and g+
+    echo "<div class='margins create'>
+        <div class='explain'>
+          <label for='heading'>Title:</label>
+        </div>
+        <div>
+          <small>Your title should contain the essence of your topic</small>
+          <input type='text' id='heading' maxlength='50' value={$row['title']} name='title'>
+        </div>
+      </div>
+
+      <div class='margins create'>
+        <div class='explain'>
+          <label for='subtitle'>Subitle:</label>
+        </div>
+        <div>
+          <small>This is a the question you're answering in your post</small>
+          <input type='text' id='subtitle' value={$row['subtitle']} name='subtitle'>
+        </div>
+      </div>
+      <div class='margins create'>
+        <div class='explain'>
+          <label for='preview'>Summary:</label>
+        </div>
+        <div>
+          <small>Make sure that most important information is on top of the page, it's valuable and consice</small>
+          <textarea name='preview' id='preview'>value={$row['preview']}</textarea>
+
+        </div>
+      </div>
+      <div class='margins create'>
+        <div class='explain'>
+          <label for='main_text'>Main Text:</label>
+        </div>
+        <div>
+          <small>Make sure that most important information is on top of the page, it's valuable and consice</small>
+          <!-- .simple-editor calls for Trumbowyg to do it's magic -->
+          <textarea name='main_text' id='main_text' class='simple-editor'>{$row['main_text']}</textarea>
+        </div>
+      </div>";
+
+
+  }
+
+}
+  catch(PDOException $e)
+  {
+    echo "Error: " . $e->getMessage();
+  }
+}
+public function update($blogID, $title, $subtitle, $preview, $main_text){
+  try{
+
+    $query = $this->db->prepare("UPDATE blogpost SET title=:title, subtitle=:subtitle, preview=:preview, main_text=:main_text WHERE blogID=:blogID");
+    $query->bindParam(':title',$title);
+    $query->bindParam(':blogID', $blogID);
+    $query->bindParam(':subtitle',$subtitle);
+    $query->bindParam(':preview', $preview);
+    $query->bindParam(':main_text', $main_text);
+    //var_dump($blogID, $title, $subtitle, $preview, $main_text);
+    //var_dump("UPDATE blogpost SET title=:title WHERE blogID=:blogID");
+    $query->execute();
+    return $query;
+    //echo ;
+  }
+  catch(PDOException $e)
+  {
+    echo "Error: " . $e->getMessage();
+  }
+}
 //password recovery following http://www.phpgang.com/how-to-create-forget-password-form-in-php_381.html
 //and adapting code from registration method
 function passwordRecovery($email){
@@ -185,7 +294,7 @@ function passwordRecovery($email){
     echo $e->getMessage();
   }
 }
-//written without following tutorials :D 
+//written without following tutorials :D
 function updateDetails($email,$password){
   try {
     $query = $this->db->prepare("UPDATE user SET password = :password WHERE email = :email");
