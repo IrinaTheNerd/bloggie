@@ -1,7 +1,7 @@
 <?php
 
 include_once('php/config.php');
-define("PAGENAME","Update");
+define("PAGENAME","Delete");
 include_once('include/header.php');
 $user = new USER($conn);
 
@@ -21,26 +21,33 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 try{
 	//runs a query depending on the id of the post
 	$query = $conn->prepare("SELECT * FROM blogpost WHERE blogID = :blogID");
-	$query->execute(array(':blogID' => $_GET['ID']));
-	$row=$query->fetch();
+	$query->execute(array(":blogID" => $_GET['ID']));
+	$row=$query->fetch(PDO::FETCH_ASSOC);
 	//echo ;
 	if($row == "") {
 		echo "OH NO";
 	}
-foreach ($row as $row){
+else{
 $title = $row['title'];
 $subtitle = $row['subtitle'];
 $preview = $row['preview'];
 $main_text = $row['main_text'];
 $userIdent = $row['userID'];
-}
-	$blogID = $_GET['ID'];
-		//if no errors are found, run update
-		$user->delete($blogID);
-		$submitted[] = "Deleted! Now wasn't that easy?";
-}
+$blogID = $_GET['ID'];
 
 }
+
+
+		//if no errors are found, run update
+	//	$user->delete();
+		$sql = $conn->prepare("DELETE FROM blogpost WHERE blogID = :blogID");
+		$sql->execute(array(":blogID"=>$blogID));
+		$result=$sql->fetch(PDO::FETCH_ASSOC);
+		var_dump($result);
+		$submitted[] = "Deleted! Now wasn't that easy?";
+
+}
+
 catch(PDOException $e)
 {
 	echo "Error: " . $e->getMessage();
@@ -63,7 +70,7 @@ if($userID==$userIdent) {?>
 
 			foreach ($error as $value) {	?>
 				<div class="alert" >
-					<?php echo $value; ?>
+					<p><?php echo $value; ?></p>
 				</div>
 				<?php
 			}

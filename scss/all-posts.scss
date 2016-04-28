@@ -2,7 +2,7 @@
 .post {
   //includes the mixin from the container
   @include row();
-  float:none; // fixing the small width 
+  float:none !important; // fixing the small width
   .box {
     padding-top:1%;
 
@@ -22,6 +22,10 @@
             margin-bottom:3em !important;
           }
           article {
+            h1{
+              text-align: center;
+              font-size: 3em;
+            }
             h3, h4 {
               padding:0 1.25em;
             }

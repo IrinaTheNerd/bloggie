@@ -88,7 +88,7 @@ if($userID==$userIdent) {?>
 
 			foreach ($error as $value) {	?>
 				<div class="alert" >
-					<?php echo $value; ?>
+					<p><?php echo $value; ?></p>
 				</div>
 				<?php
 			}
@@ -98,7 +98,7 @@ if($userID==$userIdent) {?>
 
 			foreach ($submitted as $value) {	?>
 				<div class="message" >
-					<?php echo $value; ?>
+				<p>	<?php echo $value; ?></p>
 				</div>
 				<?php
 			}
