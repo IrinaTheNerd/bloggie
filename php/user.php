@@ -169,10 +169,26 @@ public function ownPosts($userID)
       echo  "<h3>{$row['title']}</h3>";
       echo "<h4>{$row['subtitle']}</h4>";
       echo "<p>{$row['preview']}<br>";
-      echo "<a href='edit?ID={$key}' class='button'>Update</a></p>";
+      echo "<a href='edit?ID={$key}' class='read-more button'>Update</a></p>";
+      echo "<a href='delete?ID={$key}' class='read-more button'>Delete Post</a></p>";
       echo "</div>";
 
     }
+  }
+
+  catch (PDOException $e) {
+    echo $e->getMessage();
+  }
+
+}
+//delete method
+public function delete($blogID)
+{
+  try {
+    $query = $this->db->prepare("DELETE FROM blogpost WHERE blogID = :blogID");
+    $query->bindParam(':blogID', $blogID);
+    $query->execute();
+    $result=$query->fetchAll();
   }
 
   catch (PDOException $e) {
