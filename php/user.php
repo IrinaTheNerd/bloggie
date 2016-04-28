@@ -169,7 +169,7 @@ public function ownPosts($userID)
       echo  "<h3>{$row['title']}</h3>";
       echo "<h4>{$row['subtitle']}</h4>";
       echo "<p>{$row['preview']}<br>";
-      echo "<a href='edit?ID={$key}' class='read-more button'>Read More</a></p>";
+      echo "<a href='edit?ID={$key}' class='button'>Update</a></p>";
       echo "</div>";
 
     }
@@ -180,69 +180,29 @@ public function ownPosts($userID)
   }
 
 }
-
+//can't get this to work properly
+/*
 public function showOnePost(){
   try{
 
-    $query = $this->db->prepare("SELECT * FROM blogpost WHERE blogID = :blogID");
+    $query = $conn->prepare("SELECT * FROM blogpost WHERE blogID = :blogID");
     $query->execute(array(':blogID' => $_GET['ID']));
     $row=$query->fetch();
     //echo ;
-    if($row == "") {
-      echo "OH NO";
-    }
-    else{
-    //  if(':userID' == $userID){
-    //added social sharing buttons from twitter, facebook and g+
-    echo "<div class='margins create'>
-        <div class='explain'>
-          <label for='heading'>Title:</label>
-        </div>
-        <div>
-          <small>Your title should contain the essence of your topic</small>
-          <input type='text' id='heading' maxlength='50' value={$row['title']} name='title'>
-        </div>
-      </div>
 
-      <div class='margins create'>
-        <div class='explain'>
-          <label for='subtitle'>Subitle:</label>
-        </div>
-        <div>
-          <small>This is a the question you're answering in your post</small>
-          <input type='text' id='subtitle' value={$row['subtitle']} name='subtitle'>
-        </div>
-      </div>
-      <div class='margins create'>
-        <div class='explain'>
-          <label for='preview'>Summary:</label>
-        </div>
-        <div>
-          <small>Make sure that most important information is on top of the page, it's valuable and consice</small>
-          <textarea name='preview' id='preview'>value={$row['preview']}</textarea>
-
-        </div>
-      </div>
-      <div class='margins create'>
-        <div class='explain'>
-          <label for='main_text'>Main Text:</label>
-        </div>
-        <div>
-          <small>Make sure that most important information is on top of the page, it's valuable and consice</small>
-          <!-- .simple-editor calls for Trumbowyg to do it's magic -->
-          <textarea name='main_text' id='main_text' class='simple-editor'>{$row['main_text']}</textarea>
-        </div>
-      </div>";
-
+    $title = $row['title'];
+    $subtitle = $row['subtitle'];
+    $preview = $row['preview'];
+    $main_text = $row['main_text'];
+    $userID = $row['userID'];
 
   }
-
-}
   catch(PDOException $e)
   {
     echo "Error: " . $e->getMessage();
   }
 }
+*/
 public function update($blogID, $title, $subtitle, $preview, $main_text){
   try{
 
@@ -312,18 +272,18 @@ function updateDetails($email,$password){
 }
 //tidying up reset
 /*function resetVerify($email){
-  try
-  {
-    $query = $conn->prepare("SELECT userID FROM user WHERE email = :email");
-    $query->execute(array(':email'=>$email));
-    $row=$query->fetch(PDO::FETCH_ASSOC);
-    $userID = hash('sha512', $row['userID']);
+try
+{
+$query = $conn->prepare("SELECT userID FROM user WHERE email = :email");
+$query->execute(array(':email'=>$email));
+$row=$query->fetch(PDO::FETCH_ASSOC);
+$userID = hash('sha512', $row['userID']);
 
 
 }
 catch(PDOException $e)
 {
-  echo $e->getMessage();
+echo $e->getMessage();
 }
 }*/
 }
