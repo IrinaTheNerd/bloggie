@@ -169,7 +169,7 @@ public function ownPosts($userID)
       echo  "<h3>{$row['title']}</h3>";
       echo "<h4>{$row['subtitle']}</h4>";
       echo "<p>{$row['preview']}<br>";
-      echo "<a href='edit?ID={$key}' class='read-more button'>Update</a></p>";
+      echo "<a href='edit?ID={$key}' class='read-more button'>Update</a>";
       echo "<a href='delete?ID={$key}' class='read-more button'>Delete Post</a></p>";
       echo "</div>";
 

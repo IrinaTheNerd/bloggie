@@ -3,6 +3,16 @@
   //includes the mixin from the container
   @include row();
   float:none !important; // fixing the small width
+  //adding button style on the own posts
+.button {
+    border:2px solid $blue;
+    margin:0 1em;
+    padding:1% 2%;
+    &:hover {
+      border-color: $pink;
+    }
+  }
+
   .box {
     padding-top:1%;
 

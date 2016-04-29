@@ -3,7 +3,7 @@ $(document).ready(function() {
   // old code
   // $(window).width() >= 1100 ? $("#index").addClass("image") : ($(".main").removeClass("absolute"), $("#index").removeClass("image"));
   //own code :D when hover on submit of search the form turns blue and back, when the mouse leaves the form
-  $("input[type=submit]").mouseover(function() {
+  $("input[name=search_input]").mouseover(function() {
     $("nav form").addClass("transition")
   }).mouseleave(function() {
     $("nav form").removeClass("transition");
