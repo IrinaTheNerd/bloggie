@@ -116,6 +116,16 @@ $output = '<h3 style="color:red">Some problem occurred, please try again.</h3>';
 public function loggedin()
 {
   if (isset($_SESSION['user_session'])) {
+    //following this https://gist.github.com/psdtohtml5/6090113
+    $autoTime=86400;//after 60 seconds the user gets logged out
+    if (time()-$_SESSION['timestamp']>$sutoTime){
+      session_destroy();
+      session_unset();
+    }else{
+      $_SESSION['timestamp']=time();
+    }
+    //on session creation
+    $_SESSION['timestamp']=time();
     return true;
   }
 }
