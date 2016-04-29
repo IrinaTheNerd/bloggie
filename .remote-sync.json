@@ -1,6 +1,6 @@
 {
   "port": "21098",
-  "uploadOnSave": true,
+  "uploadOnSave": false,
   "useAtomicWrites": false,
   "deleteLocal": false,
   "hostname": "server194.web-hosting.com",

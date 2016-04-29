@@ -5,7 +5,7 @@ define("PAGENAME","Delete");
 include_once('include/header.php');
 $user = new USER($conn);
 
-
+$blogID = $_GET['ID'];
 
 if(!$user->loggedin())
 {
@@ -17,34 +17,30 @@ $userID = $_SESSION['user_session'];
 $stmt = $conn->prepare("SELECT * FROM user WHERE userID=:userID");
 $stmt->execute(array(":userID"=>$userID));
 $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+
 //not tidied up
 try{
 	//runs a query depending on the id of the post
-	$query = $conn->prepare("SELECT * FROM blogpost WHERE blogID = :blogID");
-	$query->execute(array(":blogID" => $_GET['ID']));
+	$query = $conn->prepare("SELECT userID, title FROM blogpost WHERE blogID = :blogID");
+	$query->execute(array(":blogID" => $blogID));
 	$row=$query->fetch(PDO::FETCH_ASSOC);
-	//echo ;
+
+	//if no results, display "Oh,no!"
 	if($row == "") {
 		echo "OH NO";
 	}
-else{
-$title = $row['title'];
-$subtitle = $row['subtitle'];
-$preview = $row['preview'];
-$main_text = $row['main_text'];
-$userIdent = $row['userID'];
-$blogID = $_GET['ID'];
-
-}
-
-
+	else{
+		//setting variables
+		$userIdent = $row['userID'];
+		$title = $row['title'];
+	}
+	if(isset($_POST['delete'])){
 		//if no errors are found, run update
-	//	$user->delete();
-		$sql = $conn->prepare("DELETE FROM blogpost WHERE blogID = :blogID");
-		$sql->execute(array(":blogID"=>$blogID));
-		$result=$sql->fetch(PDO::FETCH_ASSOC);
-		var_dump($result);
-		$submitted[] = "Deleted! Now wasn't that easy?";
+		if($userID==$userIdent){
+			$user->delete($blogID);
+			$submitted[] = "Deleted! Now wasn't that easy?";
+		}
+	}
 
 }
 
@@ -52,52 +48,56 @@ catch(PDOException $e)
 {
 	echo "Error: " . $e->getMessage();
 }
-//when the post has been changed and the user clicks update
 
+/*
+//when the post has been changed and the user clicks update
+*/
 ?>
 
 <?php
 //but we also check if the user is the right user
 if($userID==$userIdent) {?>
-<main>
-	<div class="feat create">
-		<h1 class="dashboard">Deleted post <?php echo $title; ?></h1>
+	<main>
+		<div class="feat create">
+			<h1 class="dashboard">Deleted post <?php echo $title ?></h1>
 
-		<?php
-		//show errors if there are any
-		if(isset($error))
-		{
+			<?php
+			//show errors if there are any
+			if(isset($error))
+			{
 
-			foreach ($error as $value) {	?>
-				<div class="alert" >
-					<p><?php echo $value; ?></p>
-				</div>
-				<?php
+				foreach ($error as $value) {	?>
+					<div class="alert" >
+						<p><?php echo $value ?></p>
+					</div>
+					<?php
+				}
 			}
-		}
-		if(isset($submitted))
-		{
+			if(isset($submitted))
+			{
 
-			foreach ($submitted as $value) {	?>
-				<div class="message" >
-					<p><?php echo $value; ?></p>
-				</div>
-				<?php
+				foreach ($submitted as $value) {	?>
+					<div class="message" >
+						<p><?php echo $value ?></p>
+					</div>
+					<?php
+				}
 			}
-		}
-		?>
-	</div>
-
-</main>
-<?php
-//if the user isn't the right one, display error
- } else {?>
-		<div class="alert">
-			Hey, you're trying to access someone else's account!
+			?>
 		</div>
+		<form method="POST" class="auto inputs create">
+			<input type="submit" value="Delete" class="feat create" name="delete">
+		</form>
+	</main>
+	<?php
+	//if the user isn't the right one, display error
+} else {?>
+	<div class="alert">
+		Hey, you're trying to access someone else's account!
+	</div>
 	<?php } ?>
 
-<?php
-include_once('include/extra.php');
-include_once('include/footer.php');
-?>
+	<?php
+	include_once('include/extra.php');
+	include_once('include/footer.php');
+	?>

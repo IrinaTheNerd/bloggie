@@ -42,7 +42,7 @@ if(isset($_POST['send_post']))
 	else {
 		if($user->insertBlog($userID, $title, $subtitle, $preview, $main_text))
 		{
-			$user->redirect('all_posts');
+			$user->redirect('my_posts');
 		}
 
 	}

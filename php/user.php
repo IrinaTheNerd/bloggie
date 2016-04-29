@@ -187,7 +187,7 @@ public function delete($blogID)
   try {
     $query = $this->db->prepare("DELETE FROM blogpost WHERE blogID = :blogID");
     $query->execute(array(":blogID"=>$blogID));
-    $result=$query->fetchAll();
+    return $query;
   }
 
   catch (PDOException $e) {
