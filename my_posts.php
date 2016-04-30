@@ -1,7 +1,7 @@
 <?php
 include_once('php/config.php');
 
-define("PAGENAME","Dashboard");
+define("PAGENAME","My Posts");
 include_once('include/header.php');
 //creates an object
 $user = new USER($conn);

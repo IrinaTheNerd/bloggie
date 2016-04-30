@@ -2,7 +2,7 @@
 
 include_once('php/config.php');
 define("PAGENAME","Create New");
-include_once('include/header');
+include_once('include/header.php');
 $user = new USER($conn);
 
 
