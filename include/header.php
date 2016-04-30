@@ -59,7 +59,7 @@ $session = new USER($conn);
 				<!-- Search Bar -->
 				<form class="last" action="search.php" method="get">
 					<label class="hidden" for="search">Search</label>
-					<input placeholder="Search.." type="search" name="search" id="search">
+					<input placeholder="Search for blog posts" type="search" name="search" id="search">
 					<input type="submit" name="search_input" value="submit">
 				</form>
 			</nav>

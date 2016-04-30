@@ -33,6 +33,7 @@ header {
     .button {
       text-align: center;
       border: 2px solid $pink;
+      padding:0.5em 1em;
       color:$pink;
       &:hover {
         background:$pink;
