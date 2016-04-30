@@ -18,7 +18,10 @@ old design
 			</div>
 		</div>-->
 		<h1>Bloggie, a super friendly blogging platform</h1>
-			<h2>Write well structured and adapted content for all platforms</h2>
+		<h2>Write well structured and adapted content for all platforms</h2>
+		<div class="auto">
+			<a href="register" class="button">Register for free</a>
+		</div>
 	</header>
 <!-- add element reveals on scroll-->
 	<div class="container">

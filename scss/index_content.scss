@@ -26,6 +26,19 @@ header {
       color:$pink;
       text-align: center;
     }
+    .auto {
+      margin-top:2em;
+      text-align:center;
+    }
+    .button {
+      text-align: center;
+      border: 2px solid $pink;
+      color:$pink;
+      &:hover {
+        background:$pink;
+        color:$white;
+      }
+    }
 }
 
 

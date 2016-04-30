@@ -116,16 +116,6 @@ $output = '<h3 style="color:red">Some problem occurred, please try again.</h3>';
 public function loggedin()
 {
   if (isset($_SESSION['user_session'])) {
-    //following this https://gist.github.com/psdtohtml5/6090113
-    $autoTime=86400;//after 60 seconds the user gets logged out
-    if (time()-$_SESSION['timestamp']>$sutoTime){
-      session_destroy();
-      session_unset();
-    }else{
-      $_SESSION['timestamp']=time();
-    }
-    //on session creation
-    $_SESSION['timestamp']=time();
     return true;
   }
 }
@@ -206,28 +196,23 @@ public function delete($blogID)
 
 }
 //can't get this to work properly
-/*
-public function showOnePost(){
+
+public function showOnePost($blogID){
   try{
+  	//runs a query depending on the id of the post
+  	$query = $this->db->prepare("SELECT * FROM blogpost WHERE blogID = :blogID");
+  	$query->execute(array(':blogID' => $blogID));
+  	$row=$query->fetch();
+  	//echo ;
 
-    $query = $conn->prepare("SELECT * FROM blogpost WHERE blogID = :blogID");
-    $query->execute(array(':blogID' => $_GET['ID']));
-    $row=$query->fetch();
-    //echo ;
-
-    $title = $row['title'];
-    $subtitle = $row['subtitle'];
-    $preview = $row['preview'];
-    $main_text = $row['main_text'];
-    $userID = $row['userID'];
-
+    return $row;
   }
   catch(PDOException $e)
   {
-    echo "Error: " . $e->getMessage();
+  	echo "Error: " . $e->getMessage();
   }
 }
-*/
+
 public function update($blogID, $title, $subtitle, $preview, $main_text){
   try{
 
