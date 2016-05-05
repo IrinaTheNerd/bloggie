@@ -14,7 +14,7 @@
 			a {
 				font-size:1.5em;
 			}
-			.last {
+			.last, .logged-search {
 				width: 65%;
 				vertical-align: top;
 				padding: 1%;
@@ -23,7 +23,6 @@
 			form {
 				@include col(3,4,$first:true);
 				margin-left: 4%;
-
 			}
 
 		}
@@ -35,7 +34,7 @@
 				margin:0 20%;
 			}
 			h1 {
-				font-size: 2.5em;
+				font-size: 2.25em;
 			}
 			.last {
 				width:100%;
@@ -86,4 +85,5 @@
 	#new_post{
 		padding: 1% 3%;
 	}
+	
 }

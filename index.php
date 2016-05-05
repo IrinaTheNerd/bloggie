@@ -68,12 +68,12 @@ old design
 		<div class="first feat">
 
 			<div id="slider">
-				<a class="control_next"><img src="img/right.png" alt="next"></a>
-				<a class="control_prev"><img src="img/left.png" alt="previous"></a>
+				<a class="control_next"><img src="img/right.png" width="24" height="24" alt="next"></a>
+				<a class="control_prev"><img src="img/left.png" width="24" height="24" alt="previous"></a>
 				<ul>
 					<li>
 						<div class="hover-image">
-							<img src="img/testim-one.gif" alt="first testimony">
+							<img src="img/testim-one.jpg" width="300" height="300" alt="first testimony">
 							<div class="hover-text">
 								<p>This is an awesome platform</p>
 							</div>
@@ -81,14 +81,14 @@ old design
 					</li>
 					<li>
 						<div class="hover-image">
-							<img src="img/writing.jpg" alt="first testimony">
+							<img src="img/writing.jpg" width="300" height="300" alt="first testimony">
 							<div class="hover-text">
 								<p>Writing is so easy!</p>
 							</div>
 						</div></li>
 						<li>
 						<div class="hover-image">
-							<img src="img/typing.jpg" alt="first testimony">
+							<img src="img/typing.jpg" width="300" height="300" alt="first testimony">
 							<div class="hover-text">
 								<p>This is an awesome platform</p>
 							</div>

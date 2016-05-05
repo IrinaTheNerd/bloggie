@@ -51,10 +51,12 @@ if ($(window).width() <= 1025 ){
   $(".responsive").on("click", function(){
     event.stopPropagation();
     $("nav .last").toggle();
+    $("nav .logged-search").toggle();
   });
   //if click on header, then search box disappears
   $("header").on("click",function(){
     $("nav .last").hide();
+    $("nav .logged-search").hide();
   });
   //fadeing magic, cheers for .scroll();
   /* okay, this doesn't work for now

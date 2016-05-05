@@ -56,10 +56,10 @@ class BLOG
 			//added social sharing buttons from twitter, facebook and g+
 			echo "<div class='post'>";
 			echo "<div class='box bg middle'>";
-			echo  "<article><h2>{$row['title']}</h2>";
-			echo "<h3>{$row['subtitle']}</h3>";
-			echo "<p><i>{$row['preview']}</i></p>";
-			echo "{$row['main_text']}</article>";
+			echo  "<article><h2>{$row['title']}</h2>"; //display title
+			echo "<h3>{$row['subtitle']}</h3>"; //display subtitle
+			echo "<p><i>{$row['preview']}</i></p>"; //display preview
+			echo "{$row['main_text']}</article>"; //display main text
 			echo "<div class='social-buttons'><div id='fb-root'></div>
 			<script>(function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0];

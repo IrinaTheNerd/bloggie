@@ -28,12 +28,13 @@ $session = new USER($conn);
 		<body>
 			<!-- Navigation -->
 			<nav>
+				<?php if(!$session->loggedin()){ ?>
 				<div class="first">
-					<a href="index"><img src="img/logo-small.png" alt="logo, or get back to the index page" class="logo"></a>
+					<a href="index"><img src="img/logo-small.png" alt="logo, or get back to the index page" class="logo" width="100" height="77"></a>
 					<!-- only shows up on a mobile device: tablet or a phone -->
 					<span class="icon-search responsive hidden"></span>
 				</div>
-				<?php if(!$session->loggedin()){ ?>
+
 				<div class="middle">
 					<a href="all_posts">latest blogs</a>
 				</div>
@@ -44,8 +45,22 @@ $session = new USER($conn);
 					<a href="register" class="button">register</a>
 
 				</div>
+				<!-- Search Bar -->
+				<form class="last" action="search.php" method="get">
+					<label class="hidden" for="search">Search</label>
+					<input placeholder="Search for blog posts" type="search" name="search" id="search">
+					<input type="submit" name="search_input" value="submit">
+				</form>
 				<?php }
 				else {?>
+					<div class="new-nav">
+						<a href="index"><img src="img/logo-small.png" alt="logo, or get back to the index page" class="logo" width="100" height="77"></a>
+						<!-- only shows up on a mobile device: tablet or a phone -->
+						<span class="icon-search responsive hidden"></span>
+					</div>
+					<div class="middle">
+						<a href="all_posts">all posts</a>
+					</div>
 					<div class="middle">
 						<a href="dashboard">dashboard</a>
 					</div>
@@ -53,13 +68,17 @@ $session = new USER($conn);
 						<a href="logout.php?logout=true">log out</a>
 					</div>
 					<div class="middle">
+						<a href="tips">tips</a>
+					</div>
+					<div class="middle">
 						<a href="new_post" class="button">new post</a>
 					</div>
+					<!-- Search Bar -->
+					<form class="logged-search" action="search.php" method="get">
+						<label class="hidden" for="search">Search</label>
+						<input placeholder="Search for blog posts" type="search" name="search" id="search">
+						<input type="submit" name="search_input" value="submit">
+					</form>
 					<?php } ?>
-				<!-- Search Bar -->
-				<form class="last" action="search.php" method="get">
-					<label class="hidden" for="search">Search</label>
-					<input placeholder="Search for blog posts" type="search" name="search" id="search">
-					<input type="submit" name="search_input" value="submit">
-				</form>
+
 			</nav>
