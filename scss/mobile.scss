@@ -6,6 +6,9 @@
   nav {
     .middle {
       margin:0.5em 0;
+      a {
+        font-size: 1.1em;
+      }
     }
     .last, .logged-search {
       display:none;
@@ -23,9 +26,7 @@
         margin-bottom:0;
       }
     }
-    a {
-      font-size: 1.1em;
-    }
+
 
   }
   .responsive {
@@ -37,7 +38,7 @@
   header {
     text-align: center;
     h1 {
-      font-size: 1em;
+      font-size: 1.2em;
     }
   }
   .intro h2 {
