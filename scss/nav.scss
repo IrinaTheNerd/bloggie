@@ -22,13 +22,13 @@ nav {
   }
   //this is only for when users
   .new-nav {
-    @include col(5,10);
+    @include col(5,9);
     img {
       width:inherit;
     }
   }
   .logged-search {
-    @include col(4,10); 
+    @include col(4,10);
     margin-left: 1.5%;
   }
   a {
