@@ -72,7 +72,6 @@ header {
   .fade { margin-bottom: 3em; }
 }*/
 
-
 //need to re-do, ugly
 
 /*section content */
@@ -82,7 +81,19 @@ header {
   padding:0;
   margin:0;
   width:100%;
-
+  .auto{
+    margin-top:1em;
+  }
+  .button {
+    text-align: center;
+    border: 2px solid $post-bg;
+    padding:0.5em 1em;
+    color:$post-bg;
+    &:hover {
+      background:$post-bg;
+      color:$green;
+    }
+  }
   }
 
   //latest addition round elements

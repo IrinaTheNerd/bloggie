@@ -26,7 +26,7 @@ old design
 <!-- add element reveals on scroll-->
 	<div class="container">
 		<div class="blue">
-			<div class="feat first">
+			<div class="feat interaction first">
 				<div class="middle fade">
 					<div class="round">
 					<h3>Create</h3>
@@ -94,6 +94,9 @@ old design
 							</div>
 						</div></li>
 					</ul>
+				</div>
+				<div class="auto">
+					<a href="register" class="button">Register for free</a>
 				</div>
 			</div>
 			<!--Icons taken from google material design https://design.google.com/icons/ -->

@@ -24,7 +24,7 @@ $(document).ready(function() {
     $(".trumbowyg-button-pane").css("background-color","#ad1457");
   }
 //fake transition for each .fade; could tidy up
-  $(".fade:nth-child(1)").animate({
+$(".fade:nth-child(1)").animate({
   opacity: 1
 }, 500);
 $(".fade:nth-child(2)").animate({
@@ -44,8 +44,6 @@ opacity: 1
 }, 3500);
 
 
-
-
 //responsive search code
 if ($(window).width() <= 1025 ){
   $(".responsive").on("click", function(){
@@ -58,6 +56,7 @@ if ($(window).width() <= 1025 ){
     $("nav .last").hide();
     $("nav .logged-search").hide();
   });
+}
   //fadeing magic, cheers for .scroll();
   /* okay, this doesn't work for now
   $(window).scroll(function(){
@@ -74,7 +73,7 @@ if ($(window).width() <= 1025 ){
 });
 
 });*/
-}
+
 
 //epic slider, thank you so much mr http://codepen.io/doodlemarks/pen/aFcly
 function i() {
