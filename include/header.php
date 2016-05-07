@@ -70,7 +70,7 @@ $session = new USER($conn);
 					<div class="middle">
 						<a href="tips">tips</a>
 					</div>
-					<div class="middle">
+					<div class="middle cta">
 						<a href="new_post" class="button">new post</a>
 					</div>
 					<!-- Search Bar -->
