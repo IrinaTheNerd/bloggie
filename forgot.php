@@ -22,13 +22,13 @@
 ?>
 
 				<header class="big-header">
-						<h1 class="no-margin">Provide your email</h1>
+						<h1 class="no-margin">Forgot your password?</h1>
 			</header>
 
 			<div class="intro bottom-margin">
 				<form method="post" class="inputs feat first">
 					<div class="light-green">
-						<h2>Just fill in your details</h2>
+						<h2>Just fill in your email</h2>
 					</div>
 								<?php
 								//feedback
