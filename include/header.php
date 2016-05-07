@@ -27,8 +27,9 @@ $session = new USER($conn);
 		</head>
 		<body>
 			<!-- Navigation -->
-			<nav>
+
 				<?php if(!$session->loggedin()){ ?>
+				<nav>
 				<div class="first">
 					<a href="index"><img src="img/logo-small.png" alt="logo, or get back to the index page" class="logo" width="100" height="77"></a>
 					<!-- only shows up on a mobile device: tablet or a phone -->
@@ -53,6 +54,7 @@ $session = new USER($conn);
 				</form>
 				<?php }
 				else {?>
+				<nav id="logged">
 					<div class="new-nav">
 						<a href="index"><img src="img/logo-small.png" alt="logo, or get back to the index page" class="logo" width="100" height="77"></a>
 						<!-- only shows up on a mobile device: tablet or a phone -->

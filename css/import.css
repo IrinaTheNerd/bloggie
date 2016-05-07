@@ -1243,20 +1243,7 @@ form .create {
     padding: 1% 0 1% 0; } }
   @media screen and (max-width: 1024px) and (min-width: 35.5em) {
     nav .middle {
-      width: 25%;
-      vertical-align: top;
-      padding: 1% 0; } }
-@media screen and (max-width: 1024px) {
-  nav .cta {
-    width: 100%;
-    font-size: inherit;
-    float: left;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 1% 0 1% 0; } }
-  @media screen and (max-width: 1024px) and (min-width: 35.5em) {
-    nav .cta {
-      width: 100%;
+      width: 33.33333%;
       vertical-align: top;
       padding: 1% 0; } }
 @media screen and (max-width: 1024px) {
@@ -1289,6 +1276,34 @@ form .create {
       margin-top: 0;
       margin-bottom: 0; }
 
+  #logged .middle {
+    width: 100%;
+    font-size: inherit;
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1% 0 1% 0; } }
+  @media screen and (max-width: 1024px) and (min-width: 35.5em) {
+    #logged .middle {
+      width: 25%;
+      vertical-align: top;
+      padding: 1% 0; } }
+
+@media screen and (max-width: 1024px) {
+  #logged .cta {
+    width: 100%;
+    font-size: inherit;
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1% 0 1% 0; } }
+  @media screen and (max-width: 1024px) and (min-width: 35.5em) {
+    #logged .cta {
+      width: 100%;
+      vertical-align: top;
+      padding: 1% 0; } }
+
+@media screen and (max-width: 1024px) {
   .responsive {
     display: block;
     float: right;
