@@ -7,7 +7,7 @@
 	$blog = new BLOG($conn);
 	//prints the header
 	echo '<header class="big-header">
-			<h1 class="no-margin">Your latest posts</h1>
+			<h1 class="no-margin">All the latest posts</h1>
 	</header>';
 	//calls to showBlog
 	$blog->showBlog();
