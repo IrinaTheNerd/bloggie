@@ -36,7 +36,7 @@
 			            {
 			                  ?>
 			                  <div class="message">
-			                      <strong> <?php echo $message; ?> </strong>
+			                    <p>  <strong> <?php echo $message; ?> </strong> </p>
 			                  </div>
 			                  <?php
 			            }
