@@ -172,9 +172,9 @@ small {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 500px; }
+  height: 800px; }
   #error-page header {
-    background: rgba(221, 221, 221, 0.5); }
+    background: rgba(221, 221, 221, 0.8); }
 
 nav {
   background-color: rgba(221, 221, 221, 0.2);
@@ -809,9 +809,6 @@ header {
   width: 100%;
   overflow: hidden; }
 
-@media screen and (min-width: 65em) {
-  #testimonials {
-    height: 450px; } }
 #slider {
   position: relative;
   overflow: hidden;
@@ -1296,7 +1293,12 @@ form .create {
     display: block;
     float: right;
     font-size: 50px;
-    cursor: pointer; } }
+    cursor: pointer; }
+
+  #testimonials {
+    height: 450px; }
+    #testimonials .first {
+      overflow: visible; } }
 @media screen and (max-width: 37.5em) {
   nav .middle {
     margin: 0.5em 0; }
