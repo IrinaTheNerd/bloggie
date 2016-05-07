@@ -6,7 +6,7 @@
 //if logged in already rediret
 	if($login->loggedin()!="")
 	{
-	 $login->redirect('dashboard.php');
+	 $login->redirect('dashboard');
 	}
 	//if not, then check details through running a method
 	if(isset($_POST['login_button']))
@@ -16,7 +16,7 @@
 
 		if($login->login($email,$pass))
 		{
-		 $login->redirect('dashboard.php');
+		 $login->redirect('dashboard');
 		}
 		else
 		{

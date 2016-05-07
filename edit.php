@@ -50,16 +50,16 @@ if(isset($_POST['update'])) {
 	$preview = trim($_POST['preview']);
 	$main_text = trim($_POST['main_text']);
 	//check for errors
-	if($title == ""){
+	if(empty($title)){
 		$error[] = "Oh no! You need a title for your post!";
 	}
-	else if($subtitle == ""){
+	else if(empty($subtitle)){
 		$error[] = "Oh no! You need a subtitle for your post!";
 	}
-	else if($preview== ""){
+	else if(empty($preview)){
 		$error[] = "Oh no! What's your extract?";
 	}
-	else if($main_text== ""){
+	else if(empty($main_text)){
 		$error[] = "Oh no! C'mon, you need to write your post! This is a blog, afterall!";
 	}
 	else {

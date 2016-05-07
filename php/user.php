@@ -280,6 +280,22 @@ function updateDetails($email,$password){
     echo $e->getMessage();
   }
 }
+//testing whether checks for empty elements can be done in here, doesn't work
+function notEmtpy($title,$subtitle,$preview,$main_text) {
+  if(empty($title)){
+    $error = "Oh no! You need a title for your post!";
+  }
+  else if(empty($subtitle)){
+    $error = "Oh no! You need a subtitle for your post!";
+  }
+  else if(empty($preview)){
+    $error = "Oh no! What's your extract?";
+  }
+  else if(empty($main_text)){
+    $error = "Oh no! C'mon, you need to write your post! This is a blog, afterall!";
+  }
+  return $error;
+}
 //tidying up reset
 /*function resetVerify($email){
 try

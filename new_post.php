@@ -26,20 +26,21 @@ if(isset($_POST['send_post']))
 	$subtitle = trim($_POST['subtitle']);
 	$preview = trim($_POST['preview']);
 	$main_text = trim($_POST['main_text']);
-
-	if($title == ""){
-		$error[] = "Oh no! You need a title for your post!";
-	}
-	else if($subtitle == ""){
-		$error[] = "Oh no! You need a subtitle for your post!";
-	}
-	else if($preview== ""){
-		$error[] = "Oh no! What's your extract?";
-	}
-	else if($main_text== ""){
-		$error[] = "Oh no! C'mon, you need to write your post! This is a blog, afterall!";
-	}
+	//improving quality of the code, adding empty method to check for empty variables
+	if(empty($title)){
+    $error[] = "Oh no! You need a title for your post!";
+  }
+  else if(empty($subtitle)){
+    $error[] = "Oh no! You need a subtitle for your post!";
+  }
+  else if(empty($preview)){
+    $error[] = "Oh no! What's your extract?";
+  }
+  else if(empty($main_text)){
+    $error[] = "Oh no! C'mon, you need to write your post! This is a blog, afterall!";
+  }
 	else {
+		//$user->notEmtpy($title, $subtitle, $preview, $main_text);
 		if($user->insertBlog($userID, $title, $subtitle, $preview, $main_text))
 		{
 			$user->redirect('my_posts');
