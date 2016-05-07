@@ -28,11 +28,12 @@ try{
 		echo "OH NO";
 	}
 	else{
-$title = $row['title'];
-$subtitle = $row['subtitle'];
-$preview = $row['preview'];
-$main_text = $row['main_text'];
-$userIdent = $row['userID'];
+		//sets variables for outputting them from the table
+		$title = $row['title'];
+		$subtitle = $row['subtitle'];
+		$preview = $row['preview'];
+		$main_text = $row['main_text'];
+		$userIdent = $row['userID'];
 }
 
 }
@@ -74,7 +75,7 @@ if(isset($_POST['update'])) {
 if($userID==$userIdent) {?>
 <main>
 	<div class="feat create">
-		<h1 class="dashboard">Update new post</h1>
+		<h1 class="dashboard">Update "<?php echo $title ?>"</h1>
 
 
 		<div class="dashboard">

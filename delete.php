@@ -59,7 +59,7 @@ catch(PDOException $e)
 if($userID==$userIdent) {?>
 	<main>
 		<div class="feat create">
-			<h1 class="dashboard">Deleted post <?php echo $title ?></h1>
+			<h1 class="dashboard">Delete post "<?php echo $title ?>"</h1>
 
 			<?php
 			//show errors if there are any
