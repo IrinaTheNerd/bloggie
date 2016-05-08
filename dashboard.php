@@ -63,7 +63,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC)
 			</div>
 		</a>
 	<!-- this is currently out of scope, however it still links to a useful article about writing -->
-		<a href="http://www.enchantingmarketing.com/writing-for-the-web-vs-print/" target="_blank" class="box board">
+		<a href="tips" target="_blank" class="box board">
 			<div class="tile">
 				<span class="icon-help-circled" aria-hidden="true"></span>
 				<span class="access">Tips and Tricks</span>
