@@ -22,6 +22,7 @@
       @include centr();
       margin-bottom: 1% !important;
       margin-top:1em;
+      min-height:340px;
             &:nth-child(1) {
             @include col(11,12, $first:true);
             @include centr();
