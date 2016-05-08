@@ -48,7 +48,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC)
 				<span class="access">View your posts</span>
 			</div>
 			<div class="tile">
-				<h3>View all posts</h3>
+				<h3>View your posts</h3>
 			</div>
 		</a>
 	</div>
