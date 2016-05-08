@@ -28,6 +28,7 @@ footer{
   a {
     color:$white;
   }
+  //footer button is different to other buttons, since there might be a clash of contrasts
    .button {
   	padding: 1em 3em;
   	background: $green;

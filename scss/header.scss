@@ -11,11 +11,10 @@
     }
   }*/
 //}
+//nice and improved header
 header {
-	margin: 2em 0 2em 0;
   padding: 0px;
   margin: 0px;
   overflow: hidden;
-  @include row();
-  @include col(1,1);
+  display: inline-block;
 }

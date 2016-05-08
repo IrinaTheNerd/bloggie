@@ -56,6 +56,7 @@ if(isset($_POST['send_post']))
 		<h1 class="dashboard">Create a new post</h1>
 
 		<?php
+		//loops through the errors
 		if(isset($error))
 		{
 

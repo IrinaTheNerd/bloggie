@@ -40,7 +40,7 @@ h3 {
 p {
   padding: 0.25em 1.25em;
 }
-
+//responsive images
 img {
   width:100%;
 
@@ -69,12 +69,7 @@ header {
   @include row();
   @include col(1,1);
 }
-hg, .container {
-  clear: both;
-  padding: 0px;
-  margin: 0px;
-  overflow: hidden;
-}
+
 section {
 	min-height: 30vh;
 	overflow: auto;

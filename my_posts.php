@@ -26,7 +26,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC)
 
 		</div>
 	</header>
-	<!--Dashboard options -->
+	<!--own posts display-->
 	<div class="post">
 		<?php
 		$user->ownPosts($userID);
